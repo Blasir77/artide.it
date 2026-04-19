@@ -165,22 +165,27 @@ def rewrite_img_src(src: str) -> str | None:
     """Map original image references to our compressed /assets/img/<id>.webp."""
     if not src:
         return None
-    # Extract the Webnode file fingerprint portion
-    # Shapes:
-    #   67be54ee…/200000011-90bdd90be0/450/file.webp?ph=…
-    #   ../67be54ee…/…
-    #   data:…
     if src.startswith("data:"):
         return src
-    clean = src.split("?")[0]
-    # Find the key in MEDIA_MAP (which uses posix paths without ?)
-    # Our keys look like: '67be54ee7dfaae1e955c05a76e69ace8/200000011-90bdd90be0/450/logo.webp'
+    from urllib.parse import unquote
+    clean = unquote(src.split("?")[0])
     # Strip any leading ../
     key = re.sub(r"^(?:\.\./)+", "", clean).lstrip("/")
+    # If src went through rewrite already and has our BASE, strip it
+    if BASE and key.startswith(BASE.lstrip("/") + "/"):
+        key = key[len(BASE.lstrip("/")) + 1:]
     mapped = MEDIA_MAP.get(key)
     if mapped:
         return abs_path(mapped)
-    return None  # Fall through; caller decides
+    # Try also by matching by image ID (first folder segment after 67be54ee...)
+    m = re.search(r"67be54ee7dfaae1e955c05a76e69ace8/([^/]+)/", key)
+    if m:
+        id_ = m.group(1)
+        # find any media_map value for this id
+        for k, v in MEDIA_MAP.items():
+            if f"/{id_}/" in k:
+                return abs_path(v)
+    return None
 
 
 # ─── banner ──────────────────────────────────────────────────────
@@ -344,6 +349,31 @@ def rewrite_all_links(soup: BeautifulSoup, source_url: str) -> None:
         el["style"] = re.sub(r"url\(([^)]+)\)", repl, style)
 
 
+def inject_overrides(soup: BeautifulSoup, url: str) -> None:
+    """Add the body class, base-data attribute, and override CSS/JS tags."""
+    body = soup.body
+    if body is None:
+        return
+    # Page-class markers used by the override CSS
+    cls = body.get("class", []) or []
+    if url == "/":
+        cls = list(set(cls + ["is-home"]))
+    else:
+        cls = [c for c in cls if c != "is-home"]
+    body["class"] = cls
+    body["data-base"] = BASE  # JS reads this to resolve asset paths
+
+    head = soup.head or soup
+    # CSS override (last stylesheet wins)
+    css = soup.new_tag("link", rel="stylesheet", href=abs_path("/assets/artide-overrides.css"))
+    head.append(css)
+
+    # JS override at end of body
+    js = soup.new_tag("script", src=abs_path("/assets/artide-overrides.js"))
+    js.attrs["defer"] = "defer"
+    body.append(js)
+
+
 def insert_banner(soup: BeautifulSoup, url: str, h1: str, kw: str) -> None:
     banner = BeautifulSoup(preview_banner_html(url, h1, kw), "lxml")
     # We only want the content (banner div + style), not the html/head/body added by lxml
@@ -382,6 +412,15 @@ def main():
         src = SRC / sub
         if src.exists():
             shutil.copytree(src, OUT / sub, dirs_exist_ok=True)
+
+    # Copy our design overrides (CSS + JS) from preview-src/ into preview/assets/
+    overrides_src = ROOT / "preview-src"
+    overrides_dst = OUT / "assets"
+    overrides_dst.mkdir(parents=True, exist_ok=True)
+    for name in ("artide-overrides.css", "artide-overrides.js"):
+        src_file = overrides_src / name
+        if src_file.exists():
+            shutil.copy2(src_file, overrides_dst / name)
 
     # Copy favicon folder references — already in 67be54ee… but we use /assets/img/
     # Copy preview/assets from pre-compressed artefacts:
@@ -437,6 +476,7 @@ def main():
         apply_seo_patches(soup, seo, url)
         rewrite_all_links(soup, url)
         strip_tracking(soup)
+        inject_overrides(soup, url)
         insert_banner(soup, url, seo["h1"], seo["kw_primary"])
 
         outp = url_to_outpath(url)

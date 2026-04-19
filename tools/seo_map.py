@@ -170,15 +170,7 @@ SEO_MAP = {
         kw_secondary=["casa dell'acqua"],
         template="service",
     ),
-    "/assistenza": dict(
-        h1="Assistenza case dell'acqua: numero verde e supporto",
-        title="Assistenza Case dell'Acqua | Artide",
-        meta="Assistenza case dell'acqua Artide: numero verde, ticket online, tecnici in sede entro 24h. Knowledge base con guide operative.",
-        kw_primary="manutenzione case dell'acqua",
-        kw_secondary=["casa dell'acqua"],
-        template="service",
-        consolidate_from=["/supporto"],
-    ),
+    # /assistenza and /supporto are now redirected to /contatti per client request.
 
     # ── AZIENDA ───────────────────────────────────────────────────────────
     "/chi-siamo": dict(
@@ -382,7 +374,8 @@ SEO_MAP = {
 # Pages to redirect (slug_from → slug_to)
 REDIRECTS = {
     "/azienda": "/chi-siamo",
-    "/supporto": "/assistenza",
+    "/supporto": "/contatti",
+    "/assistenza": "/contatti",
     "/blog-articoli": "/blog",
     "/blog-articoli-in-evidenza": "/blog",
     "/blog/p-q2odg5ma/1": "/blog",
