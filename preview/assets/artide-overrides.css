@@ -120,27 +120,27 @@ body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .wnd-icon {
   opacity: 0 !important;
 }
 
-/* Submenu chevrons (Webnode renders them as ::before / ::after pseudo
- * elements on menu items) and the horizontal separator line below
- * the nav must also be invisible when the nav is transparent. */
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn ::before,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn ::after,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::before,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::after,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-w::after {
-  content: none !important;
-  display: none !important;
+/* Submenu chevrons (Webnode renders them via .mm-arrow inside menu items)
+ * and the horizontal separator line under the nav must also be invisible
+ * when the nav is transparent. Targets are intentionally narrow so they
+ * don't break the actual submenu dropdowns (which are <ul class="level-2">).
+ */
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow::before,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow::after,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .menu-item span::before,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .menu-item span::after {
   opacity: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
+  visibility: hidden !important;
 }
 /* Kill the nav border line (wnd-nav-border draws a separator line on
- * .s-w::after) when the nav is transparent */
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .wnd-nav-border .s-w::after {
-  display: none !important;
+ * .s-w::after) when the nav is transparent. */
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .wnd-nav-border .s-w::after,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::after,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::before {
+  opacity: 0 !important;
   background: transparent !important;
   border: 0 !important;
-  content: none !important;
 }
 
 /* Invisible hover catch zone covering just the nav area so hover can
@@ -349,6 +349,36 @@ body.is-home main section.s-hm:not(.s-hm-hidden) {
   #artide-slider .artide-slide-subtitle { font-size: 0.95rem; }
   #artide-slider .artide-slider-dots { bottom: 18px; }
   #artide-slider .artide-slider-dots button { width: 28px; }
+}
+
+
+/* ── 3.5 Header offset on non-home pages ─────────────────────────── */
+/* The header is position: fixed on every page (so the social bar stays
+ * pinned at the top). On home the slider fills the viewport behind it.
+ * On every other page we must push the content down by the header
+ * height, otherwise the menu covers the first part of the page. */
+body:not(.is-home) main.l-m {
+  padding-top: 130px;
+}
+@media (max-width: 56.25em) {
+  /* Mobile: nav typically becomes a single bar (~70px) */
+  body:not(.is-home) main.l-m { padding-top: 100px; }
+}
+
+
+/* ── 3.6 Sticky-bottom footer ────────────────────────────────────── */
+/* Make sure the copyright bar (footer.l-f) is always at the very
+ * bottom of the page even when the page content is short. */
+html, body { min-height: 100vh; }
+.l-w {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.l-w > main.l-m { flex: 1 0 auto; }
+.l-w > footer.l-f {
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 
