@@ -494,7 +494,11 @@ def main():
     # page looks identical to the home.
     home_path = SRC / "index.htm"
     shared_footer_block_html = ""
-    history_section_text_markers = ("Nostra Storia", "Arquati", "VIENI A SCOPRICI")
+    # Safe marker: this exact CTA label only appears on the home page's
+    # "La Nostra Storia" section. Using "Arquati" as a marker would
+    # wrongly strip content from /chi-siamo, /azienda and /team, which
+    # legitimately mention the founding family.
+    history_section_text_markers = ("VIENI A SCOPRICI",)
     if home_path.exists():
         home_soup = BeautifulSoup(home_path.read_text(encoding="utf-8", errors="replace"), "lxml")
         rewrite_all_links(home_soup, "/")
@@ -563,11 +567,12 @@ def main():
 
         # Render
         soup = BeautifulSoup(html_path.read_text(encoding="utf-8", errors="replace"), "lxml")
-        # Remove the legacy "La Nostra Storia" section on every page
-        # (including home). Client request: this text must not appear.
+        # Remove the legacy home-only "La Nostra Storia" section from
+        # every page. The marker is the unique CTA label "VIENI A
+        # SCOPRICI" that appears only inside that section on the home.
         for s in list(soup.find_all("section")):
             txt = s.get_text(separator=" ", strip=True)
-            if any(m in txt for m in ("Nostra Storia", "Arquati", "VIENI A SCOPRICI")):
+            if "VIENI A SCOPRICI" in txt:
                 s.decompose()
         apply_seo_patches(soup, seo, url)
         rewrite_all_links(soup, url)
