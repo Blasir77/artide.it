@@ -17,17 +17,20 @@ def convert(p: Path):
     except Exception as e:
         print(f"!! cannot open {p.name}: {e}")
         return
-    if im.mode in ("RGBA", "LA"):
-        bg = Image.new("RGB", im.size, (255, 255, 255))
-        bg.paste(im, mask=im.split()[-1])
-        im = bg
+
+    # Keep transparency if the source has it (logos are white-on-transparent —
+    # flattening onto a white background makes them vanish).
+    has_alpha = im.mode in ("RGBA", "LA") or (im.mode == "P" and "transparency" in im.info)
+    if has_alpha:
+        im = im.convert("RGBA")
     elif im.mode != "RGB":
         im = im.convert("RGB")
+
     w, h = im.size
     if w > MAX_WIDTH:
         im = im.resize((MAX_WIDTH, int(h * MAX_WIDTH / w)), Image.LANCZOS)
     dest = p.with_suffix(".webp")
-    im.save(dest, "WEBP", quality=QUALITY, method=4)
+    im.save(dest, "WEBP", quality=QUALITY, method=4, lossless=False)
     if dest != p:
         p.unlink()
 

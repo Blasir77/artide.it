@@ -58,17 +58,48 @@ def clean_heading(text: str) -> str:
     return text
 
 
+INLINE_TAGS = r"(?:strong|em|b|i|u|font|span|a|mark|sub|sup)"
+_RE_GLUED_OPEN = re.compile(
+    rf'([A-Za-zÀ-ÿ0-9\)\]!,;.?])(<{INLINE_TAGS}\b[^>]*>)(?=[A-Za-zÀ-ÿ0-9])',
+    flags=re.I,
+)
+_RE_GLUED_CLOSE = re.compile(
+    rf'(</{INLINE_TAGS}>)([A-Za-zÀ-ÿ0-9])',
+    flags=re.I,
+)
+
+
+def fix_inline_spacing(html: str) -> str:
+    """Insert a single space where HTML inline elements butt directly against
+    a preceding/following word character. Fixes the common Webnode pattern
+    `pensa<strong>Artide</strong>!` → `pensa <strong>Artide</strong> !`.
+    """
+    # word + <inline>word
+    html = _RE_GLUED_OPEN.sub(r'\1 \2', html)
+    # </inline> + word
+    html = _RE_GLUED_CLOSE.sub(r'\1 \2', html)
+    # Accent-vowel glued to "è" (e.g. "qualitàè", "Artideè", "sitoè")
+    html = re.sub(r'([a-zà-ÿ])è([a-zà-ÿA-ZÀ-Ÿ])', r'\1 è \2', html)
+    html = re.sub(r'([a-zà-ÿ])è(?=\s|[,.!?;:]|$)', r'\1 è', html)
+    return html
+
+
 def fix_typos(text: str) -> str:
-    fixes = {
+    # First, specific word fixes
+    specific = {
         r"\bPropietari": "Proprietari",
         r"\bRevamping\b": "Riqualificazione",
         r"\bScheider\b": "Schneider",
         r"\bParthner\b": "Partner",
-        r"\bArtideè\b": "Artide è",
-        r"\bprodottoè\b": "prodotto è",
     }
-    for pat, repl in fixes.items():
+    for pat, repl in specific.items():
         text = re.sub(pat, repl, text, flags=re.I)
+    # Generic Italian "stuck words" — whenever a word ends with an Italian
+    # accented vowel (or any letter) and is followed directly by an
+    # unspaced "è" that starts a new word, insert a space.
+    # Example: "qualitàè"→"qualità è", "prodottoè"→"prodotto è",
+    #          "Artideè"→"Artide è", "sitoè"→"sito è".
+    text = re.sub(r"([a-zà-ÿ])è(?=[\s,.;:!?]|$)", r"\1 è", text)
     return text
 
 
@@ -548,7 +579,7 @@ def main():
 
         outp = url_to_outpath(url)
         outp.parent.mkdir(parents=True, exist_ok=True)
-        outp.write_text(str(soup), encoding="utf-8")
+        outp.write_text(fix_inline_spacing(str(soup)), encoding="utf-8")
         pages_done.append(url)
 
     print(f"Generated {len(pages_done)} pages + {redirects_written} redirects → {OUT}/")
