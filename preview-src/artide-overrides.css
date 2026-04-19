@@ -120,39 +120,54 @@ body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .wnd-icon {
   opacity: 0 !important;
 }
 
-/* Submenu chevrons (Webnode renders them via .mm-arrow inside menu items)
- * and the horizontal separator line under the nav must also be invisible
- * when the nav is transparent. Targets are intentionally narrow so they
- * don't break the actual submenu dropdowns (which are <ul class="level-2">).
- */
+/* Hide submenu chevrons (.mm-arrow) and the nav separator line when
+ * the nav is transparent on home. Use opacity only — never display:none
+ * or visibility:hidden — so pointer events keep flowing through the
+ * elements and the submenu dropdown still triggers on hover.
+ * The .level-2 / .level-3 dropdowns themselves are NEVER hidden by
+ * this override; their visibility is driven by Webnode's own
+ * .open-class JS toggle. */
 body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow,
 body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow::before,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow::after,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .menu-item span::before,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .menu-item span::after {
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .mm-arrow::after {
   opacity: 0 !important;
-  visibility: hidden !important;
 }
-/* Kill the nav border line (wnd-nav-border draws a separator line on
- * .s-w::after) when the nav is transparent. */
 body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .wnd-nav-border .s-w::after,
 body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::after,
 body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::before {
   opacity: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
 }
 
-/* Invisible hover catch zone covering just the nav area so hover can
- * reveal it even while fully transparent. */
-body.is-home::before {
-  content: "";
-  position: fixed;
-  top: 40px; left: 0; right: 0;   /* below the always-visible social bar */
-  height: 70px;
-  z-index: 99;
-  pointer-events: auto;
+/* When a level-2 submenu opens, force its background to RED + white text
+ * regardless of the page state (covers the case where the user hovers
+ * a top item while the nav itself is still in the transparent state). */
+.l-h .s-hn .level-2,
+.l-h .s-hn .level-3 {
+  background: var(--artide-red) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
+.l-h .s-hn .level-2 a,
+.l-h .s-hn .level-3 a,
+.l-h .s-hn .level-2 span,
+.l-h .s-hn .level-3 span,
+.l-h .s-hn .level-2 li,
+.l-h .s-hn .level-3 li {
+  color: #fff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* The little arrow indicator on top of the dropdown */
+.l-h .s-hn .level-2::before,
+.l-h .s-hn .level-3::before {
+  border-bottom-color: var(--artide-red) !important;
+}
+
+/* (Hover detection is handled by the override JS via mousemove on the
+ * document; we deliberately do NOT add a CSS hover-catch ::before
+ * pseudo-element here, because pointer-events: auto on it would
+ * intercept mouseover events between the menu item and its submenu
+ * dropdown — which would break submenu visibility on hover.) */
 
 /* Hide removed menu items (flagged by JS) */
 .l-h .nav-remove,
