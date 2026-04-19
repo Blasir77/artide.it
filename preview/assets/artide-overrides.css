@@ -433,6 +433,11 @@ footer.l-f a:hover { opacity: 0.85; }
  * header layout. No more body padding-top, no more header offset. */
 #preview-banner { backdrop-filter: blur(6px); }
 
+/* Hide the "Artide srl © 2022 | … | P.IVA / CF: …" copyright line
+ * from the footer (client request). The rest of the legal block
+ * (copyright year + privacy/cookie links) stays. */
+footer.l-f .s-f-cr { display: none !important; }
+
 
 /* ── 6. Polish ───────────────────────────────────────────────────── */
 a { transition: color 0.15s ease, opacity 0.15s ease; }
