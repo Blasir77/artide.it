@@ -382,23 +382,22 @@ def rewrite_all_links(soup: BeautifulSoup, source_url: str) -> None:
 
 
 def inject_shared_footer(soup: BeautifulSoup, block_html: str) -> None:
-    """Insert the shared footer block right before the page's <footer class='l-f'>.
-    Also remove any existing trailing .wnd-background-image sections on the page
-    so we don't end up with duplicates.
+    """Append the shared footer block to the end of <main> (inside .sw > .sw-c)
+    so it sits in the same DOM location as on the home page — otherwise
+    scoped Webnode CSS targeting '.l-m > ...' wouldn't match and the
+    styling would diverge between home and subpages.
     """
-    footer = soup.find("footer", class_=lambda c: c and "l-f" in c)
-    if not footer:
+    sw_c = soup.select_one("main.l-m > .sw > .sw-c") or soup.select_one("main > .sw > .sw-c") or soup.find("main")
+    if not sw_c:
         return
-    # Remove pre-existing trailing background-image sections (rare on subpages)
-    for s in list(soup.find_all("section", class_="wnd-background-image"))[-3:]:
-        # Only remove if adjacent to footer (last sections of the document)
-        # Keep it simple: remove only if parent is <main> or body and no further .s-basic after it
-        pass
-
     fragment = BeautifulSoup(block_html, "lxml")
     block = fragment.find("div", class_="artide-footer-block")
-    if block:
-        footer.insert_before(block)
+    if not block:
+        return
+    # Move each section directly into sw-c so they render exactly like
+    # the home page's final sections (not wrapped in an extra div).
+    for section in list(block.find_all("section", recursive=False)):
+        sw_c.append(section.extract())
 
 
 def inject_overrides(soup: BeautifulSoup, url: str) -> None:

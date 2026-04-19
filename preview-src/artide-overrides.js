@@ -36,10 +36,18 @@
     links.forEach(function (a) {
       var label = (a.textContent || '').trim().toUpperCase();
 
-      // Rename ASSISTENZA → CONTATTI and repoint
+      // Rename ASSISTENZA → CONTATTI and repoint; also strip its submenu.
       if (label === 'ASSISTENZA') {
         a.textContent = 'CONTATTI';
         a.setAttribute('href', base + '/contatti/');
+        var li = a.closest('li');
+        if (li) {
+          li.classList.remove('wnd-with-submenu');
+          // remove the submenu UL and the chevron
+          li.querySelectorAll('ul.level-2, ul.level-3, .mm-arrow').forEach(function (el) {
+            el.remove();
+          });
+        }
         return;
       }
 
@@ -60,7 +68,6 @@
         ul.classList.add('nav-remove');
         var parentLi = ul.closest('li');
         if (parentLi && parentLi.querySelectorAll(':scope > a').length) {
-          // If the parent's only link is a toggle, remove it too
           var parentText = (parentLi.querySelector('a') || {}).textContent;
           if (parentText && /wiki|supporto/i.test(parentText)) {
             parentLi.classList.add('nav-remove');
@@ -68,6 +75,28 @@
         }
       }
     });
+
+    // Reorder top-level menu items per client request:
+    //   PRODOTTI, SERVIZI, AZIENDA, BLOG, CONTATTI
+    var topLevelUl = document.querySelector('.l-h .s-hn ul.level-1');
+    if (topLevelUl) {
+      var ORDER = ['PRODOTTI', 'SERVIZI', 'AZIENDA', 'BLOG', 'CONTATTI'];
+      var topLis = Array.prototype.slice.call(topLevelUl.querySelectorAll(':scope > li'));
+      var byLabel = {};
+      topLis.forEach(function (li) {
+        var a = li.querySelector(':scope > .menu-item a, :scope > a');
+        if (!a) return;
+        var lbl = (a.textContent || '').trim().toUpperCase();
+        byLabel[lbl] = li;
+      });
+      // Remove items we want to reorder, then append in the target order.
+      ORDER.forEach(function (lbl) {
+        var li = byLabel[lbl];
+        if (li) {
+          topLevelUl.appendChild(li);  // append moves to the end
+        }
+      });
+    }
   }
 
   /* ── 2. Transparent-on-home menu ───────────────────────────────── */
