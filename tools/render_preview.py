@@ -9,6 +9,7 @@ The preview includes:
 """
 import html
 import json
+import os
 import re
 from pathlib import Path
 
@@ -17,6 +18,25 @@ PAGES = json.loads((ROOT / "build/pages.json").read_text(encoding="utf-8"))
 MEDIA = json.loads((ROOT / "build/media_map.json").read_text(encoding="utf-8"))
 OUT = ROOT / "preview"
 OUT.mkdir(parents=True, exist_ok=True)
+
+# Prefix applied to every absolute site link — useful for GH Pages project
+# deployments where the site lives under /REPO_NAME/. Set BASE_PREFIX env var.
+BASE = os.environ.get("BASE_PREFIX", "").rstrip("/")
+
+
+def apply_base(html_text: str) -> str:
+    """Prefix BASE to every absolute site path in href/src/content attributes."""
+    if not BASE:
+        return html_text
+    # Skip //, http://, https://, mailto:, tel:, #
+    pattern = re.compile(r'(\b(?:href|src|content)=")(/[^"]*)"', re.I)
+    def repl(m):
+        p = m.group(2)
+        # skip //, //protocol-relative
+        if p.startswith("//"):
+            return m.group(0)
+        return f'{m.group(1)}{BASE}{p}"'
+    return pattern.sub(repl, html_text)
 
 # ── Primary navigation ───────────────────────────────────────────
 NAV = [
@@ -386,7 +406,7 @@ def main():
         else:
             out = OUT / page["url"].lstrip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page_html(page, body), encoding="utf-8")
+        out.write_text(apply_base(page_html(page, body)), encoding="utf-8")
 
     # Write redirect stubs for consolidated URLs
     redirects = json.loads((ROOT / "build/redirects.json").read_text(encoding="utf-8"))
@@ -396,11 +416,11 @@ def main():
         out = OUT / src.lstrip("/") / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         dest_href = dst if dst.endswith("/") or dst == "/" else dst + "/"
-        out.write_text(f"""<!doctype html><meta charset="utf-8">
+        out.write_text(apply_base(f"""<!doctype html><meta charset="utf-8">
 <title>Reindirizzamento…</title>
 <meta http-equiv="refresh" content="0; url={dest_href}">
 <link rel="canonical" href="{dest_href}">
-<p>Questa pagina è stata consolidata in <a href="{dest_href}">{dest_href}</a>.""",
+<p>Questa pagina è stata consolidata in <a href="{dest_href}">{dest_href}</a>."""),
                          encoding="utf-8")
 
     print(f"Rendered {len(PAGES)} pages + {len(redirects)} redirects → {OUT}/")
