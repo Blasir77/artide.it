@@ -1,0 +1,34 @@
+[
+  {
+    "from": "/azienda",
+    "to": "/chi-siamo"
+  },
+  {
+    "from": "/supporto",
+    "to": "/assistenza"
+  },
+  {
+    "from": "/blog-articoli",
+    "to": "/blog"
+  },
+  {
+    "from": "/blog-articoli-in-evidenza",
+    "to": "/blog"
+  },
+  {
+    "from": "/blog/p-q2odg5ma/1",
+    "to": "/blog"
+  },
+  {
+    "from": "/blog/p-q2odg5ma/2",
+    "to": "/blog"
+  },
+  {
+    "from": "/blog/p-q2odg5ma/3",
+    "to": "/blog"
+  },
+  {
+    "from": "/blog/p-q2odg5ma/4",
+    "to": "/blog"
+  }
+]
