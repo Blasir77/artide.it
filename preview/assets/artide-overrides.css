@@ -115,8 +115,32 @@ body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn li {
 }
 /* Also make menu icons (burger etc.) blend when invisible */
 body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn svg,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn img {
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn img,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .wnd-icon {
   opacity: 0 !important;
+}
+
+/* Submenu chevrons (Webnode renders them as ::before / ::after pseudo
+ * elements on menu items) and the horizontal separator line below
+ * the nav must also be invisible when the nav is transparent. */
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn ::before,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn ::after,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::before,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::after,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-w::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+/* Kill the nav border line (wnd-nav-border draws a separator line on
+ * .s-w::after) when the nav is transparent */
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .wnd-nav-border .s-w::after {
+  display: none !important;
+  background: transparent !important;
+  border: 0 !important;
+  content: none !important;
 }
 
 /* Invisible hover catch zone covering just the nav area so hover can
@@ -371,9 +395,9 @@ footer.l-f a:hover { opacity: 0.85; }
 
 
 /* ── 5. Preview banner tweaks ────────────────────────────────────── */
-#preview-banner { background: linear-gradient(90deg, #fff3cd 0%, #fff8e2 100%); }
-body.is-home #preview-banner + .l-h,
-body.is-home header.l-h { top: 40px !important; }
+/* Preview banner lives pinned to bottom-right so it doesn't affect
+ * header layout. No more body padding-top, no more header offset. */
+#preview-banner { backdrop-filter: blur(6px); }
 
 
 /* ── 6. Polish ───────────────────────────────────────────────────── */

@@ -191,13 +191,14 @@ def rewrite_img_src(src: str) -> str | None:
 # ─── banner ──────────────────────────────────────────────────────
 
 def preview_banner_html(url: str, h1: str, kw: str) -> str:
-    return f'''<div id="preview-banner" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#fff3cd;color:#7a5a00;padding:8px 14px;text-align:center;font:600 13px/1.3 system-ui,-apple-system,sans-serif;border-bottom:1px solid #f3e2a0;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
-⚠ <b>Anteprima SEO — design identico al sito attuale</b> ·
-Pagina: <code style="background:rgba(0,0,0,0.05);padding:1px 6px;border-radius:4px">{url}</code> ·
-Keyword: <b>{kw}</b>
-<button onclick="document.getElementById('preview-banner').remove();document.body.style.paddingTop=0" style="margin-left:12px;background:transparent;border:1px solid #b89a1a;border-radius:4px;padding:2px 8px;font:inherit;cursor:pointer">chiudi ×</button>
-</div>
-<style>body{{padding-top:40px}}</style>'''
+    """Small dismissible preview badge pinned to bottom-right so it never
+    interferes with the page layout or the header."""
+    return f'''<div id="preview-banner" style="position:fixed;bottom:16px;right:16px;z-index:99999;background:#fff3cd;color:#7a5a00;padding:8px 14px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.14);font:600 12px/1.35 system-ui,-apple-system,sans-serif;border:1px solid #f3e2a0;max-width:420px">
+<span style="opacity:0.85">Anteprima SEO</span>
+<code style="background:rgba(0,0,0,0.05);padding:1px 6px;border-radius:4px;margin:0 4px">{url}</code>
+<span style="opacity:0.6">· kw:</span> <b>{kw}</b>
+<button onclick="document.getElementById('preview-banner').remove()" style="margin-left:10px;background:transparent;border:1px solid #b89a1a;border-radius:4px;padding:1px 7px;font:inherit;cursor:pointer;color:#7a5a00">×</button>
+</div>'''
 
 
 # ─── core patch routine ─────────────────────────────────────────
