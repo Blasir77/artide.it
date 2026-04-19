@@ -23,22 +23,49 @@
   /* ── 1. Menu patches ───────────────────────────────────────────── */
   function patchMenu() {
     var base = getBase();
+    var LABELS_TO_REMOVE = new Set([
+      'HOME',
+      'SUPPORTO',
+      'WIKI',
+      'WIKI - TOTEM RICARICA',
+      "WIKI - CASA DELL'ACQUA",
+      "WIKI - CASA DELL\u2019ACQUA",
+    ]);
+
     var links = document.querySelectorAll('.l-h a');
     links.forEach(function (a) {
-      var href = a.getAttribute('href') || '';
       var label = (a.textContent || '').trim().toUpperCase();
-
-      // Remove the HOME entry (the literal home link in the nav)
-      if (label === 'HOME' && (href === base + '/' || href === '/' || href.endsWith(base + '/'))) {
-        // Hide its closest <li> / wrapper, not the <a>
-        var item = a.closest('li, .menu-item, .nav-item') || a;
-        item.classList.add('nav-remove');
-      }
 
       // Rename ASSISTENZA → CONTATTI and repoint
       if (label === 'ASSISTENZA') {
         a.textContent = 'CONTATTI';
         a.setAttribute('href', base + '/contatti/');
+        return;
+      }
+
+      // Remove unwanted entries
+      if (LABELS_TO_REMOVE.has(label)) {
+        var item = a.closest('li, .menu-item, .nav-item, .sub-menu-item') || a;
+        item.classList.add('nav-remove');
+      }
+    });
+
+    // After hiding, if a parent submenu ended up empty, hide it too.
+    document.querySelectorAll('.l-h ul, .l-h .sub-menu, .l-h .submenu').forEach(function (ul) {
+      var visibleChildren = 0;
+      ul.querySelectorAll(':scope > li, :scope > .menu-item').forEach(function (li) {
+        if (!li.classList.contains('nav-remove')) visibleChildren++;
+      });
+      if (visibleChildren === 0 && ul !== document.querySelector('.l-h ul')) {
+        ul.classList.add('nav-remove');
+        var parentLi = ul.closest('li');
+        if (parentLi && parentLi.querySelectorAll(':scope > a').length) {
+          // If the parent's only link is a toggle, remove it too
+          var parentText = (parentLi.querySelector('a') || {}).textContent;
+          if (parentText && /wiki|supporto/i.test(parentText)) {
+            parentLi.classList.add('nav-remove');
+          }
+        }
       }
     });
   }
