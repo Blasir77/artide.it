@@ -138,29 +138,18 @@ body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-o::before {
   opacity: 0 !important;
 }
 
-/* When a level-2 submenu opens, force its background to RED + white text
- * regardless of the page state (covers the case where the user hovers
- * a top item while the nav itself is still in the transparent state). */
-.l-h .s-hn .level-2,
-.l-h .s-hn .level-3 {
-  background: var(--artide-red) !important;
-  color: #fff !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-}
+/* The submenu dropdown panels (.level-2 / .level-3) keep their original
+ * Webnode look — we don't override their background. We only make sure
+ * that, inside them, links remain readable: when the parent nav is
+ * still transparent (home at rest, before scroll/hover triggers), the
+ * inherited color: transparent rule would also blank the dropdown links.
+ * Restore them to white explicitly. */
 .l-h .s-hn .level-2 a,
 .l-h .s-hn .level-3 a,
-.l-h .s-hn .level-2 span,
-.l-h .s-hn .level-3 span,
-.l-h .s-hn .level-2 li,
-.l-h .s-hn .level-3 li {
+.l-h .s-hn .level-2 .menu-item-text,
+.l-h .s-hn .level-3 .menu-item-text {
   color: #fff !important;
   opacity: 1 !important;
-  visibility: visible !important;
-}
-/* The little arrow indicator on top of the dropdown */
-.l-h .s-hn .level-2::before,
-.l-h .s-hn .level-3::before {
-  border-bottom-color: var(--artide-red) !important;
 }
 
 /* (Hover detection is handled by the override JS via mousemove on the
