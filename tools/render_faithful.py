@@ -463,24 +463,34 @@ def main():
     # page looks identical to the home.
     home_path = SRC / "index.htm"
     shared_footer_block_html = ""
+    history_section_text_markers = ("Nostra Storia", "Arquati", "VIENI A SCOPRICI")
     if home_path.exists():
         home_soup = BeautifulSoup(home_path.read_text(encoding="utf-8", errors="replace"), "lxml")
         rewrite_all_links(home_soup, "/")
+
+        # Drop the "La Nostra Storia" section from the home soup so it
+        # never ends up either in the shared footer block or in the
+        # rendered home page (per client request).
+        for s in home_soup.find_all("section"):
+            txt = s.get_text(separator=" ", strip=True)
+            if any(m in txt for m in history_section_text_markers):
+                s.decompose()
+
         home_sections = home_soup.find_all("section")
-        # Heuristic: take the last 3 sections that live inside <main>, excluding
-        # the actual <footer>. That captures: optional bg image section +
-        # address/info section + final section.
         bg_candidates = []
         for s in home_sections:
-            if not s.find_parent("footer"):
-                cls = s.get("class") or []
-                if any(c.startswith("s-basic") or "wnd-background" in c for c in cls):
-                    bg_candidates.append(s)
-        block_sections = bg_candidates[-3:] if len(bg_candidates) >= 3 else bg_candidates[-2:]
+            if s.find_parent("footer"):
+                continue
+            cls = s.get("class") or []
+            if any(c.startswith("s-basic") or "wnd-background" in c for c in cls):
+                bg_candidates.append(s)
+        # Take the LAST 2 sections (decorative bg + address/links columns);
+        # the history section is already gone.
+        block_sections = bg_candidates[-2:]
         if block_sections:
             wrapper = home_soup.new_tag("div", attrs={"class": "artide-footer-block"})
             for s in block_sections:
-                wrapper.append(s)  # move into wrapper
+                wrapper.append(s)
             shared_footer_block_html = str(wrapper)
 
     pages_done: list[str] = []
@@ -522,6 +532,12 @@ def main():
 
         # Render
         soup = BeautifulSoup(html_path.read_text(encoding="utf-8", errors="replace"), "lxml")
+        # Remove the legacy "La Nostra Storia" section on every page
+        # (including home). Client request: this text must not appear.
+        for s in list(soup.find_all("section")):
+            txt = s.get_text(separator=" ", strip=True)
+            if any(m in txt for m in ("Nostra Storia", "Arquati", "VIENI A SCOPRICI")):
+                s.decompose()
         apply_seo_patches(soup, seo, url)
         rewrite_all_links(soup, url)
         strip_tracking(soup)
