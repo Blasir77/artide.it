@@ -36,82 +36,98 @@
 
 
 /* ── 2. Menu behaviour ───────────────────────────────────────────── */
-/* HOME: top of page — menu is FULLY transparent (both text and bg).
- * On scroll OR hover, menu reveals with RED background + white text.
+/* Header structure in Webnode:
+ *   <header class="l-h">
+ *     <section class="s-hb">  — social icons + hours + contacts (top strip)
+ *     <section class="s-hn">  — main navigation menu
+ *   </header>
+ *
+ * Requirements:
+ *   - .s-hb stays always visible, always white, always at the top
+ *     (never changes on scroll, never moves).
+ *   - .s-hn is:
+ *       • fully transparent (bg + text) on home at the top of the page;
+ *       • solid RED with white text on scroll/hover;
+ *       • solid RED with white text on every non-home page.
  */
-body.is-home .l-h {
+
+/* Whole header pinned to the top on every page */
+.l-h {
   position: fixed !important;
   top: 0; left: 0; right: 0;
   z-index: 100;
   background: transparent !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  transition: background 0.35s ease, box-shadow 0.35s ease;
+  transition: box-shadow 0.35s ease;
 }
 
-/* Thin invisible hover zone to allow revealing the menu even when it's
- * fully transparent at the top of the page. */
-body.is-home::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 90px;
-  z-index: 99;
-  pointer-events: auto;
+/* Social bar (top strip) — always WHITE, text dark, never changes. */
+.l-h .s-hb,
+.l-h .s-hb .s-bg,
+.l-h .s-hb .s-bg-l {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+.l-h .s-hb a,
+.l-h .s-hb span,
+.l-h .s-hb li,
+.l-h .s-hb .s-c {
+  color: inherit !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
 }
 
-/* At rest on home: text fully transparent (as requested) */
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .menu-nav,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) nav,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .l-h-text,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) a,
-body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-c {
+/* Main nav — default: red with white text.
+ * This is the "visible" state used on non-home pages and on home
+ * once the user starts scrolling. */
+.l-h .s-hn,
+.l-h .s-hn .s-bg,
+.l-h .s-hn .s-bg-l {
+  background: var(--artide-red) !important;
+  background-color: var(--artide-red) !important;
+  transition: background 0.35s ease, opacity 0.35s ease;
+}
+.l-h .s-hn a,
+.l-h .s-hn span,
+.l-h .s-hn li,
+.l-h .s-hn .s-c {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+/* Subtle shadow on nav when visible */
+.l-h .s-hn { box-shadow: 0 4px 18px rgba(0,0,0,0.12); }
+
+/* HOME, at the top of the page (nav not scrolled): fully transparent
+ * (both background and text). On scroll/hover it reverts to the default
+ * red+white state above. */
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-bg,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn .s-bg-l {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn a,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn span,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn li {
   color: transparent !important;
   text-shadow: none !important;
 }
-
-/* When scrolled or hovering, menu background becomes the official RED */
-body.is-home .l-h.is-scrolled,
-body.is-home .l-h.is-hovering,
-body.is-home .l-h.is-scrolled .s-bg,
-body.is-home .l-h.is-hovering .s-bg,
-body.is-home .l-h.is-scrolled .s-bg-l,
-body.is-home .l-h.is-hovering .s-bg-l {
-  background: var(--artide-red) !important;
-  background-color: var(--artide-red) !important;
-}
-body.is-home .l-h.is-scrolled,
-body.is-home .l-h.is-hovering {
-  box-shadow: 0 4px 18px rgba(0,0,0,0.15) !important;
-}
-body.is-home .l-h.is-scrolled a,
-body.is-home .l-h.is-hovering a,
-body.is-home .l-h.is-scrolled .menu-nav a,
-body.is-home .l-h.is-hovering .menu-nav a,
-body.is-home .l-h.is-scrolled span,
-body.is-home .l-h.is-hovering span,
-body.is-home .l-h.is-scrolled li,
-body.is-home .l-h.is-hovering li {
-  color: #fff !important;
-  text-shadow: none !important;
+/* Also make menu icons (burger etc.) blend when invisible */
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn svg,
+body.is-home .l-h:not(.is-scrolled):not(.is-hovering) .s-hn img {
+  opacity: 0 !important;
 }
 
-/* Non-home pages: sticky nav with red solid bg + white text (uniform style) */
-body:not(.is-home) .l-h {
-  position: sticky !important;
-  top: 0;
-  z-index: 80;
-  background: var(--artide-red) !important;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.1);
-}
-body:not(.is-home) .l-h a,
-body:not(.is-home) .l-h .menu-nav a,
-body:not(.is-home) .l-h span {
-  color: #fff !important;
-}
-body:not(.is-home) .l-h .s-bg,
-body:not(.is-home) .l-h .s-bg-l {
-  background: transparent !important;
+/* Invisible hover catch zone covering just the nav area so hover can
+ * reveal it even while fully transparent. */
+body.is-home::before {
+  content: "";
+  position: fixed;
+  top: 40px; left: 0; right: 0;   /* below the always-visible social bar */
+  height: 70px;
+  z-index: 99;
+  pointer-events: auto;
 }
 
 /* Hide removed menu items (flagged by JS) */

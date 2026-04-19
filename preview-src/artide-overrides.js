@@ -75,13 +75,21 @@
     if (!document.body.classList.contains('is-home')) return;
     var hd = document.querySelector('.l-h');
     if (!hd) return;
-    var threshold = 80;
+
+    var scrollThreshold = 60;
     function onScroll() {
-      if (window.scrollY > threshold) hd.classList.add('is-scrolled');
+      if (window.scrollY > scrollThreshold) hd.classList.add('is-scrolled');
       else hd.classList.remove('is-scrolled');
     }
-    hd.addEventListener('mouseenter', function () { hd.classList.add('is-hovering'); });
-    hd.addEventListener('mouseleave', function () { hd.classList.remove('is-hovering'); });
+
+    // Hover detection via mouse Y position — works even when the nav is
+    // fully transparent (invisible <a> elements don't capture hover).
+    var hoverZoneHeight = 140; // social bar + nav ≈ 100-140px
+    function onMouseMove(e) {
+      if (e.clientY <= hoverZoneHeight) hd.classList.add('is-hovering');
+      else hd.classList.remove('is-hovering');
+    }
+    document.addEventListener('mousemove', onMouseMove, { passive: true });
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
