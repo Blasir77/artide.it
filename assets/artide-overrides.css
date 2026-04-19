@@ -387,42 +387,19 @@ html, body { min-height: 100vh; }
 
 
 /* ── 4. Shared footer block (injected into every page) ───────────── */
-/* The client wants the home footer on every page. We clone the home's
- * last bg+address sections and the renderer inserts them right before
- * <footer class="l-f">. We wrap them in a .artide-footer-block marker.
+/* No CSS tweaks on .artide-footer-block: we want it to render with the
+ * same styling as Webnode's native footer sections on the home page.
+ * Every subpage now has the identical block injected via JS, so the
+ * visual result is uniform across the whole site.
  */
-.artide-footer-block {
-  position: relative;
-}
-
-/* First image inside the shared footer block — reduce height by 50%. */
-.artide-footer-block .s-bg picture:first-of-type img,
-.artide-footer-block .wnd-background-image:first-of-type .s-bg img {
-  max-height: 50% !important;
-  height: 50% !important;
-  object-fit: cover;
-  object-position: center top;
-}
-
-/* Second image overlaps the text area (multiply blend, reduced opacity). */
-.artide-footer-block .wnd-background-image + .wnd-background-image {
-  position: relative;
-  z-index: 2;
-}
-.artide-footer-block .wnd-background-image + .wnd-background-image .s-bg img,
-.artide-footer-block .wnd-background-image + .wnd-background-image .s-bg picture {
-  mix-blend-mode: multiply;
-  opacity: 0.55;
-}
-
-/* Ensure copy inside footer block stays readable */
+.artide-footer-block { position: relative; }
 .artide-footer-block .s-c { position: relative; z-index: 10; }
 
 /* Footer gold accents → #ffba1b everywhere it was gold */
 footer.l-f a,
 footer.l-f a:visited,
 footer.l-f a:hover,
-.artide-footer-block a {
+.artide-footer-block a[style*="c8a24b" i] {
   color: var(--artide-gold) !important;
 }
 footer.l-f a:hover { opacity: 0.85; }
