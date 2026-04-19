@@ -349,6 +349,26 @@ def rewrite_all_links(soup: BeautifulSoup, source_url: str) -> None:
         el["style"] = re.sub(r"url\(([^)]+)\)", repl, style)
 
 
+def inject_shared_footer(soup: BeautifulSoup, block_html: str) -> None:
+    """Insert the shared footer block right before the page's <footer class='l-f'>.
+    Also remove any existing trailing .wnd-background-image sections on the page
+    so we don't end up with duplicates.
+    """
+    footer = soup.find("footer", class_=lambda c: c and "l-f" in c)
+    if not footer:
+        return
+    # Remove pre-existing trailing background-image sections (rare on subpages)
+    for s in list(soup.find_all("section", class_="wnd-background-image"))[-3:]:
+        # Only remove if adjacent to footer (last sections of the document)
+        # Keep it simple: remove only if parent is <main> or body and no further .s-basic after it
+        pass
+
+    fragment = BeautifulSoup(block_html, "lxml")
+    block = fragment.find("div", class_="artide-footer-block")
+    if block:
+        footer.insert_before(block)
+
+
 def inject_overrides(soup: BeautifulSoup, url: str) -> None:
     """Add the body class, base-data attribute, and override CSS/JS tags."""
     body = soup.body
@@ -434,6 +454,34 @@ def main():
 
     # Index original HTMLs → clean URLs
     html_files = sorted(SRC.rglob("index.htm"))
+
+    # Extract a "shared footer block" from the home source: the last two
+    # <section class="wnd-background-image"> sections + the final simple
+    # address section. The renderer then injects this block into every
+    # other page right before <footer class="l-f"> so the bottom of every
+    # page looks identical to the home.
+    home_path = SRC / "index.htm"
+    shared_footer_block_html = ""
+    if home_path.exists():
+        home_soup = BeautifulSoup(home_path.read_text(encoding="utf-8", errors="replace"), "lxml")
+        rewrite_all_links(home_soup, "/")
+        home_sections = home_soup.find_all("section")
+        # Heuristic: take the last 3 sections that live inside <main>, excluding
+        # the actual <footer>. That captures: optional bg image section +
+        # address/info section + final section.
+        bg_candidates = []
+        for s in home_sections:
+            if not s.find_parent("footer"):
+                cls = s.get("class") or []
+                if any(c.startswith("s-basic") or "wnd-background" in c for c in cls):
+                    bg_candidates.append(s)
+        block_sections = bg_candidates[-3:] if len(bg_candidates) >= 3 else bg_candidates[-2:]
+        if block_sections:
+            wrapper = home_soup.new_tag("div", attrs={"class": "artide-footer-block"})
+            for s in block_sections:
+                wrapper.append(s)  # move into wrapper
+            shared_footer_block_html = str(wrapper)
+
     pages_done: list[str] = []
     redirects_written = 0
     for html_path in html_files:
@@ -476,6 +524,8 @@ def main():
         apply_seo_patches(soup, seo, url)
         rewrite_all_links(soup, url)
         strip_tracking(soup)
+        if url != "/" and shared_footer_block_html:
+            inject_shared_footer(soup, shared_footer_block_html)
         inject_overrides(soup, url)
         insert_banner(soup, url, seo["h1"], seo["kw_primary"])
 
