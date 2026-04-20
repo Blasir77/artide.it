@@ -167,6 +167,16 @@ def rewrite_anchor_href(href: str, source_url: str) -> str:
     # Ensure trailing slash for directory-like URLs (no file extension)
     if "." not in href.rsplit("/", 1)[-1] and not href.endswith("/"):
         href += "/"
+
+    # Follow redirects at build time so navigation links never target a
+    # 301 stub — eliminates internal redirects + guarantees the hrefs
+    # are correct regardless of whether our client-side JS runs.
+    # REDIRECTS keys are stored without a trailing slash; probe both.
+    probe = href.rstrip("/") if href != "/" else href
+    if probe in REDIRECTS:
+        target = REDIRECTS[probe]
+        href = target if target.endswith("/") or target == "/" else target + "/"
+
     return abs_path(href)
 
 
