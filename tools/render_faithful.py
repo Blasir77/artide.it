@@ -59,25 +59,29 @@ def clean_heading(text: str) -> str:
 
 
 INLINE_TAGS = r"(?:strong|em|b|i|u|font|span|a|mark|sub|sup)"
-_RE_GLUED_OPEN = re.compile(
-    rf'([A-Za-zÀ-ÿ0-9\)\]!,;.?])(<{INLINE_TAGS}\b[^>]*>)(?=[A-Za-zÀ-ÿ0-9])',
-    flags=re.I,
-)
-_RE_GLUED_CLOSE = re.compile(
-    rf'(</{INLINE_TAGS}>)([A-Za-zÀ-ÿ0-9])',
+
+# Matches: word-ending char + one-or-more inline open/close tags + word-starting char.
+# Example matches in the Webnode output:
+#   "una</font><a><strong>Garanzia"      → inserts a space after "una"
+#   "vandalici</strong></a><font>del"    → inserts a space after "vandalici"
+#   "manutenzione*</font><font>(<em>vedi"→ inserts a space after "manutenzione*"
+_RE_TAG_CLUSTER = re.compile(
+    r'([A-Za-zÀ-ÿ0-9\)\]\*\+!?.,;:])((?:\s*</?' + INLINE_TAGS + r'\b[^>]*>\s*)+)(?=[A-Za-zÀ-ÿ0-9(])',
     flags=re.I,
 )
 
 
 def fix_inline_spacing(html: str) -> str:
-    """Insert a single space where HTML inline elements butt directly against
-    a preceding/following word character. Fixes the common Webnode pattern
-    `pensa<strong>Artide</strong>!` → `pensa <strong>Artide</strong> !`.
+    """Insert a single space wherever an inline-tag cluster in the HTML is
+    sandwiched between two word-character regions without any whitespace.
+    Fixes the common Webnode output pattern where consecutive inline
+    elements (`<font>`, `<a>`, `<strong>`, …) glue adjacent words.
     """
-    # word + <inline>word
-    html = _RE_GLUED_OPEN.sub(r'\1 \2', html)
-    # </inline> + word
-    html = _RE_GLUED_CLOSE.sub(r'\1 \2', html)
+    # Run twice so overlapping clusters (e.g. multiple neighbouring pairs
+    # like "word</a><b>word</b><c>word") all get a chance to insert a
+    # space in one of the matches the first pass misses.
+    html = _RE_TAG_CLUSTER.sub(r'\1 \2', html)
+    html = _RE_TAG_CLUSTER.sub(r'\1 \2', html)
     # Accent-vowel glued to "è" (e.g. "qualitàè", "Artideè", "sitoè")
     html = re.sub(r'([a-zà-ÿ])è([a-zà-ÿA-ZÀ-Ÿ])', r'\1 è \2', html)
     html = re.sub(r'([a-zà-ÿ])è(?=\s|[,.!?;:]|$)', r'\1 è', html)
