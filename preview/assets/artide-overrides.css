@@ -395,14 +395,46 @@ html, body { min-height: 100vh; }
 .artide-footer-block { position: relative; }
 .artide-footer-block .s-c { position: relative; z-index: 10; }
 
-/* Footer gold accents → #ffba1b everywhere it was gold */
-footer.l-f a,
-footer.l-f a:visited,
-footer.l-f a:hover,
-.artide-footer-block a[style*="c8a24b" i] {
+/* Footer colour swap — per client request:
+ * in the whole footer area (the two injected "footer" sections + the
+ * <footer class="l-f"> copyright strip) every instance of the official
+ * red #cc1212 becomes the gold #ffba1b. This applies to headings
+ * ("Artide srl", "Servizi", "Prodotti", …), link colour, bullet
+ * markers, and any Webnode accent token that inherits --ac-color. */
+
+/* Scope: the last two "footer" sections of each page + the <footer> strip */
+footer.l-f,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) {
+  --ac-color: var(--artide-gold) !important;
+  --ac-color-h: 40;
+  --ac-color-s: 100%;
+  --ac-color-l: 55%;
+  --ac-color-rgb: 255, 186, 27;
+}
+
+/* Direct rules for elements that still use the literal red hex inline
+ * or that inherit from the original ac-color cascade. */
+footer.l-f [style*="#cc1212" i],
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) [style*="#cc1212" i] {
   color: var(--artide-gold) !important;
 }
-footer.l-f a:hover { opacity: 0.85; }
+footer.l-f a,
+footer.l-f a:visited,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) a,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) a:visited,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) h1,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) h2,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) h3,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) h4,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) strong,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) .wsw-ac {
+  color: var(--artide-gold) !important;
+}
+footer.l-f a:hover,
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) a:hover {
+  color: var(--artide-gold) !important;
+  opacity: 0.82;
+}
 
 
 /* ── 5. Preview banner tweaks ────────────────────────────────────── */
