@@ -23,6 +23,21 @@
   /* ── 1. Menu patches ───────────────────────────────────────────── */
   function patchMenu() {
     var base = getBase();
+
+    // Direct-link map: nav items that currently point to redirect stubs
+    // are repointed to their final destinations to avoid unnecessary 301
+    // hops (SEO audit: "avoid internal redirects").
+    var REDIRECT_TARGETS = {
+      '/blog-articoli/': '/blog/',
+      '/blog-articoli-in-evidenza/': '/blog/',
+      '/azienda/': '/chi-siamo/',
+      '/assistenza/': '/contatti/',
+      '/supporto/': '/contatti/',
+      '/wiki/': '/contatti/',
+      '/wiki-totem-pagamento/': '/contatti/',
+      '/wiki-casa-dell-acqua/': '/contatti/',
+    };
+
     var LABELS_TO_REMOVE = new Set([
       'HOME',
       'SUPPORTO',
@@ -32,33 +47,52 @@
       "WIKI - CASA DELL\u2019ACQUA",
     ]);
 
-    var links = document.querySelectorAll('.l-h a');
-    links.forEach(function (a) {
+    // 1a. Repoint redirect-targeted links, rename ASSISTENZA, flag items to hide
+    document.querySelectorAll('.l-h a[href]').forEach(function (a) {
+      var href = a.getAttribute('href') || '';
       var label = (a.textContent || '').trim().toUpperCase();
 
-      // Rename ASSISTENZA → CONTATTI and repoint; also strip its submenu.
+      // Strip the base prefix to check against REDIRECT_TARGETS
+      var relative = href.indexOf(base) === 0 ? href.slice(base.length) : href;
+      if (REDIRECT_TARGETS[relative]) {
+        a.setAttribute('href', base + REDIRECT_TARGETS[relative]);
+      }
+
+      // ASSISTENZA → CONTATTI + strip submenu + no dropdown chevron
       if (label === 'ASSISTENZA') {
         a.textContent = 'CONTATTI';
         a.setAttribute('href', base + '/contatti/');
-        var li = a.closest('li');
-        if (li) {
-          li.classList.remove('wnd-with-submenu');
-          // remove the submenu UL and the chevron
-          li.querySelectorAll('ul.level-2, ul.level-3, .mm-arrow').forEach(function (el) {
-            el.remove();
-          });
+        var liA = a.closest('li');
+        if (liA) {
+          liA.classList.remove('wnd-with-submenu');
+          liA.querySelectorAll('ul.level-2, ul.level-3, .mm-arrow').forEach(function (el) { el.remove(); });
         }
         return;
       }
 
-      // Remove unwanted entries
       if (LABELS_TO_REMOVE.has(label)) {
         var item = a.closest('li, .menu-item, .nav-item, .sub-menu-item') || a;
         item.classList.add('nav-remove');
       }
     });
 
-    // After hiding, if a parent submenu ended up empty, hide it too.
+    // 1b. Within AZIENDA's submenu, remove the "CONTATTI" entry (CONTATTI
+    // is already a top-level item — per client request).
+    document.querySelectorAll('.l-h ul.level-1 > li').forEach(function (topLi) {
+      var topA = topLi.querySelector(':scope > .menu-item a, :scope > a');
+      if (!topA) return;
+      var topLabel = (topA.textContent || '').trim().toUpperCase();
+      if (topLabel === 'AZIENDA') {
+        topLi.querySelectorAll('ul a').forEach(function (subA) {
+          if ((subA.textContent || '').trim().toUpperCase() === 'CONTATTI') {
+            var subLi = subA.closest('li');
+            if (subLi) subLi.classList.add('nav-remove');
+          }
+        });
+      }
+    });
+
+    // 1c. After hiding, if a submenu ended up empty, hide the parent too.
     document.querySelectorAll('.l-h ul, .l-h .sub-menu, .l-h .submenu').forEach(function (ul) {
       var visibleChildren = 0;
       ul.querySelectorAll(':scope > li, :scope > .menu-item').forEach(function (li) {
@@ -67,7 +101,7 @@
       if (visibleChildren === 0 && ul !== document.querySelector('.l-h ul')) {
         ul.classList.add('nav-remove');
         var parentLi = ul.closest('li');
-        if (parentLi && parentLi.querySelectorAll(':scope > a').length) {
+        if (parentLi) {
           var parentText = (parentLi.querySelector('a') || {}).textContent;
           if (parentText && /wiki|supporto/i.test(parentText)) {
             parentLi.classList.add('nav-remove');
@@ -76,8 +110,7 @@
       }
     });
 
-    // Reorder top-level menu items per client request:
-    //   PRODOTTI, SERVIZI, AZIENDA, BLOG, CONTATTI
+    // 1d. Reorder top-level menu items: PRODOTTI, SERVIZI, AZIENDA, BLOG, CONTATTI
     var topLevelUl = document.querySelector('.l-h .s-hn ul.level-1');
     if (topLevelUl) {
       var ORDER = ['PRODOTTI', 'SERVIZI', 'AZIENDA', 'BLOG', 'CONTATTI'];
@@ -86,15 +119,10 @@
       topLis.forEach(function (li) {
         var a = li.querySelector(':scope > .menu-item a, :scope > a');
         if (!a) return;
-        var lbl = (a.textContent || '').trim().toUpperCase();
-        byLabel[lbl] = li;
+        byLabel[(a.textContent || '').trim().toUpperCase()] = li;
       });
-      // Remove items we want to reorder, then append in the target order.
       ORDER.forEach(function (lbl) {
-        var li = byLabel[lbl];
-        if (li) {
-          topLevelUl.appendChild(li);  // append moves to the end
-        }
+        if (byLabel[lbl]) topLevelUl.appendChild(byLabel[lbl]);
       });
     }
   }
