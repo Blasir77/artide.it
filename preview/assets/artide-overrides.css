@@ -439,7 +439,8 @@ main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2)::after {
 }
 
 /* Address/columns section: no dark bg of its own, pull up to overlap
- * the water image, raise above the image. */
+ * the water image, raise above the image. The dark fill behind it
+ * (for the area below the image) is provided by .l-w background. */
 main > .sw > .sw-c > section.s-basic:last-of-type {
   position: relative;
   z-index: 3;
@@ -459,6 +460,13 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
   position: relative;
   z-index: 4;
 }
+
+/* Eliminate the white strip that appears between the water image and
+ * the <footer.l-f> dark bar. The strip is the page wrapper's default
+ * white background showing through where the columns section extends
+ * below the water image. Filling .l-w with the same dark colour as the
+ * footer bar makes the transition seamless. */
+.l-w { background-color: #191919; }
 
 /* ── Footer copyright bar stays solid dark ─────────────────────── */
 footer.l-f {
