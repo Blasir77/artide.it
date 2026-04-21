@@ -387,24 +387,91 @@ html, body { min-height: 100vh; }
 
 
 /* ── 4. Shared footer block (injected into every page) ───────────── */
-/* No CSS tweaks on .artide-footer-block: we want it to render with the
- * same styling as Webnode's native footer sections on the home page.
- * Every subpage now has the identical block injected via JS, so the
- * visual result is uniform across the whole site.
+/* The client's target: the water image (second-to-last section of the
+ * page) and the address/columns section below should look like ONE
+ * continuous scene — the columns sit ON TOP of the dark bottom half
+ * of the water image, no visible seam between the two sections.
+ *
+ * Technique:
+ *   - Keep the water-image section (.wnd-background-image) where it is
+ *     and grow its height so the image extends further down.
+ *   - Pull the address/columns section up into it with negative
+ *     margin-top, remove its own dark background so the water shows
+ *     through, and raise it on z-index.
+ *   - Add a subtle dark gradient overlay on top of the water image
+ *     where the columns sit, so the copy stays readable.
  */
 .artide-footer-block { position: relative; }
 .artide-footer-block .s-c { position: relative; z-index: 10; }
+
+/* Target: the second-to-last section in sw-c that has a background
+ * image (the "water" deco) and the very last one (address/columns). */
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) {
+  position: relative;
+  min-height: 62vh;
+  z-index: 1;
+}
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg,
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
+  min-height: 62vh;
+}
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg img,
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Bottom dark vignette over the image so the columns underneath
+ * remain readable even when they overlap a bright region. */
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2)::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 55%;
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.35) 45%,
+    rgba(0,0,0,0.85) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Address/columns section: no dark bg of its own, pull up to overlap
+ * the water image, raise above the image. */
+main > .sw > .sw-c > section.s-basic:last-of-type {
+  position: relative;
+  z-index: 3;
+  margin-top: -38vh;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+main > .sw > .sw-c > section.s-basic:last-of-type .s-bg,
+main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Make sure the column content sits above the water image's vignette */
+main > .sw > .sw-c > section.s-basic:last-of-type .s-c,
+main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
+  position: relative;
+  z-index: 4;
+}
+
+/* ── Footer copyright bar stays solid dark ─────────────────────── */
+footer.l-f {
+  background: #0e0e10 !important;
+  position: relative;
+  z-index: 5;
+}
 
 /* Footer colour swap — per client request:
  * In the footer area (two injected footer sections + <footer class="l-f">)
  * the elements that were PREVIOUSLY RED (#cc1212 / --ac-color) must now
  * render in GOLD #ffba1b. All other elements (white address/phone text,
  * black body copy, etc.) must be left untouched.
- *
- * Webnode drives the accent (red) via the --ac-color CSS variable.
- * Overriding that variable in the footer scope swaps only the elements
- * that consume it — headings, link colour, bullet markers, the small
- * "Artide srl" brand line. Other colours cascade normally.
  */
 footer.l-f,
 main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) {
