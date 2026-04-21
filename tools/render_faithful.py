@@ -497,6 +497,18 @@ def main():
     # Instead, rebuild the deduped images:
     _rebuild_image_assets()
 
+    # Apply client-supplied image overrides from _assets/overrides/img/.
+    # Files dropped here replace same-named files inside preview/assets/img/
+    # AFTER compression, so the rebuild step cannot overwrite them.
+    overrides_img = ROOT / "_assets/overrides/img"
+    if overrides_img.is_dir():
+        dest_dir = OUT / "assets/img"
+        dest_dir.mkdir(parents=True, exist_ok=True)
+        for src_file in overrides_img.iterdir():
+            if src_file.is_file():
+                shutil.copy2(src_file, dest_dir / src_file.name)
+                print(f"  override applied: {src_file.name}")
+
     # Index original HTMLs → clean URLs
     html_files = sorted(SRC.rglob("index.htm"))
 
