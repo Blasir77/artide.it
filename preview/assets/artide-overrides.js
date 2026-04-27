@@ -289,20 +289,62 @@
 
     main.insertBefore(wrap, main.firstChild);
 
+    /* ── Viewport sizing ─────────────────────────────────────── */
+    /* Slider must always fill the visible viewport BELOW the white
+     * social bar (which stays fixed at the top). Measure that bar
+     * and feed it into the slider as a CSS custom property so CSS
+     * can use calc(100vh - var(--social-bar-h)). */
+    function fitSlider() {
+      var socialBar = document.querySelector('.l-h .s-hb');
+      var h = socialBar ? Math.round(socialBar.getBoundingClientRect().height) : 50;
+      wrap.style.setProperty('--social-bar-h', h + 'px');
+    }
+    fitSlider();
+    window.addEventListener('resize', fitSlider, { passive: true });
+    // The social bar may render slightly differently after webfonts load
+    window.addEventListener('load', fitSlider);
+
+    /* ── Transition rotation ─────────────────────────────────── */
+    /* Five distinct effects rotate so consecutive slide changes
+     * feel different. Order shuffled so the first transition is
+     * the showy "liquid wave". */
+    var TRANSITIONS = ['liquid', 'iris', 'drift', 'glitch', 'zoom'];
+    var transitionIdx = 0;
+    var TRANS_DURATION = 1600; // ms — must be >= longest CSS animation
+
     var index = 0;
     var timer = null;
+
     function goTo(i, userTriggered) {
       var n = slideEls.length;
       var target = ((i % n) + n) % n;
       if (target === index && !userTriggered) return;
+
+      var transName = TRANSITIONS[transitionIdx++ % TRANSITIONS.length];
+
       slideEls.forEach(function (el, j) {
-        el.classList.remove('is-active', 'is-leaving');
-        if (j === target) el.classList.add('is-active');
-        else if (j === index) el.classList.add('is-leaving');
+        // Clear every transition class, every state class
+        TRANSITIONS.forEach(function (t) { el.classList.remove('is-trans-' + t); });
+        el.classList.remove('is-active', 'is-leaving', 'is-entering');
+
+        if (j === target) {
+          el.classList.add('is-active', 'is-entering', 'is-trans-' + transName);
+        } else if (j === index) {
+          el.classList.add('is-leaving', 'is-trans-' + transName);
+        }
       });
+
+      // Drop the entering/leaving markers after the animation finishes
+      // (CSS sets opacity:1 on .is-active permanently so this is safe).
+      window.setTimeout(function () {
+        slideEls.forEach(function (el) {
+          el.classList.remove('is-entering', 'is-leaving');
+          TRANSITIONS.forEach(function (t) { el.classList.remove('is-trans-' + t); });
+        });
+      }, TRANS_DURATION + 50);
+
       dots.querySelectorAll('button').forEach(function (b, j) {
         b.classList.toggle('is-active', j === target);
-        // Restart dot animation
         if (j === target) {
           b.style.animation = 'none';
           void b.offsetWidth;

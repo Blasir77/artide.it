@@ -171,12 +171,17 @@ body.is-home main section.s-hm:not(.s-hm-hidden) {
   display: none !important;
 }
 
+/* Slider sized to fit the viewport BELOW the white social bar.
+ * The override JS sets --social-bar-h dynamically so the slider always
+ * adapts to actual header height (changes on mobile / when social bar
+ * wraps). */
 #artide-slider {
+  --social-bar-h: 50px;
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 580px;
-  max-height: 820px;
+  margin-top: var(--social-bar-h);
+  height: calc(100vh - var(--social-bar-h));
+  min-height: 460px;
   overflow: hidden;
   background: #000;
   isolation: isolate;
@@ -185,30 +190,124 @@ body.is-home main section.s-hm:not(.s-hm-hidden) {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(1.08);
-  filter: blur(12px) saturate(120%);
-  transition:
-    opacity 1.1s cubic-bezier(0.25,0.8,0.3,1),
-    transform 15s linear,
-    filter 1.1s ease;
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
+  will-change: transform, opacity, clip-path, filter;
 }
 #artide-slider .artide-slide.is-active {
   opacity: 1;
-  transform: scale(1);
-  filter: blur(0) saturate(115%);
   pointer-events: auto;
   z-index: 2;
 }
-#artide-slider .artide-slide.is-leaving {
-  opacity: 0;
-  transform: scale(1.1) translateX(-4%) rotate(-0.5deg);
-  filter: blur(8px) brightness(0.6);
-  transition: opacity 1.1s ease, transform 1.1s ease, filter 1.1s ease;
-  z-index: 1;
+
+/* ── Transition effects ────────────────────────────────────────── */
+/* The active slide always gets a subtle Ken Burns slow-zoom while it's
+ * displayed, regardless of which transition is used to reveal it. */
+#artide-slider .artide-slide.is-active .artide-slide-media img,
+#artide-slider .artide-slide.is-active .artide-slide-media video {
+  animation: artide-kenburns 16s ease-in-out forwards;
 }
+@keyframes artide-kenburns {
+  0%   { transform: scale(1.05) translate(-1%, -1%); }
+  100% { transform: scale(1.18) translate(2%, 2%); }
+}
+
+/* Effect 1 — LIQUID WAVE reveal: clip-path morph that mimics rising water. */
+#artide-slider .artide-slide.is-trans-liquid.is-entering {
+  animation: artide-liquid-in 1.5s cubic-bezier(.55,.06,.25,1) forwards;
+}
+@keyframes artide-liquid-in {
+  0%   { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); opacity: 0.6; }
+  35%  { clip-path: polygon(0 75%, 12% 60%, 25% 78%, 50% 55%, 75% 78%, 88% 60%, 100% 75%, 100% 100%, 0 100%); opacity: 1; }
+  70%  { clip-path: polygon(0 35%, 18% 22%, 35% 38%, 55% 18%, 80% 35%, 100% 22%, 100% 100%, 0 100%); }
+  100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1; }
+}
+#artide-slider .artide-slide.is-trans-liquid.is-leaving {
+  animation: artide-liquid-out 1.5s cubic-bezier(.4,0,.6,1) forwards;
+}
+@keyframes artide-liquid-out {
+  0%   { transform: scale(1) translateY(0); filter: blur(0); opacity: 1; }
+  100% { transform: scale(0.92) translateY(-8%); filter: blur(14px); opacity: 0; }
+}
+
+/* Effect 2 — IRIS ZOOM reveal: circular reveal from centre with depth. */
+#artide-slider .artide-slide.is-trans-iris.is-entering {
+  animation: artide-iris-in 1.4s cubic-bezier(.45,.05,.2,1) forwards;
+}
+@keyframes artide-iris-in {
+  0%   { clip-path: circle(0% at 50% 50%); transform: scale(1.35); filter: blur(24px) brightness(1.2); }
+  60%  { clip-path: circle(80% at 50% 50%); transform: scale(1.05); filter: blur(4px) brightness(1.05); }
+  100% { clip-path: circle(150% at 50% 50%); transform: scale(1); filter: blur(0) brightness(1); }
+}
+#artide-slider .artide-slide.is-trans-iris.is-leaving {
+  animation: artide-iris-out 1.4s ease-in forwards;
+}
+@keyframes artide-iris-out {
+  0%   { transform: scale(1); opacity: 1; filter: blur(0); }
+  100% { transform: scale(1.4); opacity: 0; filter: blur(18px) brightness(0.4); }
+}
+
+/* Effect 3 — DRIFT + ROTATE: incoming slide drifts in from the side
+ * with a subtle rotation while the leaving slide drifts out the
+ * opposite way. Reads as a kinetic page swipe. */
+#artide-slider .artide-slide.is-trans-drift.is-entering {
+  animation: artide-drift-in 1.6s cubic-bezier(.2,1.05,.4,1) forwards;
+}
+@keyframes artide-drift-in {
+  0%   { opacity: 0; transform: translateX(35%) scale(1.18) rotate(2.5deg); filter: blur(12px); }
+  100% { opacity: 1; transform: translateX(0)   scale(1)    rotate(0);     filter: blur(0); }
+}
+#artide-slider .artide-slide.is-trans-drift.is-leaving {
+  animation: artide-drift-out 1.6s cubic-bezier(.5,0,.6,.4) forwards;
+}
+@keyframes artide-drift-out {
+  0%   { opacity: 1; transform: translateX(0)    scale(1)    rotate(0); }
+  100% { opacity: 0; transform: translateX(-35%) scale(0.88) rotate(-2.5deg); filter: blur(8px); }
+}
+
+/* Effect 4 — GLITCH SHIFT: chromatic split + flicker. Eye-catching. */
+#artide-slider .artide-slide.is-trans-glitch.is-entering {
+  animation: artide-glitch-in 1.3s steps(1, end) forwards;
+}
+@keyframes artide-glitch-in {
+  0%   { opacity: 0; transform: translate(-3%, 1%) skewX(-2deg);
+         filter: hue-rotate(20deg) saturate(2) blur(2px); }
+  18%  { opacity: 1; transform: translate(2%, -1%) skewX(2deg);
+         filter: hue-rotate(-20deg) saturate(2) blur(1px); }
+  35%  { transform: translate(-1%, 0.5%); filter: hue-rotate(0) saturate(1.4); }
+  55%  { transform: translate(1%, 0); filter: blur(0); }
+  100% { opacity: 1; transform: none; filter: none; }
+}
+#artide-slider .artide-slide.is-trans-glitch.is-leaving {
+  animation: artide-glitch-out 1.3s steps(1, end) forwards;
+}
+@keyframes artide-glitch-out {
+  0%   { opacity: 1; }
+  20%  { opacity: 1; transform: translate(2%, -1%) skewX(1deg); filter: hue-rotate(15deg); }
+  60%  { opacity: 0.5; transform: translate(-2%, 1%); filter: blur(6px); }
+  100% { opacity: 0; transform: translate(0); }
+}
+
+/* Effect 5 — ZOOM BLUR: leaving slide flies forward, entering rushes in. */
+#artide-slider .artide-slide.is-trans-zoom.is-entering {
+  animation: artide-zoom-in 1.3s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes artide-zoom-in {
+  0%   { opacity: 0; transform: scale(0.6); filter: blur(20px); }
+  100% { opacity: 1; transform: scale(1);   filter: blur(0); }
+}
+#artide-slider .artide-slide.is-trans-zoom.is-leaving {
+  animation: artide-zoom-out 1.3s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes artide-zoom-out {
+  0%   { opacity: 1; transform: scale(1);    filter: blur(0); }
+  100% { opacity: 0; transform: scale(1.6);  filter: blur(20px); }
+}
+
+/* Tag the slide actively transitioning so its layering is correct. */
+#artide-slider .artide-slide.is-entering { z-index: 3; }
+#artide-slider .artide-slide.is-leaving  { z-index: 2; }
 #artide-slider .artide-slide-media { position: absolute; inset: 0; }
 #artide-slider .artide-slide-media img,
 #artide-slider .artide-slide-media video {
