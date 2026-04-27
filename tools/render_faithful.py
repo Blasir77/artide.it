@@ -83,28 +83,53 @@ def fix_inline_spacing(html: str) -> str:
     # space in one of the matches the first pass misses.
     html = _RE_TAG_CLUSTER.sub(r'\1 \2', html)
     html = _RE_TAG_CLUSTER.sub(r'\1 \2', html)
-    # Accent-vowel glued to "è" (e.g. "qualitàè", "Artideè", "sitoè")
-    html = re.sub(r'([a-zà-ÿ])è([a-zà-ÿA-ZÀ-Ÿ])', r'\1 è \2', html)
-    html = re.sub(r'([a-zà-ÿ])è(?=\s|[,.!?;:]|$)', r'\1 è', html)
+    # Common Italian misspellings present in the original Webnode source.
+    # Run BEFORE the vowel+è split so words like "Perchè" don't get
+    # wrongly broken into "Perch è".
+    html = _apply_known_misspellings(html)
+    # Vowel + glued "è" → split with a space. Restricted to VOWELS only so
+    # legitimate è-final words preceded by a consonant ("perché"-class) are
+    # not affected. This handles real glue cases like "qualitàè", "Artideè",
+    # "sitoè" → "qualità è", "Artide è", "sito è".
+    html = re.sub(r'([aeiouàèéìòóù])è([a-zà-ÿA-ZÀ-Ÿ])', r'\1 è \2', html)
+    html = re.sub(r'([aeiouàèéìòóù])è(?=\s|[,.!?;:]|$)', r'\1 è', html)
     return html
 
 
+# ── Italian-language misspelling corrections ─────────────────────
+# Centralised so both fix_typos (text-node level) and
+# fix_inline_spacing (HTML level) apply the same fixes.
+_KNOWN_MISSPELLINGS = [
+    # (pattern, replacement, flags)
+    (r"\bPerchè\b",        "Perché",         0),
+    (r"\bperchè\b",        "perché",         0),
+    (r"\bScegleire\b",     "Scegliere",      re.I),
+    (r"\bprofessinista\b", "professionista", re.I),
+    (r"\bprofessinisti\b", "professionisti", re.I),
+    (r"\bPropietari",      "Proprietari",    re.I),
+    (r"\bRevamping\b",     "Riqualificazione", re.I),
+    (r"\bScheider\b",      "Schneider",      re.I),
+    (r"\bParthner\b",      "Partner",        re.I),
+    # Specific phrase that combined two errors ("quanto" → "quando" only
+    # in this idiomatic phrase; we don't touch other "quanto" usages).
+    (r"\bquanto\s+è\s+possibile\s+andare\b", "quando è possibile andare", re.I),
+    # Detached uppercase accent ("QUALIT À" → "QUALITÀ"); also lowercase.
+    (r"\bQUALIT\s+À\b",    "QUALITÀ",        0),
+    (r"\bqualit\s+à\b",    "qualità",        0),
+]
+
+
+def _apply_known_misspellings(text: str) -> str:
+    for pat, repl, flags in _KNOWN_MISSPELLINGS:
+        text = re.sub(pat, repl, text, flags=flags)
+    return text
+
+
 def fix_typos(text: str) -> str:
-    # First, specific word fixes
-    specific = {
-        r"\bPropietari": "Proprietari",
-        r"\bRevamping\b": "Riqualificazione",
-        r"\bScheider\b": "Schneider",
-        r"\bParthner\b": "Partner",
-    }
-    for pat, repl in specific.items():
-        text = re.sub(pat, repl, text, flags=re.I)
-    # Generic Italian "stuck words" — whenever a word ends with an Italian
-    # accented vowel (or any letter) and is followed directly by an
-    # unspaced "è" that starts a new word, insert a space.
-    # Example: "qualitàè"→"qualità è", "prodottoè"→"prodotto è",
-    #          "Artideè"→"Artide è", "sitoè"→"sito è".
-    text = re.sub(r"([a-zà-ÿ])è(?=[\s,.;:!?]|$)", r"\1 è", text)
+    text = _apply_known_misspellings(text)
+    # Generic vowel + glued "è" → split with a space (vowels only;
+    # consonant+è words like "Perché" already corrected above).
+    text = re.sub(r"([aeiouàèéìòóù])è(?=[\s,.;:!?]|$)", r"\1 è", text)
     return text
 
 
