@@ -31,6 +31,7 @@ SRC = ROOT / "_source/extracted/www.artide.it"
 OUT = ROOT / "preview"
 sys.path.insert(0, str(ROOT / "tools"))
 from seo_map import SEO_MAP, REDIRECTS, BLOG_ARTICLE_DEFAULTS  # noqa: E402
+from seo_copy import get_copy as get_seo_copy  # noqa: E402
 
 MEDIA_MAP = json.loads((ROOT / "build/media_map.json").read_text(encoding="utf-8"))
 BASE = os.environ.get("BASE_PREFIX", "").rstrip("/")
@@ -414,6 +415,82 @@ def inject_shared_footer(soup: BeautifulSoup, block_html: str) -> None:
         sw_c.append(section.extract())
 
 
+def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
+    """Insert keyword-rich intro and outro paragraphs sourced from
+    tools/seo_copy.py. Boosts keyword density and adds an internal
+    link towards a related page.
+    """
+    copy = get_seo_copy(url.rstrip("/")) or get_seo_copy(url)
+    if not copy:
+        return
+
+    # Intro: insert as the first <p> of the first content block right
+    # after the page H1.
+    h1 = soup.find("h1")
+    if h1 is not None:
+        intro_p = soup.new_tag("p")
+        intro_p["class"] = ["artide-seo-intro"]
+        intro_p.string = copy["intro"]
+        # Insert right after the H1 (after its parent block when possible)
+        target = h1.parent.parent if h1.parent and h1.parent.parent else h1.parent or h1
+        target.insert_after(intro_p)
+
+    # Outro paragraph + internal link, appended before the artide
+    # footer block (which is the last 2 sections we inject).
+    sw_c = soup.select_one("main.l-m > .sw > .sw-c") or soup.select_one("main > .sw > .sw-c") or soup.find("main")
+    if sw_c is None:
+        return
+
+    outro_section = soup.new_tag("section")
+    outro_section["class"] = ["s", "s-basic", "cf", "wnd-w-default", "artide-seo-outro"]
+    container = soup.new_tag("div")
+    container["class"] = ["s-w", "cf"]
+    inner = soup.new_tag("div")
+    inner["class"] = ["s-c", "cf"]
+    p = soup.new_tag("p")
+    p["class"] = ["artide-seo-outro__text"]
+    # Outro text + internal anchor
+    text_node = soup.new_string(copy["outro"])
+    p.append(text_node)
+    href, anchor = copy["related"]
+    a = soup.new_tag("a", href=abs_path(href if href.endswith("/") else href + "/"))
+    a.string = anchor
+    a["class"] = ["artide-seo-outro__link"]
+    p.append(a)
+    p.append(soup.new_string("."))
+    inner.append(p)
+    container.append(inner)
+    outro_section.append(container)
+
+    # Insert just before the last 2 footer sections (decorative + address)
+    sections = sw_c.find_all("section", recursive=False)
+    insert_target = None
+    if len(sections) >= 2:
+        insert_target = sections[-2]
+    elif sections:
+        insert_target = sections[-1]
+    if insert_target is not None:
+        insert_target.insert_before(outro_section)
+    else:
+        sw_c.append(outro_section)
+
+
+def mark_external_links_nofollow(soup: BeautifulSoup) -> None:
+    """Set rel='nofollow noopener' on every external <a href>."""
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        if not href.startswith(("http://", "https://")):
+            continue
+        # Internal links that resolve to artide.it self-references stay clean
+        if "artide.it" in href or "blasir77.github.io" in href:
+            continue
+        existing = a.get("rel") or []
+        if isinstance(existing, str):
+            existing = existing.split()
+        rel = set(existing) | {"nofollow", "noopener"}
+        a["rel"] = " ".join(sorted(rel))
+
+
 def inject_overrides(soup: BeautifulSoup, url: str) -> None:
     """Add the body class, base-data attribute, and override CSS/JS tags."""
     body = soup.body
@@ -599,11 +676,26 @@ def main():
             txt = s.get_text(separator=" ", strip=True)
             if "VIENI A SCOPRICI" in txt:
                 s.decompose()
+
+        # Remove Webnode placeholder/demo paragraphs ("Il testo inizia
+        # qui…" + Lorem ipsum) found on /produzione-tessere and
+        # /erogatore-d-acqua pages.
+        DEMO_MARKERS = (
+            "Il testo inizia qui",
+            "perspiciatis unde omnis iste",
+            "Lorem ipsum",
+        )
+        for s in list(soup.find_all("section")):
+            txt = s.get_text(separator=" ", strip=True)
+            if any(m in txt for m in DEMO_MARKERS):
+                s.decompose()
         apply_seo_patches(soup, seo, url)
         rewrite_all_links(soup, url)
         strip_tracking(soup)
         if url != "/" and shared_footer_block_html:
             inject_shared_footer(soup, shared_footer_block_html)
+        inject_seo_copy(soup, url)
+        mark_external_links_nofollow(soup)
         inject_overrides(soup, url)
         insert_banner(soup, url, seo["h1"], seo["kw_primary"])
 
