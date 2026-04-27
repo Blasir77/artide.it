@@ -593,6 +593,44 @@ body.is-home main section.s-hm:not(.s-hm-hidden) {
 body:not(.is-home) main.l-m {
   padding-top: 130px;
 }
+
+/* ── SEO injected paragraphs (intro + outro) ──────────────────── */
+/* Both blocks must visually match Webnode's body copy:
+ *   - same justified alignment (rest of body uses .wnd-align-justify);
+ *   - dark text on a clearly readable background (the outro section is
+ *     dropped right before the dark footer-water area; without an
+ *     explicit white panel the text would render on the dark .l-w
+ *     wrapper and disappear). */
+.artide-seo-intro,
+.artide-seo-outro__text {
+  text-align: justify !important;
+}
+
+/* Outro section: white panel, comfortable padding, dark text */
+.artide-seo-outro {
+  background: #ffffff !important;
+  position: relative;
+  z-index: 4;
+}
+.artide-seo-outro .s-w,
+.artide-seo-outro .s-c {
+  background: transparent !important;
+}
+.artide-seo-outro__text {
+  color: #1a2233 !important;
+  padding: 1.6rem 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.artide-seo-outro__text a {
+  color: var(--ac-color, #cc1212);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.artide-seo-outro__text a:hover {
+  text-decoration: none;
+}
 @media (max-width: 56.25em) {
   /* Mobile: nav typically becomes a single bar (~70px) */
   body:not(.is-home) main.l-m { padding-top: 100px; }
