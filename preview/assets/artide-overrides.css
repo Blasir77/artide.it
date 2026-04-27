@@ -606,7 +606,12 @@ body:not(.is-home) main.l-m {
   text-align: justify !important;
 }
 
-/* Outro section: white panel, comfortable padding, dark text */
+/* Outro section: white panel, dark text, TIGHT vertical padding so it
+ * doesn't open a big visual gap between the last body section above
+ * and the footer water image below. The section keeps the same
+ * horizontal width chain (sc-w wnd-w-default wnd-s-normal wnd-h-auto)
+ * as the body content sections so left/right margins match perfectly.
+ */
 .artide-seo-outro {
   background: #ffffff !important;
   position: relative;
@@ -615,10 +620,16 @@ body:not(.is-home) main.l-m {
 .artide-seo-outro .s-w,
 .artide-seo-outro .s-c {
   background: transparent !important;
+  /* Force tight vertical padding to override Webnode's wnd-s-normal
+   * default (which adds ~5rem top/bottom). Horizontal padding from
+   * the same Webnode rules is preserved so the text aligns to the
+   * same left/right margins as the body copy above. */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 .artide-seo-outro__text {
   color: #1a2233 !important;
-  padding: 1.6rem 0;
+  padding: 1.4rem 0 1.6rem;
   margin: 0;
   font-size: 1rem;
   line-height: 1.65;

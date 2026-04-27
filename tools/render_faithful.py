@@ -467,7 +467,17 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
         return
 
     outro_section = soup.new_tag("section")
-    outro_section["class"] = ["s", "s-basic", "cf", "wnd-w-default", "artide-seo-outro"]
+    # Match the full Webnode class chain used by body content sections so
+    # horizontal margins/widths and vertical spacing are identical across
+    # the whole page (avoids the visible gap + width drift we had).
+    outro_section["class"] = [
+        "s", "s-basic", "cf",
+        "sc-w",            # color-scheme: white
+        "wnd-w-default",   # default content width (matches body sections)
+        "wnd-s-normal",    # normal section spacing (matches body sections)
+        "wnd-h-auto",      # auto height
+        "artide-seo-outro",
+    ]
     container = soup.new_tag("div")
     container["class"] = ["s-w", "cf"]
     inner = soup.new_tag("div")
