@@ -139,14 +139,30 @@
       else hd.classList.remove('is-scrolled');
     }
 
-    // Hover detection via mouse Y position — works even when the nav is
-    // fully transparent (invisible <a> elements don't capture hover).
-    var hoverZoneHeight = 140; // social bar + nav ≈ 100-140px
+    // Hover detection — any of the following keeps the menu visible:
+    //   1. mouse is in the top 140px of the viewport (zone reveal), or
+    //   2. mouse is over the .l-h header element OR any of its
+    //      descendants (including the level-2 / level-3 dropdowns,
+    //      which can extend far below the 140px zone).
+    var hoverZoneHeight = 140;
     function onMouseMove(e) {
-      if (e.clientY <= hoverZoneHeight) hd.classList.add('is-hovering');
-      else hd.classList.remove('is-hovering');
+      var inHeader = e.target && e.target.closest && e.target.closest('.l-h, .l-h *');
+      if (e.clientY <= hoverZoneHeight || inHeader) {
+        hd.classList.add('is-hovering');
+      } else {
+        hd.classList.remove('is-hovering');
+      }
     }
     document.addEventListener('mousemove', onMouseMove, { passive: true });
+
+    // Direct mouseenter/mouseleave on the header is the most reliable
+    // signal when the cursor is anywhere inside it (including dropdowns).
+    hd.addEventListener('mouseenter', function () { hd.classList.add('is-hovering'); });
+    hd.addEventListener('mouseleave', function () {
+      // Only drop is-hovering if mouse also out of the top zone
+      hd.classList.remove('is-hovering');
+    });
+
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
@@ -308,9 +324,14 @@
     /* Five distinct effects rotate so consecutive slide changes
      * feel different. Order shuffled so the first transition is
      * the showy "liquid wave". */
-    var TRANSITIONS = ['liquid', 'iris', 'drift', 'glitch', 'zoom'];
+    var TRANSITIONS = [
+      // 2D effects
+      'liquid', 'iris', 'drift', 'glitch', 'zoom',
+      // 3D effects
+      'flip-card', 'cube', 'fold', 'dive', 'tilt', 'spiral',
+    ];
     var transitionIdx = 0;
-    var TRANS_DURATION = 1600; // ms — must be >= longest CSS animation
+    var TRANS_DURATION = 1750; // ms — must be >= longest CSS animation (spiral 1.7s)
 
     var index = 0;
     var timer = null;
