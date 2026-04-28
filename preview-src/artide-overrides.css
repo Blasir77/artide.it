@@ -608,9 +608,13 @@ body:not(.is-home) main.l-m {
 
 /* Outro section: white panel, dark text, TIGHT vertical padding so it
  * doesn't open a big visual gap between the last body section above
- * and the footer water image below. The section keeps the same
- * horizontal width chain (sc-w wnd-w-default wnd-s-normal wnd-h-auto)
- * as the body content sections so left/right margins match perfectly.
+ * and the footer water image below.
+ *
+ * Key insight: Webnode's wnd-s-normal applies padding-top/bottom to
+ * .s-c (the INNER content wrapper), NOT to .s-w. So overriding .s-w
+ * has no effect — we must target .s-c. Default values are
+ * 2.5rem (mobile/tablet) and 3.125rem (desktop). Both are killed
+ * here so the outro's own paragraph padding controls the spacing.
  */
 .artide-seo-outro {
   background: #ffffff !important;
@@ -620,19 +624,44 @@ body:not(.is-home) main.l-m {
 .artide-seo-outro .s-w,
 .artide-seo-outro .s-c {
   background: transparent !important;
-  /* Force tight vertical padding to override Webnode's wnd-s-normal
-   * default (which adds ~5rem top/bottom). Horizontal padding from
-   * the same Webnode rules is preserved so the text aligns to the
-   * same left/right margins as the body copy above. */
+}
+.artide-seo-outro .s-c {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 .artide-seo-outro__text {
   color: #1a2233 !important;
-  padding: 1.4rem 0 1.6rem;
+  padding: 1.2rem 0 1.4rem;
   margin: 0;
   font-size: 1rem;
   line-height: 1.65;
+}
+
+/* Reduce the bottom padding of the body section IMMEDIATELY BEFORE
+ * the outro — they together created an oversized gap. Modern :has()
+ * is supported in Chrome/Edge/Safari/Firefox 121+ which covers our
+ * audience. */
+main > .sw > .sw-c > section.wnd-s-normal:has(+ .artide-seo-outro) .s-c {
+  padding-bottom: 1.4rem !important;
+}
+
+/* ── Uniform horizontal margins ──────────────────────────────────
+ * Webnode lets sections be wider than the default body width via
+ * wnd-w-wide (71.25rem) and wnd-w-wider (80rem). The address +
+ * 5-columns footer uses wnd-w-wide which gives it a smaller right/
+ * left external margin than the body sections (wnd-w-default,
+ * 62.5rem). User wants all sections to have the SAME external
+ * margins from the page edges → force every section's content
+ * wrapper to the body width. */
+main > .sw > .sw-c > section .s-w {
+  max-width: 62.5rem !important;
+}
+/* But the decorative "water" footer bg image must remain full-width
+ * so the photo still bleeds edge-to-edge of the viewport. */
+main > .sw > .sw-c > section.wnd-background-image .s-w,
+main > .sw > .sw-c > section.wnd-background-image .s-bg-l,
+main > .sw > .sw-c > section.wnd-background-image .s-bg {
+  max-width: 100% !important;
 }
 .artide-seo-outro__text a {
   color: var(--ac-color, #cc1212);
