@@ -569,15 +569,27 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
     s_w.append(s_c)
     outro_section.append(s_w)
 
-    # Insert just before the trailing footer block (decorative water
-    # image + address columns). The footer block is the LAST 2-3
-    # sections — find the first one that is decorative or the address.
+    # Insert just BEFORE the trailing decorative water-image section
+    # (wnd-background-image + wnd-w-wider — the full-bleed photo right
+    # above the address columns). This is the only reliable anchor for
+    # the bottom of the page on every layout. Walking from the END we
+    # find that exact section even when other sections of the page also
+    # have background images (e.g. /automazione has the hero AND a
+    # mid-page bg-image section, both with wnd-background-image; only
+    # the trailing one has wnd-w-wider).
     insert_target = None
-    for s in sections:
+    for s in reversed(sections):
         cls = s.get("class") or []
-        if "wnd-background-image" in cls or "sc-cd" in cls:
+        if "wnd-background-image" in cls and "wnd-w-wider" in cls:
             insert_target = s
             break
+    # Secondary fallback: insert before the address section (sc-cd).
+    if insert_target is None:
+        for s in reversed(sections):
+            cls = s.get("class") or []
+            if "sc-cd" in cls:
+                insert_target = s
+                break
     if insert_target is not None:
         insert_target.insert_before(outro_section)
     else:
