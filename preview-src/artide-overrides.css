@@ -606,43 +606,33 @@ body:not(.is-home) main.l-m {
   text-align: justify !important;
 }
 
-/* Outro section: white panel, dark text, TIGHT vertical padding so it
- * doesn't open a big visual gap between the last body section above
- * and the footer water image below.
- *
- * Key insight: Webnode's wnd-s-normal applies padding-top/bottom to
- * .s-c (the INNER content wrapper), NOT to .s-w. So overriding .s-w
- * has no effect — we must target .s-c. Default values are
- * 2.5rem (mobile/tablet) and 3.125rem (desktop). Both are killed
- * here so the outro's own paragraph padding controls the spacing.
- */
-.artide-seo-outro {
-  background: #ffffff !important;
-  position: relative;
-  z-index: 4;
-}
-.artide-seo-outro .s-w,
-.artide-seo-outro .s-c {
-  background: transparent !important;
-}
-.artide-seo-outro .s-c {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
+/* Outro paragraph: now appended inside the last body section, right
+ * after the existing CTA/buttons. Inherits the Webnode body styling
+ * (white bg, text colour, horizontal padding) so it flows seamlessly
+ * with the rest of the page copy. We only override alignment + add
+ * a small top margin so it sits a comfortable distance from the
+ * preceding block. */
 .artide-seo-outro__text {
-  color: #1a2233 !important;
-  padding: 1.2rem 0 1.4rem;
-  margin: 0;
+  text-align: justify !important;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.65;
 }
+.artide-seo-outro__link {
+  color: var(--ac-color, #cc1212);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.artide-seo-outro__link:hover {
+  text-decoration: none;
+}
 
-/* Reduce the bottom padding of the body section IMMEDIATELY BEFORE
- * the outro — they together created an oversized gap. Modern :has()
- * is supported in Chrome/Edge/Safari/Firefox 121+ which covers our
- * audience. */
-main > .sw > .sw-c > section.wnd-s-normal:has(+ .artide-seo-outro) .s-c {
-  padding-bottom: 1.4rem !important;
+/* Reduce the bottom padding on the last body section so the footer
+ * water image starts close to the page content (user wants minimum
+ * distance between the CTA / closing paragraph and the footer). */
+main > .sw > .sw-c > section.s-basic.wnd-s-normal:has(+ section.wnd-background-image) .s-c {
+  padding-bottom: 1.5rem !important;
 }
 
 /* (Removed the global max-width override on every section: it was

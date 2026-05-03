@@ -465,45 +465,69 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
         target = h1.parent.parent if h1.parent and h1.parent.parent else h1.parent or h1
         target.insert_after(intro_p)
 
-    # Outro paragraph + internal link, appended before the artide
-    # footer block (which is the last 2 sections we inject).
+    # ── Outro paragraph + internal link ────────────────────────
+    # Append the outro INSIDE the last body section's editor zone so it
+    # flows naturally as the closing paragraph of the page (right under
+    # the existing CTA / button), instead of living in its own section
+    # with extra Webnode spacing. This eliminates the empty band between
+    # the page CTA and the footer water image.
     sw_c = soup.select_one("main.l-m > .sw > .sw-c") or soup.select_one("main > .sw > .sw-c") or soup.find("main")
     if sw_c is None:
         return
 
-    outro_section = soup.new_tag("section")
-    # Match the full Webnode class chain used by body content sections so
-    # horizontal margins/widths and vertical spacing are identical across
-    # the whole page (avoids the visible gap + width drift we had).
-    outro_section["class"] = [
-        "s", "s-basic", "cf",
-        "sc-w",            # color-scheme: white
-        "wnd-w-default",   # default content width (matches body sections)
-        "wnd-s-normal",    # normal section spacing (matches body sections)
-        "wnd-h-auto",      # auto height
-        "artide-seo-outro",
-    ]
-    container = soup.new_tag("div")
-    container["class"] = ["s-w", "cf"]
-    inner = soup.new_tag("div")
-    inner["class"] = ["s-c", "cf"]
     p = soup.new_tag("p")
-    p["class"] = ["artide-seo-outro__text"]
-    # Outro text + internal anchor
-    text_node = soup.new_string(copy["outro"])
-    p.append(text_node)
+    p["class"] = ["artide-seo-outro__text", "wnd-align-justify"]
+    p.append(soup.new_string(copy["outro"] + " "))
     href, anchor = copy["related"]
     a = soup.new_tag("a", href=abs_path(href if href.endswith("/") else href + "/"))
     a.string = anchor
     a["class"] = ["artide-seo-outro__link"]
     p.append(a)
     p.append(soup.new_string("."))
+
+    # Find the last body content section — the one immediately BEFORE
+    # the footer block (decorative water image + address columns). Its
+    # editor zone (.ez-c, where Webnode body copy lives) gets the new
+    # paragraph appended at the end.
+    sections = sw_c.find_all("section", recursive=False)
+    body_section = None
+    for s in reversed(sections):
+        cls = s.get("class") or []
+        if "wnd-background-image" in cls or "sc-cd" in cls or "s-hm-hidden" in cls:
+            continue
+        body_section = s
+        break
+
+    if body_section is not None:
+        ez_c = body_section.select_one(".ez-c") or body_section.select_one(".s-c")
+        if ez_c is not None:
+            # Wrap in a Webnode-style block so it inherits the editor
+            # spacing (no extra outro section needed).
+            block = soup.new_tag("div")
+            block["class"] = ["b", "b-text", "cf", "artide-seo-outro-block"]
+            block_inner = soup.new_tag("div")
+            block_inner["class"] = ["b-c", "b-text-c", "b-cs", "cf"]
+            block_inner.append(p)
+            block.append(block_inner)
+            ez_c.append(block)
+            return
+
+    # Fallback for pages without a recognisable body section: keep the
+    # legacy section-based injection.
+    outro_section = soup.new_tag("section")
+    outro_section["class"] = [
+        "s", "s-basic", "cf",
+        "sc-w", "wnd-w-default", "wnd-s-normal", "wnd-h-auto",
+        "artide-seo-outro",
+    ]
+    container = soup.new_tag("div")
+    container["class"] = ["s-w", "cf"]
+    inner = soup.new_tag("div")
+    inner["class"] = ["s-c", "cf"]
     inner.append(p)
     container.append(inner)
     outro_section.append(container)
 
-    # Insert just before the last 2 footer sections (decorative + address)
-    sections = sw_c.find_all("section", recursive=False)
     insert_target = None
     if len(sections) >= 2:
         insert_target = sections[-2]
