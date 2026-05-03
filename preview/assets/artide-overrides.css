@@ -634,16 +634,39 @@ body:not(.is-home) main.l-m {
   padding: 0 !important;
 }
 
-/* Last body section: trim the bottom padding so the footer water image
- * starts close to the closing paragraph. Also kill any trailing Webnode
- * spacer block AT THE END of that section (those are sometimes 4-6rem
- * tall, producing the giant white gap the user reported). */
-main > .sw > .sw-c > section.s-basic.wnd-s-normal:has(+ section.wnd-background-image) .s-c {
-  padding-bottom: 1rem !important;
+/* Last body section before the footer water image: ZERO bottom space
+ * (per user request). Three sources of vertical space exist between
+ * the closing copy and the water image; we kill all of them.
+ *
+ *   1. .s-c default 1.25–3.75rem bottom padding from wnd-s-normal
+ *   2. trailing .b-sp Webnode spacer block(s) inside .ez-c
+ *   3. trailing .b-hr-line horizontal rule blocks
+ */
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) > .s-w > .s-c,
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .s-c.s-fs {
+  padding-bottom: 0 !important;
 }
+/* Kill every trailing decorative block at the end of that section's
+ * editor zone (spacer or hr-line). We hide as many trailing ones as
+ * exist (up to 4 levels back) so consecutive spacers all disappear. */
 main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:last-child,
-main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:nth-last-child(2) {
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:nth-last-child(2),
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:nth-last-child(3),
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:nth-last-child(4),
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-hr-line:last-child,
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-hr-line:nth-last-child(2),
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-s.b-hr-line:last-child {
   display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+/* Also kill any margin on the section itself + on the water image
+ * section's top so they touch directly. */
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image),
+main > .sw > .sw-c > section.wnd-background-image {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 @media (max-width: 56.25em) {
   /* Mobile: nav typically becomes a single bar (~70px) */
