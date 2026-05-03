@@ -476,10 +476,20 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
         return
 
     p = soup.new_tag("p")
-    # Use Webnode's center-alignment class so the closing paragraph is
-    # visually centred — matches the position of the CTA button it sits
-    # under and reads as a clean closing line, not a body-copy block.
+    # Center the closing paragraph regardless of which Webnode section
+    # theme it lands in (sc-w, sc-acd, sc-m, …). Accent-dark themes
+    # have specific typography rules that override .wnd-align-center,
+    # so we ALSO bake an inline style with !important — inline styles
+    # win over external CSS unless those use !important AND higher
+    # specificity, which Webnode rules don't.
     p["class"] = ["artide-seo-outro__text", "wnd-align-center"]
+    p["style"] = (
+        "text-align:center !important;"
+        "max-width:56rem;"
+        "margin-left:auto !important;"
+        "margin-right:auto !important;"
+        "display:block !important;"
+    )
     p.append(soup.new_string(copy["outro"] + " "))
     href, anchor = copy["related"]
     a = soup.new_tag("a", href=abs_path(href if href.endswith("/") else href + "/"))
@@ -488,23 +498,21 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
     p.append(a)
     p.append(soup.new_string("."))
 
-    # Find the last body content section — it MUST be a regular white-themed
-    # body section (sc-w + wnd-w-default). Skipping sc-acd / sc-cd /
-    # wnd-w-wider sections is critical: those are accent / dark / hero
-    # banner sections whose typography rules override our outro alignment
-    # (the user reported /automazione, /progettazione, /sviluppo-software,
-    # /telecontrollo and /corsi outros not being centred — they were all
-    # landing inside sc-acd claim banners).
+    # Find the last content section that has a real .ez-c editor zone
+    # (i.e. not the decorative bg-image footer or the dark address
+    # block). The user wants the outro placed where it was in the
+    # mid-page red claim banner, centred. We pick the LAST non-footer
+    # content section regardless of theme (sc-w / sc-acd / sc-m all OK)
+    # and force centering via inline style (see below) so accent themes
+    # cannot override it.
     sections = sw_c.find_all("section", recursive=False)
     body_section = None
     for s in reversed(sections):
         cls = s.get("class") or []
-        if "s-hm-hidden" in cls:
+        if "wnd-background-image" in cls or "sc-cd" in cls or "s-hm-hidden" in cls:
             continue
-        # Strict: only inject into a normal white body section
-        if "sc-w" in cls and "wnd-w-default" in cls and "s-basic" in cls:
-            body_section = s
-            break
+        body_section = s
+        break
 
     if body_section is not None:
         ez_c = body_section.select_one(".ez-c") or body_section.select_one(".s-c")
