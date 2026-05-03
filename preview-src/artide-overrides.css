@@ -645,24 +645,10 @@ main > .sw > .sw-c > section.wnd-s-normal:has(+ .artide-seo-outro) .s-c {
   padding-bottom: 1.4rem !important;
 }
 
-/* ── Uniform horizontal margins ──────────────────────────────────
- * Webnode lets sections be wider than the default body width via
- * wnd-w-wide (71.25rem) and wnd-w-wider (80rem). The address +
- * 5-columns footer uses wnd-w-wide which gives it a smaller right/
- * left external margin than the body sections (wnd-w-default,
- * 62.5rem). User wants all sections to have the SAME external
- * margins from the page edges → force every section's content
- * wrapper to the body width. */
-main > .sw > .sw-c > section .s-w {
-  max-width: 62.5rem !important;
-}
-/* But the decorative "water" footer bg image must remain full-width
- * so the photo still bleeds edge-to-edge of the viewport. */
-main > .sw > .sw-c > section.wnd-background-image .s-w,
-main > .sw > .sw-c > section.wnd-background-image .s-bg-l,
-main > .sw > .sw-c > section.wnd-background-image .s-bg {
-  max-width: 100% !important;
-}
+/* (Removed the global max-width override on every section: it was
+ * narrowing wider sections too aggressively and the parent flex/grid
+ * Webnode rules ended up showing content left-aligned instead of
+ * centred. Sections keep their original Webnode widths.) */
 .artide-seo-outro__text a {
   color: var(--ac-color, #cc1212);
   text-decoration: underline;

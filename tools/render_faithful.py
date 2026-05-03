@@ -107,7 +107,12 @@ _KNOWN_MISSPELLINGS = [
     (r"\bprofessinista\b", "professionista", re.I),
     (r"\bprofessinisti\b", "professionisti", re.I),
     (r"\bPropietari",      "Proprietari",    re.I),
-    (r"\bRevamping\b",     "Riqualificazione", re.I),
+    (r"\bRevamping\b",     "RIQUALIFICAZIONE", re.I),
+    # Force all capitalised "Riqualificazione" to full uppercase so it
+    # matches the visual weight of other top-level menu / heading
+    # labels (MANUTENZIONE, SANIFICAZIONE, …). Lowercase
+    # "riqualificazione" inside running prose is left untouched.
+    (r"\bRiqualificazione\b", "RIQUALIFICAZIONE", 0),
     (r"\bScheider\b",      "Schneider",      re.I),
     (r"\bParthner\b",      "Partner",        re.I),
     # Specific phrase that combined two errors ("quanto" → "quando" only
