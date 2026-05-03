@@ -76,6 +76,25 @@
       }
     });
 
+    // 1a-bis. AZIENDA top-level: must NOT navigate on click — it's only
+    // a submenu opener. Clicking the submenu items goes to their pages
+    // (CHI SIAMO → /chi-siamo/ etc.) but the AZIENDA label itself does
+    // nothing on click. We target it AFTER the redirect-repoint step
+    // so we cleanly remove its href instead of leaving the
+    // /chi-siamo/ pointer my redirect rewriter installed.
+    document.querySelectorAll('.l-h ul.level-1 > li > .menu-item a, .l-h ul.level-1 > li > a').forEach(function (a) {
+      var label = (a.textContent || '').trim().toUpperCase();
+      if (label === 'AZIENDA') {
+        a.setAttribute('href', '#');
+        a.setAttribute('aria-haspopup', 'true');
+        a.style.cursor = 'default';
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        });
+      }
+    });
+
     // 1b. Within AZIENDA's submenu, remove the "CONTATTI" entry (CONTATTI
     // is already a top-level item — per client request).
     document.querySelectorAll('.l-h ul.level-1 > li').forEach(function (topLi) {

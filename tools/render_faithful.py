@@ -476,7 +476,10 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
         return
 
     p = soup.new_tag("p")
-    p["class"] = ["artide-seo-outro__text", "wnd-align-justify"]
+    # Use Webnode's center-alignment class so the closing paragraph is
+    # visually centred — matches the position of the CTA button it sits
+    # under and reads as a clean closing line, not a body-copy block.
+    p["class"] = ["artide-seo-outro__text", "wnd-align-center"]
     p.append(soup.new_string(copy["outro"] + " "))
     href, anchor = copy["related"]
     a = soup.new_tag("a", href=abs_path(href if href.endswith("/") else href + "/"))

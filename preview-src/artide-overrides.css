@@ -606,10 +606,19 @@ body:not(.is-home) main.l-m {
  * editor zone (.ez-c) → they inherit the Webnode body styling
  * (font, size, white background, horizontal padding) automatically.
  * Only minimal overrides are applied here. */
-.artide-seo-intro,
-.artide-seo-outro__text {
+/* Intro stays justified (it sits inline with body copy and reads as
+ * a body paragraph). Outro is CENTRED to mirror the CTA above it
+ * and read as a clean closing line. */
+.artide-seo-intro {
   text-align: justify !important;
   margin: 0 !important;
+}
+.artide-seo-outro__text {
+  text-align: center !important;
+  margin: 0 !important;
+  max-width: 56rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .artide-seo-outro__text a,
 .artide-seo-outro__link {
