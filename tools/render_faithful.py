@@ -488,18 +488,23 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
     p.append(a)
     p.append(soup.new_string("."))
 
-    # Find the last body content section — the one immediately BEFORE
-    # the footer block (decorative water image + address columns). Its
-    # editor zone (.ez-c, where Webnode body copy lives) gets the new
-    # paragraph appended at the end.
+    # Find the last body content section — it MUST be a regular white-themed
+    # body section (sc-w + wnd-w-default). Skipping sc-acd / sc-cd /
+    # wnd-w-wider sections is critical: those are accent / dark / hero
+    # banner sections whose typography rules override our outro alignment
+    # (the user reported /automazione, /progettazione, /sviluppo-software,
+    # /telecontrollo and /corsi outros not being centred — they were all
+    # landing inside sc-acd claim banners).
     sections = sw_c.find_all("section", recursive=False)
     body_section = None
     for s in reversed(sections):
         cls = s.get("class") or []
-        if "wnd-background-image" in cls or "sc-cd" in cls or "s-hm-hidden" in cls:
+        if "s-hm-hidden" in cls:
             continue
-        body_section = s
-        break
+        # Strict: only inject into a normal white body section
+        if "sc-w" in cls and "wnd-w-default" in cls and "s-basic" in cls:
+            body_section = s
+            break
 
     if body_section is not None:
         ez_c = body_section.select_one(".ez-c") or body_section.select_one(".s-c")
@@ -531,27 +536,48 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
                 ez_c.append(block)
             return
 
-    # Fallback for pages without a recognisable body section: keep the
-    # legacy section-based injection.
+    # Fallback for pages without a sc-w wnd-w-default body section
+    # (e.g. /automazione, /progettazione, /sviluppo-software,
+    # /telecontrollo, /corsi which are made entirely of sc-acd claim
+    # banners and bg-image sections). Build a clean white panel right
+    # before the footer water-image. The outro <p> is wrapped in a
+    # full Webnode b-text block chain so its CSS context is identical
+    # to a normal body paragraph (centre-aligned, max-width, etc.).
     outro_section = soup.new_tag("section")
     outro_section["class"] = [
         "s", "s-basic", "cf",
         "sc-w", "wnd-w-default", "wnd-s-normal", "wnd-h-auto",
         "artide-seo-outro",
     ]
-    container = soup.new_tag("div")
-    container["class"] = ["s-w", "cf"]
-    inner = soup.new_tag("div")
-    inner["class"] = ["s-c", "cf"]
-    inner.append(p)
-    container.append(inner)
-    outro_section.append(container)
+    s_w = soup.new_tag("div")
+    s_w["class"] = ["s-w", "cf"]
+    s_c = soup.new_tag("div")
+    s_c["class"] = ["s-c", "cf"]
+    ez = soup.new_tag("div")
+    ez["class"] = ["ez", "cf", "wnd-no-cols"]
+    ez_c = soup.new_tag("div")
+    ez_c["class"] = ["ez-c"]
+    block = soup.new_tag("div")
+    block["class"] = ["b", "b-text", "cf", "artide-seo-outro-block"]
+    block_inner = soup.new_tag("div")
+    block_inner["class"] = ["b-c", "b-text-c", "b-cs", "cf"]
+    block_inner.append(p)
+    block.append(block_inner)
+    ez_c.append(block)
+    ez.append(ez_c)
+    s_c.append(ez)
+    s_w.append(s_c)
+    outro_section.append(s_w)
 
+    # Insert just before the trailing footer block (decorative water
+    # image + address columns). The footer block is the LAST 2-3
+    # sections — find the first one that is decorative or the address.
     insert_target = None
-    if len(sections) >= 2:
-        insert_target = sections[-2]
-    elif sections:
-        insert_target = sections[-1]
+    for s in sections:
+        cls = s.get("class") or []
+        if "wnd-background-image" in cls or "sc-cd" in cls:
+            insert_target = s
+            break
     if insert_target is not None:
         insert_target.insert_before(outro_section)
     else:
