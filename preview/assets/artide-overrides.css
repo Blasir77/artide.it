@@ -601,51 +601,49 @@ body:not(.is-home) main.l-m {
  *     dropped right before the dark footer-water area; without an
  *     explicit white panel the text would render on the dark .l-w
  *     wrapper and disappear). */
+/* SEO intro + outro paragraphs (merged single ruleset).
+ * Both blocks are appended inline inside the last body section's
+ * editor zone (.ez-c) → they inherit the Webnode body styling
+ * (font, size, white background, horizontal padding) automatically.
+ * Only minimal overrides are applied here. */
 .artide-seo-intro,
 .artide-seo-outro__text {
   text-align: justify !important;
+  margin: 0 !important;
 }
-
-/* Outro paragraph: now appended inside the last body section, right
- * after the existing CTA/buttons. Inherits the Webnode body styling
- * (white bg, text colour, horizontal padding) so it flows seamlessly
- * with the rest of the page copy. We only override alignment + add
- * a small top margin so it sits a comfortable distance from the
- * preceding block. */
-.artide-seo-outro__text {
-  text-align: justify !important;
-  margin-top: 1.2rem;
-  margin-bottom: 0;
-  font-size: 1rem;
-  line-height: 1.65;
-}
+.artide-seo-outro__text a,
 .artide-seo-outro__link {
   color: var(--ac-color, #cc1212);
   text-decoration: underline;
   font-weight: 600;
 }
+.artide-seo-outro__text a:hover,
 .artide-seo-outro__link:hover {
   text-decoration: none;
 }
 
-/* Reduce the bottom padding on the last body section so the footer
- * water image starts close to the page content (user wants minimum
- * distance between the CTA / closing paragraph and the footer). */
-main > .sw > .sw-c > section.s-basic.wnd-s-normal:has(+ section.wnd-background-image) .s-c {
-  padding-bottom: 1.5rem !important;
+/* Compact wrapper block: minimal margin so it sits TIGHT against the
+ * CTA above. */
+.artide-seo-outro-block {
+  margin-top: 0.6rem !important;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+.artide-seo-outro-block .b-c {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* (Removed the global max-width override on every section: it was
- * narrowing wider sections too aggressively and the parent flex/grid
- * Webnode rules ended up showing content left-aligned instead of
- * centred. Sections keep their original Webnode widths.) */
-.artide-seo-outro__text a {
-  color: var(--ac-color, #cc1212);
-  text-decoration: underline;
-  font-weight: 600;
+/* Last body section: trim the bottom padding so the footer water image
+ * starts close to the closing paragraph. Also kill any trailing Webnode
+ * spacer block AT THE END of that section (those are sometimes 4-6rem
+ * tall, producing the giant white gap the user reported). */
+main > .sw > .sw-c > section.s-basic.wnd-s-normal:has(+ section.wnd-background-image) .s-c {
+  padding-bottom: 1rem !important;
 }
-.artide-seo-outro__text a:hover {
-  text-decoration: none;
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:last-child,
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .ez-c > .b-sp:nth-last-child(2) {
+  display: none !important;
 }
 @media (max-width: 56.25em) {
   /* Mobile: nav typically becomes a single bar (~70px) */

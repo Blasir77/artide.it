@@ -509,7 +509,23 @@ def inject_seo_copy(soup: BeautifulSoup, url: str) -> None:
             block_inner["class"] = ["b-c", "b-text-c", "b-cs", "cf"]
             block_inner.append(p)
             block.append(block_inner)
-            ez_c.append(block)
+            # Insert IMMEDIATELY AFTER the last meaningful block (skipping
+            # any trailing Webnode spacer blocks .b-sp). Without this, the
+            # outro lands at the very end past the trailing spacer →
+            # huge gap between the CTA above and the outro below.
+            from bs4.element import Tag as _Tag
+            last_meaningful = None
+            for child in reversed(list(ez_c.children)):
+                if isinstance(child, _Tag):
+                    cls = child.get("class") or []
+                    if "b-sp" in cls or "b-sp-placeholder" in cls:
+                        continue
+                    last_meaningful = child
+                    break
+            if last_meaningful is not None:
+                last_meaningful.insert_after(block)
+            else:
+                ez_c.append(block)
             return
 
     # Fallback for pages without a recognisable body section: keep the
