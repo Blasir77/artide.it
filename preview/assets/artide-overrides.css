@@ -690,16 +690,39 @@ main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .s-c {
   padding-bottom: 3.5rem !important;
   min-height: 22rem !important;
 }
-/* Reset stray margins on the inner blocks so vertical centring is
- * actually visible — Webnode's .b-text / .b-sp / heading wrappers
- * sometimes carry several rems of margin-top/bottom. */
+/* Tighten the gap between the claim heading and our outro paragraph
+ * inside red banners. Webnode's default .b-text wrapper carries a
+ * padding-bottom of ~0.875rem on its <p>/<h*> children, plus a
+ * default block margin between siblings — together that produced a
+ * visibly too-wide gap on /automazione, /sviluppo-software,
+ * /telecontrollo, /progettazione (the user reported the heading sat
+ * "too far" from the outro on those four pages, while /corsi looked
+ * right because /corsi uses .s-hc-c instead of .b-text and has a
+ * smaller native bottom margin).
+ *
+ * Reset every margin/padding on the heading + outro blocks and on
+ * their inner h1/h2/h3/p so the only vertical separation between
+ * heading and outro comes from a single explicit 0.5rem gap. */
 main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) .ez-c > .b-text,
 main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .ez-c > .b-text {
   margin: 0 !important;
+  padding: 0 !important;
 }
+main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) .ez-c > .b-text > .b-c,
+main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .ez-c > .b-text > .b-c {
+  padding: 0 !important;
+}
+main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) .ez-c > .b-text :is(h1,h2,h3,h4,p,span),
+main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .ez-c > .b-text :is(h1,h2,h3,h4,p,span) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+/* Single, small gap between heading block and outro block */
 main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) .ez-c > .b-text + .b-text,
 main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .ez-c > .b-text + .b-text {
-  margin-top: 1.5rem !important;
+  margin-top: 0.5rem !important;
 }
 .artide-seo-outro__text a,
 .artide-seo-outro__link {
