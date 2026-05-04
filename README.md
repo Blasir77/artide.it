@@ -7,7 +7,7 @@ Questo repository contiene tutto il materiale per ricostruire **www.artide.it** 
 Il ramo `main` contiene una **preview statica** del nuovo sito in `preview/`. Per vederla:
 
 1. Abilita GitHub Pages: _Settings → Pages → Source: `main` branch, folder `/preview`_
-2. Apri `https://blasir77.github.io/cloudcode---skill-wordpress-pro---artide.it/`
+2. Apri `https://blasir77.github.io/artide.it/`
 3. Naviga le pagine come un vero sito
 
 ## Struttura del repository
