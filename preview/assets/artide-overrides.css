@@ -1019,21 +1019,33 @@ body.has-hero-fixed main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
 }
 
 /* ── 4.4 has-hero-fade ───────────────────────────────────────────
- * Test approach (alternative to has-hero-fixed/has-hero-bg). Instead
- * of pinning or duplicating the hero, fade each Webnode bg-image
- * section to transparent at its bottom edge using a CSS mask. The
- * white body shows through the masked-out portion, producing a soft
- * "image dissolves into white" transition between bg-image sections
- * and into the footer columns block below.
+ * Test approach (alternative to has-hero-fixed/has-hero-bg). Stack a
+ * white linear-gradient on top of each Webnode bg-image section so
+ * the photo blends into white toward its bottom edge. The gradient
+ * is painted by a `::after` pseudo-element absolutely positioned
+ * inside `.s-bg-l` (which Webnode already renders with
+ * `position: absolute`, so it forms a containing block for its
+ * descendants). The top 60% of the section keeps the photo
+ * untouched; the bottom 40% fades into solid white, producing a
+ * soft "image dissolves into white" transition into whatever sits
+ * below.
  *
- * Applied to ALL `.wnd-background-image .s-bg-l` on the page (not a
- * positional selector), so it works regardless of how many bg-image
- * sections the page has and where the hero sits in the section
- * order. Currently scoped via body class `has-hero-fade`, present
- * only on /sviluppo-software for the test. */
-body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image .s-bg-l {
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
-          mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+ * Why an overlay and not `mask-image`: a mask makes pixels
+ * transparent, revealing whatever is behind `.s-bg-l` (which on
+ * Webnode pages may not be white — there can be a dark `.s-bg`
+ * wrapper, an `overlay-black` layer, or the section's own bg). An
+ * overlay paints actual white pixels on top, so the visual is
+ * identical regardless of what sits behind.
+ *
+ * Currently scoped via body class `has-hero-fade`, present only on
+ * /sviluppo-software for the test. */
+body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image .s-bg-l::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, #ffffff 100%);
+  pointer-events: none;
+  z-index: 5;
 }
 
 /* ── Force unified icon colour across browsers ───────────────────
