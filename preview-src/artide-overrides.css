@@ -990,10 +990,21 @@ body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-typ
   position: fixed !important;
   inset: 0 !important;
   z-index: -1 !important;
+  background-size: cover !important;
+  background-position: center bottom !important;
+  background-repeat: no-repeat !important;
+  /* background-image is set per-page via inline <style> next to the
+   * artide-hero-bg block — keeps URL extraction in one place. */
 }
 
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l picture img {
-  display: block !important;
+/* Hide the original <picture> on the fixed .s-bg-l: Webnode renders the
+ * hero image either via the picture/img (with parallax JS) or via a
+ * background-image set by JS. Both interact badly with our fixed wrapper.
+ * We bypass entirely by using the same hero URL as a CSS background
+ * applied directly to the .s-bg-l. The <picture> below would otherwise
+ * stack on top of our background and re-create the parallax bug. */
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l picture {
+  display: none !important;
 }
 
 /* Wave + columns transparent so the fixed bg shows through */
