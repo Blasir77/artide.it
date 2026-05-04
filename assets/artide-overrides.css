@@ -620,6 +620,42 @@ body:not(.is-home) main.l-m {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+/* ── Maximum-specificity centring for the outro block ──────────────
+ * On accent-dark sections (sc-acd, used by /sviluppo-software,
+ * /telecontrollo, /automazione, /progettazione, /corsi) Webnode's
+ * specific selectors were keeping the outro paragraph left-aligned
+ * even with text-align:center !important — too many cascade rules
+ * with equal weight. Force-centre everything by:
+ *   1. Flexing the wrapper block + b-c so its single <p> child
+ *      lands at horizontal centre of the available width.
+ *   2. Re-asserting text-align:center on every level.
+ *   3. Capping max-width at 50rem so the centring is visually
+ *      obvious even when the surrounding section is .wnd-w-wider.
+ */
+.artide-seo-outro-block,
+.artide-seo-outro-block .b-c,
+.artide-seo-outro-block .b-text-c,
+.artide-seo-outro-block .b-cs {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.artide-seo-outro-block p,
+.artide-seo-outro-block p.artide-seo-outro__text,
+section .artide-seo-outro-block p {
+  text-align: center !important;
+  max-width: 50rem !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  display: block !important;
+  float: none !important;
+  position: static !important;
+}
 .artide-seo-outro__text a,
 .artide-seo-outro__link {
   color: var(--ac-color, #cc1212);
