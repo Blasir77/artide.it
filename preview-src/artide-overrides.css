@@ -633,14 +633,16 @@ body:not(.is-home) main.l-m {
  *   3. Capping max-width at 50rem so the centring is visually
  *      obvious even when the surrounding section is .wnd-w-wider.
  */
+/* Outro wrapper blocks: NO display:flex here — that was causing the
+ * heading text and the outro paragraph to render as a single
+ * vertical character column when combined with align-items: center
+ * on .s-c (each flex child shrunk to content width, then text
+ * wrapped letter by letter). Plain block layout + text-align: center
+ * keeps wrapping natural and centres the lines. */
 .artide-seo-outro-block,
 .artide-seo-outro-block .b-c,
 .artide-seo-outro-block .b-text-c,
 .artide-seo-outro-block .b-cs {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   text-align: center !important;
   width: 100% !important;
   max-width: 100% !important;
@@ -658,20 +660,18 @@ section .artide-seo-outro-block p {
 }
 
 /* ── Uniform vertical padding inside red banner sections ───────────
- * The /corsi page uses Webnode's "wnd-p-cc" modifier on the section,
- * which translates to `.s-c { justify-content: center; align-items:
- * center }` — the heading + outro float vertically centred and
- * top/bottom padding is symmetric. The other red-banner pages
- * (/automazione, /sviluppo-software, /telecontrollo, /progettazione)
- * lack wnd-p-cc, so their `.s-c.s-fs` flex container defaults to
- * justify-content: flex-start → content sticks to the top, leaving
- * a big asymmetric gap above the heading.
+ * /corsi works because Webnode set "wnd-p-cc" on its section, which
+ * triggers `.s-c { justify-content: center; align-items: center }`.
+ * The other red banner pages (/automazione, /sviluppo-software,
+ * /telecontrollo, /progettazione) don't have wnd-p-cc, so their
+ * .s-c.s-fs flex column defaults to flex-start → top-aligned content.
  *
- * We mirror /corsi's behaviour for every sc-acd / s-hc-claim section
- * that contains our outro: hide the inner Webnode .b-sp spacers,
- * promote .s-c to a vertically-centring flex column, and force a
- * uniform 3.5rem top + bottom padding plus a generous min-height
- * so the centring effect is visible.
+ * Fix: emulate wnd-p-cc but WITHOUT align-items:center — that one
+ * shrinks every flex child to content width and breaks layouts where
+ * children rely on full width (heading / outro). We keep
+ * align-items: stretch (the default) so children fill the row, and
+ * use justify-content: center for vertical centring only. Horizontal
+ * centring of TEXT is handled per-child via text-align.
  */
 main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) .b-sp,
 main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .b-sp {
@@ -684,7 +684,8 @@ main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .s-c {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
-  align-items: center !important;
+  /* align-items intentionally left at default (stretch) — children
+   * keep full width so headings and paragraphs wrap normally. */
   padding-top: 3.5rem !important;
   padding-bottom: 3.5rem !important;
   min-height: 22rem !important;
