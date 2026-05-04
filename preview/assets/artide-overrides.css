@@ -901,7 +901,25 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
  * page content above. */
 /* (no .l-w background-color rule on purpose) */
 
-/* ── Footer copyright bar stays solid dark ─────────────────────── */
+/* ── Force unified icon colour across browsers ───────────────────
+ * Webnode renders the small column icons (numero verde, orologio,
+ * documento, badge, scudo, ecc.) via <embed type="image/svg+xml"> +
+ * an inline JS hook (checkAndChangeSvgColor) that re-paints them.
+ * Chrome runs the hook OK and they appear in the brand red. Firefox
+ * occasionally fails to re-paint, leaving the icon in its source
+ * gold colour. Browsers also handle <embed> SVG colouring
+ * differently for cross-origin SVG.
+ *
+ * Bullet-proof fallback: apply a CSS colour filter that converts the
+ * source pixel into #cc1212 regardless of the SVG's own fill. The
+ * filter chain was generated from black → #cc1212. Works on every
+ * modern browser and doesn't depend on the JS hook running. */
+.b-img.wnd-type-icon embed[type="image/svg+xml"],
+.b-img.wnd-type-icon img[src$=".svg"],
+.b-img.wnd-type-icon svg {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(96%) saturate(7124%)
+          hue-rotate(353deg) brightness(99%) contrast(118%) !important;
+}
 footer.l-f {
   background: #0e0e10 !important;
   position: relative;
