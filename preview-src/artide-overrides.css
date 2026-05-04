@@ -1018,6 +1018,24 @@ body.has-hero-fixed main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
   background-color: transparent !important;
 }
 
+/* ── 4.4 has-hero-fade ───────────────────────────────────────────
+ * Test approach (alternative to has-hero-fixed/has-hero-bg). Instead
+ * of pinning or duplicating the hero, fade each Webnode bg-image
+ * section to transparent at its bottom edge using a CSS mask. The
+ * white body shows through the masked-out portion, producing a soft
+ * "image dissolves into white" transition between bg-image sections
+ * and into the footer columns block below.
+ *
+ * Applied to ALL `.wnd-background-image .s-bg-l` on the page (not a
+ * positional selector), so it works regardless of how many bg-image
+ * sections the page has and where the hero sits in the section
+ * order. Currently scoped via body class `has-hero-fade`, present
+ * only on /sviluppo-software for the test. */
+body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image .s-bg-l {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+          mask-image: linear-gradient(to bottom, black 0%, black 60%, transparent 100%);
+}
+
 /* ── Force unified icon colour across browsers ───────────────────
  * Webnode renders the small column icons (numero verde, orologio,
  * documento, badge, scudo, ecc.) via <embed type="image/svg+xml"> +
