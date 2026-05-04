@@ -116,6 +116,38 @@ def fix_inline_spacing(html: str) -> str:
         if new == html:
             break
         html = new
+
+    # 3. Collapse Webnode "drop-cap" whitespace: <strong>X</strong>  rest
+    #    is meant to render as a single word "Xrest" with a bold first
+    #    letter. After step 2 the whitespace ended up between the closing
+    #    </strong> and the lowercase continuation, producing "X rest".
+    #    Remove the gap when:
+    #      • the strong contains exactly ONE uppercase letter (drop cap)
+    #      • followed by 1+ whitespace chars
+    #      • then a lowercase letter (the rest of the same word)
+    html = re.sub(
+        r'(<strong[^>]*>[A-ZÀ-Ÿ]</strong>)\s+([a-zà-ÿ])',
+        r'\1\2',
+        html,
+    )
+
+    # 4. Merge "split-accent" patterns: Webnode authors sometimes split
+    #    accented words across two strong tags ("<strong>QUALIT</strong>
+    #    <strong>À</strong>"). Browser then renders the second strong
+    #    with default styling — different font and a visible space. Pull
+    #    the trailing accented letter back into the previous strong.
+    html = re.sub(
+        r'(<strong[^>]*>[^<]*?)</strong>\s*<strong[^>]*>([àèéìòóùÀÈÉÌÒÓÙ])</strong>',
+        r'\1\2</strong>',
+        html,
+    )
+
+    # 5. Bracket + link gap: the original copy used "[<a>...</a>]" without
+    #    a space after "[". The user wants a space between the bracket
+    #    and the link text — but the space MUST sit OUTSIDE the <a> so
+    #    it isn't underlined.
+    html = re.sub(r'\[\s*<a\b', '[ <a', html)
+    html = re.sub(r'(</a>)\s*\]', r'\1 ]', html)
     # Common Italian misspellings present in the original Webnode source.
     # Run BEFORE the vowel+è split so words like "Perchè" don't get
     # wrongly broken into "Perch è".
