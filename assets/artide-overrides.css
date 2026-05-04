@@ -4,29 +4,41 @@
  * ===================================================================*/
 
 :root {
-  /* Override the Webnode accent colour variable used across the whole design */
-  --ac-color: #cc1212;
+  /* Override the Webnode accent colour variable used across the whole design.
+   * #a01010 is the unified red — matches the claim banner already used by
+   * Webnode on the service pages. We force every other red surface
+   * (header on scroll, slider CTA, headings inside the footer columns,
+   * accent links) to the same hex so the brand reads as one tone. */
+  --ac-color: #a01010;
   --ac-color-h: 0;
   --ac-color-s: 82%;
-  --ac-color-l: 43%;
-  --ac-color-rgb: 204, 18, 18;
+  --ac-color-l: 35%;
+  --ac-color-rgb: 160, 16, 16;
 
   /* Our custom tokens */
-  --artide-red: #cc1212;
+  --artide-red: #a01010;
   --artide-red-old: #f25151;
+  --artide-red-prev: #cc1212;
   --artide-gold: #ffba1b;
   --artide-gold-old: #c8a24b;
 }
 
 /* ── 1. Legacy colour swaps ──────────────────────────────────────── */
 /* Inline-style or attribute occurrences we cannot reach via variables. */
-[style*="#f25151" i] { color: var(--artide-red) !important; }
+[style*="#f25151" i],
+[style*="#cc1212" i] { color: var(--artide-red) !important; }
 [style*="background-color:#f25151" i],
 [style*="background-color: #f25151" i],
 [style*="background:#f25151" i],
-[style*="background: #f25151" i] { background-color: var(--artide-red) !important; }
+[style*="background: #f25151" i],
+[style*="background-color:#cc1212" i],
+[style*="background-color: #cc1212" i],
+[style*="background:#cc1212" i],
+[style*="background: #cc1212" i] { background-color: var(--artide-red) !important; }
 [style*="border-color:#f25151" i],
-[style*="border-color: #f25151" i] { border-color: var(--artide-red) !important; }
+[style*="border-color: #f25151" i],
+[style*="border-color:#cc1212" i],
+[style*="border-color: #cc1212" i] { border-color: var(--artide-red) !important; }
 
 [style*="#c8a24b" i] { color: var(--artide-gold) !important; }
 [style*="background-color:#c8a24b" i],
