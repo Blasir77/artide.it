@@ -920,9 +920,15 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
 body.has-hero-bg {
   background-color: #0d0d10;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
-  background-attachment: scroll;
+  /* fixed = anchor to viewport; with `scroll` on a tall document
+   * `cover` would stretch the image to the full document height and
+   * push most of it off-screen. iOS Safari has known quirks with
+   * fixed bg + cover that demote it to scroll-like behaviour, but
+   * the visual fallback there is still acceptable (image visible at
+   * a single position rather than throughout). */
+  background-attachment: fixed;
 }
 
 /* Wave section: nuke its own dark fill so the body bg shows
