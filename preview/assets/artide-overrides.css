@@ -901,15 +901,16 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
  * page content above. */
 /* (no .l-w background-color rule on purpose) */
 
-/* ── 4.1 Hero-image bleed (general) ──────────────────────────────
- * Generalised mechanism: every page whose first <section> with the
- * Webnode `wnd-background-image` class carries an <img> gets its
- * hero photo extended to the body background, behind the
- * transparent footer water and the address/columns block.
+/* ── 4.1 Hero-image bleed (diffuse-bg pages only) ────────────────
+ * Discriminator: a page qualifies only if it has TWO OR MORE
+ * <section class="wnd-background-image"> elements — the first is
+ * the real hero photo (bleeds to body bg), the last is the footer
+ * wave area. Pages with only ONE wnd-background-image section have
+ * just the wave (no hero photo) and are left untouched on a default
+ * white body. Pages with zero are redirect stubs.
  *
- * Pages whose first section has no <img> (redirect stubs:
- * /assistenza, /azienda, /wiki*, /supporto, /blog-articoli*) are
- * not touched and keep the default flow.
+ * As of writing: 5 pages qualify — /automazione, /corsi,
+ * /progettazione, /sviluppo-software, /telecontrollo.
  *
  * Per page, the renderer/patcher injects:
  *   1. class "has-hero-bg" on <body>
