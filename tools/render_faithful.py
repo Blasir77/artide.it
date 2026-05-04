@@ -695,33 +695,6 @@ def inject_overrides(soup: BeautifulSoup, url: str) -> None:
     cls = [c for c in cls if c not in ("is-home", "theme-light", "theme-dark")]
     if url == "/":
         cls.append("is-home")
-
-    # Theme detection: pick the predominant colour-scheme of the body
-    # sections (excluding the always-hidden hero, the address footer
-    # and the trailing decorative water image). sc-w → white-themed
-    # page; sc-m / sc-ml → dark/medium-themed page (Webnode authors
-    # used these on /automazione, /sviluppo-software, /telecontrollo,
-    # /progettazione, /corsi). The home (sc-ml dominant) is treated
-    # as dark too. The CSS .l-w background follows the theme so the
-    # area behind the transparent water-image footer matches the
-    # surrounding page tone instead of always rendering as #191919.
-    sw_c = soup.select_one("main > .sw > .sw-c")
-    is_dark = False
-    if sw_c is not None:
-        light = dark = 0
-        for s in sw_c.find_all("section", recursive=False):
-            scls = s.get("class") or []
-            if any(x in scls for x in ("s-hm-hidden", "sc-cd")):
-                continue
-            if "wnd-background-image" in scls and "wnd-w-wider" in scls:
-                continue
-            if "sc-w" in scls:
-                light += 1
-            elif any(x in scls for x in ("sc-m", "sc-ml", "sc-acd", "sc-d")):
-                dark += 1
-        is_dark = dark > light
-    cls.append("theme-dark" if is_dark else "theme-light")
-
     body["class"] = cls
     body["data-base"] = BASE  # JS reads this to resolve asset paths
 

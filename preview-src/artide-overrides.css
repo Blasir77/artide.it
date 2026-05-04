@@ -889,23 +889,17 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
   z-index: 4;
 }
 
-/* Wrapper background propagates the dominant page theme so the area
- * behind the transparent footer water-image (FOOTER_onda_003.webp,
- * RGBA) blends with the body content above instead of always
- * rendering as a solid #191919.
+/* Wrapper background is INTENTIONALLY left transparent (= browser
+ * default white, which the underlying page sections cover where they
+ * have their own bg). The transparent footer water-image
+ * (FOOTER_onda_003.webp) lets the wrapper colour show through wherever
+ * its alpha is 0 — combined with no explicit .l-w bg, the area below
+ * the waterline simply continues the page's natural background.
  *
- * The renderer adds body.theme-light or body.theme-dark based on
- * the predominant section colour-scheme:
- *   sc-w pages   (sanificazione, manutenzione, chi-siamo, blog, …)
- *     → theme-light → white wrapper, water alpha reveals white.
- *   sc-m / sc-ml pages (automazione, sviluppo-software,
- *                       telecontrollo, progettazione, corsi, home)
- *     → theme-dark → very-dark wrapper, water alpha reveals dark
- *       so the transparent waveform looks consistent with the
- *       circuit-board / dark hero pattern of these pages.
- */
-body.theme-light .l-w { background-color: #ffffff; }
-body.theme-dark  .l-w { background-color: #0d0d10; }
+ * Only the very last <footer class="l-f"> copyright strip carries an
+ * explicit dark colour to delimit the legal/credit area from the
+ * page content above. */
+/* (no .l-w background-color rule on purpose) */
 
 /* ── Footer copyright bar stays solid dark ─────────────────────── */
 footer.l-f {
