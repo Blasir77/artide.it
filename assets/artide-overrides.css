@@ -901,33 +901,33 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
  * page content above. */
 /* (no .l-w background-color rule on purpose) */
 
-/* ── 4.1 Hero-image bleed for diffuse-bg pages ───────────────────
- * On the four service pages with a "diffuse" hero photo (circuit
- * board, factory, classroom, …), the client wants that photo to
- * extend visually all the way to the bottom of the page, behind
- * the transparent footer water and the address/columns block.
+/* ── 4.1 Hero-image bleed (general) ──────────────────────────────
+ * Generalised mechanism: every page whose first <section> with the
+ * Webnode `wnd-background-image` class carries an <img> gets its
+ * hero photo extended to the body background, behind the
+ * transparent footer water and the address/columns block.
  *
- * Mechanism:
- *   - Each of those pages carries class "has-hero-bg" on <body>
- *     plus an inline <style> that sets `body { background-image:
- *     url(<hero-img>) }`.
- *   - Below, we make the wave section's own bg + the columns
- *     section's own bg fully transparent so the body image shows
- *     through.
+ * Pages whose first section has no <img> (redirect stubs:
+ * /assistenza, /azienda, /wiki*, /supporto, /blog-articoli*) are
+ * not touched and keep the default flow.
  *
- * White-bg pages (without has-hero-bg) keep the existing default
- * (transparent .l-w over default white body). */
+ * Per page, the renderer/patcher injects:
+ *   1. class "has-hero-bg" on <body>
+ *   2. an inline <style> that sets the per-page composite
+ *      background-image: a 60% black overlay gradient layered ABOVE
+ *      the actual hero photo URL, so the result mirrors Webnode's
+ *      .overlay-black filter without needing a pseudo-element.
+ *
+ * Position is `bottom center` to match Webnode's bgpos-bottom-center
+ * helper used on all of these heroes. `attachment: fixed` anchors
+ * the bg to the viewport so `cover` sizes against the viewport
+ * instead of the (much taller) document. Note: iOS Safari may demote
+ * fixed+cover to scroll-like behaviour. */
 body.has-hero-bg {
   background-color: #0d0d10;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: bottom center;
   background-size: cover;
-  /* fixed = anchor to viewport; with `scroll` on a tall document
-   * `cover` would stretch the image to the full document height and
-   * push most of it off-screen. iOS Safari has known quirks with
-   * fixed bg + cover that demote it to scroll-like behaviour, but
-   * the visual fallback there is still acceptable (image visible at
-   * a single position rather than throughout). */
   background-attachment: fixed;
 }
 
