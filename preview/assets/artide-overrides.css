@@ -949,6 +949,53 @@ body.has-hero-bg main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
   background-color: transparent !important;
 }
 
+/* ── 4.2 Universal: wave .s-bg #272727 → white ───────────────────
+ * Webnode's `.sc-m .s-bg` pins #272727 on every section with the
+ * `sc-m` (medium-dark) scheme. The footer wave section is sc-m, so
+ * its .s-bg fills with #272727, which leaks below the wave-image's
+ * transparent bottom half as a grey band. Override to white so on
+ * traditional white-bg pages the wave appears to "splash" against
+ * the page itself. On has-hero-bg / has-hero-fixed pages a more
+ * specific selector below restores transparency. */
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg,
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
+  background-color: #ffffff !important;
+}
+
+/* ── 4.3 has-hero-fixed (Option B test) ──────────────────────────
+ * Alternative to has-hero-bg: instead of duplicating the hero photo
+ * onto body, pin Webnode's existing first wnd-background-image
+ * `.s-bg-l` to the viewport. Pros: pixel-identical centring/scaling
+ * to what Webnode already renders inside the section (object-fit
+ * cover + bgpos-bottom-center) — no second crop to align with the
+ * first. Cons: parallax/blur classes may need taming.
+ *
+ * Currently a TEST: only /sviluppo-software carries the body class.
+ * If it works visually we promote the other 4 diffuse-bg pages.
+ *
+ * Note: Webnode's `.bgatt-parallax:not(.parallax) picture img`
+ * rule sets `display:none` on the fallback <img> until a JS hook
+ * adds `.parallax`. With our fixed wrapper the JS hook does not
+ * trigger (the section is yanked out of normal flow), so we
+ * re-enable the <img> manually. */
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:first-of-type .s-bg-l {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+}
+
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:first-of-type .s-bg-l picture img {
+  display: block !important;
+}
+
+/* Wave + columns transparent so the fixed bg shows through */
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg,
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l,
+body.has-hero-fixed main > .sw > .sw-c > section.s-basic:last-of-type .s-bg,
+body.has-hero-fixed main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
+  background-color: transparent !important;
+}
+
 /* ── Force unified icon colour across browsers ───────────────────
  * Webnode renders the small column icons (numero verde, orologio,
  * documento, badge, scudo, ecc.) via <embed type="image/svg+xml"> +
