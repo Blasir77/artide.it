@@ -656,6 +656,31 @@ section .artide-seo-outro-block p {
   float: none !important;
   position: static !important;
 }
+
+/* ── Uniform vertical padding inside red banner sections ───────────
+ * Webnode authors used inconsistent inner spacers (.b-sp) around the
+ * claim heading. On /automazione the top spacer is 0.33% and the
+ * bottom 0.17%; on /sviluppo-software 0.08% and 0%. This produced
+ * visible asymmetric padding-top vs padding-bottom inside the red
+ * accent banner where our outro lands.
+ *
+ * Fix: hide every .b-sp inside an sc-acd / s-hc-claim section that
+ * also contains the outro, and let the section's own wnd-s-normal
+ * padding (3.125rem top + bottom) provide the uniform spacing. We
+ * also vertically center the content via flex on .s-c so claim +
+ * outro sit balanced inside the band.
+ */
+main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) .ez-c > .b-sp,
+main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .ez-c > .b-sp {
+  display: none !important;
+  height: 0 !important;
+  padding: 0 !important;
+}
+main > .sw > .sw-c > section.sc-acd:has(.artide-seo-outro-block) > .s-w > .s-c,
+main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) > .s-w > .s-c {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem !important;
+}
 .artide-seo-outro__text a,
 .artide-seo-outro__link {
   color: var(--ac-color, #cc1212);
