@@ -973,18 +973,26 @@ main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
  * Currently a TEST: only /sviluppo-software carries the body class.
  * If it works visually we promote the other 4 diffuse-bg pages.
  *
- * Note: Webnode's `.bgatt-parallax:not(.parallax) picture img`
+ * Note 1: target selector is `section.wnd-background-image:nth-of-type(2)`,
+ * NOT `:first-of-type`. `:first-of-type` would mean "first <section>
+ * AND has wnd-background-image" — but the first <section> is
+ * Webnode's hidden header (no wnd-background-image class), so the
+ * compound selector matches nothing. `:nth-of-type(2)` correctly
+ * targets the first visible body section, which on every diffuse
+ * Webnode hero page is the wnd-background-image hero.
+ *
+ * Note 2: Webnode's `.bgatt-parallax:not(.parallax) picture img`
  * rule sets `display:none` on the fallback <img> until a JS hook
  * adds `.parallax`. With our fixed wrapper the JS hook does not
  * trigger (the section is yanked out of normal flow), so we
  * re-enable the <img> manually. */
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:first-of-type .s-bg-l {
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l {
   position: fixed !important;
   inset: 0 !important;
   z-index: -1 !important;
 }
 
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:first-of-type .s-bg-l picture img {
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l picture img {
   display: block !important;
 }
 
