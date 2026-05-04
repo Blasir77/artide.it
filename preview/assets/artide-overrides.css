@@ -901,6 +901,47 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
  * page content above. */
 /* (no .l-w background-color rule on purpose) */
 
+/* ── 4.1 Hero-image bleed for diffuse-bg pages ───────────────────
+ * On the four service pages with a "diffuse" hero photo (circuit
+ * board, factory, classroom, …), the client wants that photo to
+ * extend visually all the way to the bottom of the page, behind
+ * the transparent footer water and the address/columns block.
+ *
+ * Mechanism:
+ *   - Each of those pages carries class "has-hero-bg" on <body>
+ *     plus an inline <style> that sets `body { background-image:
+ *     url(<hero-img>) }`.
+ *   - Below, we make the wave section's own bg + the columns
+ *     section's own bg fully transparent so the body image shows
+ *     through.
+ *
+ * White-bg pages (without has-hero-bg) keep the existing default
+ * (transparent .l-w over default white body). */
+body.has-hero-bg {
+  background-color: #0d0d10;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: scroll;
+}
+
+/* Wave section: nuke its own dark fill so the body bg shows
+ * everywhere except where the wave-image's own pixels are opaque. */
+body.has-hero-bg main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2),
+body.has-hero-bg main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg,
+body.has-hero-bg main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
+  background-color: transparent !important;
+}
+
+/* Columns section: redundant safety — already transparent in 3.6
+ * but enforce here too since the dark page bg behind them is the
+ * whole point of this block. */
+body.has-hero-bg main > .sw > .sw-c > section.s-basic:last-of-type,
+body.has-hero-bg main > .sw > .sw-c > section.s-basic:last-of-type .s-bg,
+body.has-hero-bg main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
+  background-color: transparent !important;
+}
+
 /* ── Force unified icon colour across browsers ───────────────────
  * Webnode renders the small column icons (numero verde, orologio,
  * documento, badge, scudo, ecc.) via <embed type="image/svg+xml"> +
