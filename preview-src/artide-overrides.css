@@ -973,20 +973,23 @@ main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
  * Currently a TEST: only /sviluppo-software carries the body class.
  * If it works visually we promote the other 4 diffuse-bg pages.
  *
- * Note 1: target selector is `section.wnd-background-image:nth-of-type(2)`,
- * NOT `:first-of-type`. `:first-of-type` would mean "first <section>
- * AND has wnd-background-image" — but the first <section> is
- * Webnode's hidden header (no wnd-background-image class), so the
- * compound selector matches nothing. `:nth-of-type(2)` correctly
- * targets the first visible body section, which on every diffuse
- * Webnode hero page is the wnd-background-image hero.
+ * Note 1: target selector is `section.wnd-background-image:nth-last-of-type(2)`,
+ * matching the second-to-last <section> in the page (the hero).
+ * Webnode's last <section> is the wave/columns footer block, so the
+ * hero is consistently the penultimate section on every diffuse-bg
+ * page (sviluppo-software, automazione, corsi, progettazione,
+ * telecontrollo). Using :nth-of-type(2) breaks on pages with
+ * additional wnd-background-image sections between header and hero —
+ * the rule matches an earlier (wrong) section while the
+ * background-transparent rule below correctly targets the real hero,
+ * so the bg shows through but is never pinned.
  *
  * Note 2: Webnode's `.bgatt-parallax:not(.parallax) picture img`
  * rule sets `display:none` on the fallback <img> until a JS hook
  * adds `.parallax`. With our fixed wrapper the JS hook does not
  * trigger (the section is yanked out of normal flow), so we
  * re-enable the <img> manually. */
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l {
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
   position: fixed !important;
   inset: 0 !important;
   z-index: -1 !important;
@@ -1003,7 +1006,7 @@ body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-typ
  * We bypass entirely by using the same hero URL as a CSS background
  * applied directly to the .s-bg-l. The <picture> below would otherwise
  * stack on top of our background and re-create the parallax bug. */
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l picture {
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l picture {
   display: none !important;
 }
 
