@@ -889,12 +889,23 @@ main > .sw > .sw-c > section.s-basic:last-of-type .s-w {
   z-index: 4;
 }
 
-/* Eliminate the white strip that appears between the water image and
- * the <footer.l-f> dark bar. The strip is the page wrapper's default
- * white background showing through where the columns section extends
- * below the water image. Filling .l-w with the same dark colour as the
- * footer bar makes the transition seamless. */
-.l-w { background-color: #191919; }
+/* Wrapper background propagates the dominant page theme so the area
+ * behind the transparent footer water-image (FOOTER_onda_003.webp,
+ * RGBA) blends with the body content above instead of always
+ * rendering as a solid #191919.
+ *
+ * The renderer adds body.theme-light or body.theme-dark based on
+ * the predominant section colour-scheme:
+ *   sc-w pages   (sanificazione, manutenzione, chi-siamo, blog, …)
+ *     → theme-light → white wrapper, water alpha reveals white.
+ *   sc-m / sc-ml pages (automazione, sviluppo-software,
+ *                       telecontrollo, progettazione, corsi, home)
+ *     → theme-dark → very-dark wrapper, water alpha reveals dark
+ *       so the transparent waveform looks consistent with the
+ *       circuit-board / dark hero pattern of these pages.
+ */
+body.theme-light .l-w { background-color: #ffffff; }
+body.theme-dark  .l-w { background-color: #0d0d10; }
 
 /* ── Footer copyright bar stays solid dark ─────────────────────── */
 footer.l-f {
