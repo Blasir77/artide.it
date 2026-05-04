@@ -72,17 +72,50 @@ _RE_TAG_CLUSTER = re.compile(
 )
 
 
+_RE_TRAILING_WS_INSIDE = re.compile(
+    r'(\s+)(</' + INLINE_TAGS + r'>)',
+    flags=re.I,
+)
+_RE_LEADING_WS_INSIDE = re.compile(
+    r'(<' + INLINE_TAGS + r'\b[^>]*>)(\s+)',
+    flags=re.I,
+)
+
+
 def fix_inline_spacing(html: str) -> str:
-    """Insert a single space wherever an inline-tag cluster in the HTML is
-    sandwiched between two word-character regions without any whitespace.
-    Fixes the common Webnode output pattern where consecutive inline
-    elements (`<font>`, `<a>`, `<strong>`, …) glue adjacent words.
+    """Normalise whitespace at the boundaries of inline tags.
+
+    1. Move WHITESPACE that's just before the closing tag (e.g.
+       ``<a>Artide  </a>``) to OUTSIDE the tag → ``<a>Artide</a>  ``.
+       Same for whitespace just after an opening tag.
+       This stops Webnode's text-decoration: underline on <a> from
+       extending under trailing spaces, and it keeps drop-cap patterns
+       like ``<strong>H  </strong>ai`` rendering correctly.
+
+    2. Insert a single space wherever a cluster of inline tags sits
+       between two word characters but has no whitespace between them
+       (the legacy "una<font></font><a><strong>Garanzia" glue case).
+
+    3. Apply known Italian misspellings.
+    4. Split vowel+è glue ("qualitàè" → "qualità è").
     """
-    # Run twice so overlapping clusters (e.g. multiple neighbouring pairs
-    # like "word</a><b>word</b><c>word") all get a chance to insert a
-    # space in one of the matches the first pass misses.
+    # 1. Insert a space between glued tag-cluster boundaries first.
+    #    This may temporarily place a whitespace INSIDE a closing tag
+    #    (e.g. "Artide</a>è" → "Artide </a>è"); step 2 bubbles it out.
     html = _RE_TAG_CLUSTER.sub(r'\1 \2', html)
     html = _RE_TAG_CLUSTER.sub(r'\1 \2', html)
+
+    # 2. Bubble trailing/leading whitespace OUT of every inline tag, so
+    #    underline / accent decorations on <a>, <strong>, … don't extend
+    #    over a stray space, and drop-cap patterns like "<strong>H  </strong>ai"
+    #    don't render with a wide gap. Loop until a fixed point because
+    #    nested tags need multiple passes.
+    for _ in range(8):
+        new = _RE_TRAILING_WS_INSIDE.sub(r'\2\1', html)
+        new = _RE_LEADING_WS_INSIDE.sub(r'\2\1', new)
+        if new == html:
+            break
+        html = new
     # Common Italian misspellings present in the original Webnode source.
     # Run BEFORE the vowel+è split so words like "Perchè" don't get
     # wrongly broken into "Perch è".
