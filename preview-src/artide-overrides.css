@@ -1099,7 +1099,7 @@ footer.l-f {
  * black body copy, etc.) must be left untouched.
  */
 footer.l-f,
-main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) {
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2):not(:first-of-type) {
   --ac-color: var(--artide-gold) !important;
   --ac-color-h: 40;
   --ac-color-s: 100%;
@@ -1111,8 +1111,8 @@ main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) {
  * override — CSS variables don't apply when colour is written literally. */
 footer.l-f [style*="#cc1212" i],
 footer.l-f [style*="#f25151" i],
-main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) [style*="#cc1212" i],
-main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2) [style*="#f25151" i] {
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2):not(:first-of-type) [style*="#cc1212" i],
+main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2):not(:first-of-type) [style*="#f25151" i] {
   color: var(--artide-gold) !important;
 }
 
