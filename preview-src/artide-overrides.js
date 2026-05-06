@@ -425,7 +425,17 @@
     var nav = document.getElementById('menu');
     if (!nav) return;
 
+    /* Standard pages have a `<li class="wnd-active">` for the current
+     * page. Detail pages (blog articles, product/listing details) do
+     * NOT — the URL doesn't match any menu item directly. Fall back
+     * to the deepest `<li class="wnd-active-path">`: that's the
+     * submenu leaf that took the user here (e.g. "ARTICOLI DEL BLOG"
+     * for any /l/blog-* article). */
     var activeLi = nav.querySelector('li.wnd-active');
+    if (!activeLi) {
+      var pathLeafs = nav.querySelectorAll('li.wnd-active-path');
+      if (pathLeafs.length > 0) activeLi = pathLeafs[pathLeafs.length - 1];
+    }
     if (!activeLi) return;
 
     var activeText = activeLi.querySelector(':scope > a .menu-item-text');
