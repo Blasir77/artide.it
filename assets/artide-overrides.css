@@ -973,20 +973,23 @@ main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
  * Currently a TEST: only /sviluppo-software carries the body class.
  * If it works visually we promote the other 4 diffuse-bg pages.
  *
- * Note 1: target selector is `section.wnd-background-image:nth-of-type(2)`,
- * NOT `:first-of-type`. `:first-of-type` would mean "first <section>
- * AND has wnd-background-image" — but the first <section> is
- * Webnode's hidden header (no wnd-background-image class), so the
- * compound selector matches nothing. `:nth-of-type(2)` correctly
- * targets the first visible body section, which on every diffuse
- * Webnode hero page is the wnd-background-image hero.
+ * Note 1: target selector is `section.wnd-background-image:nth-last-of-type(2)`,
+ * matching the second-to-last <section> in the page (the hero).
+ * Webnode's last <section> is the wave/columns footer block, so the
+ * hero is consistently the penultimate section on every diffuse-bg
+ * page (sviluppo-software, automazione, corsi, progettazione,
+ * telecontrollo). Using :nth-of-type(2) breaks on pages with
+ * additional wnd-background-image sections between header and hero —
+ * the rule matches an earlier (wrong) section while the
+ * background-transparent rule below correctly targets the real hero,
+ * so the bg shows through but is never pinned.
  *
  * Note 2: Webnode's `.bgatt-parallax:not(.parallax) picture img`
  * rule sets `display:none` on the fallback <img> until a JS hook
  * adds `.parallax`. With our fixed wrapper the JS hook does not
  * trigger (the section is yanked out of normal flow), so we
  * re-enable the <img> manually. */
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l {
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l {
   position: fixed !important;
   inset: 0 !important;
   z-index: -1 !important;
@@ -1003,7 +1006,7 @@ body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-typ
  * We bypass entirely by using the same hero URL as a CSS background
  * applied directly to the .s-bg-l. The <picture> below would otherwise
  * stack on top of our background and re-create the parallax bug. */
-body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-of-type(2) .s-bg-l picture {
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) .s-bg-l picture {
   display: none !important;
 }
 
@@ -1013,6 +1016,55 @@ body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-o
 body.has-hero-fixed main > .sw > .sw-c > section.s-basic:last-of-type .s-bg,
 body.has-hero-fixed main > .sw > .sw-c > section.s-basic:last-of-type .s-bg-l {
   background-color: transparent !important;
+}
+
+/* ── 4.4 has-hero-fade ───────────────────────────────────────────
+ * Test approach (alternative to has-hero-fixed/has-hero-bg). Stack a
+ * white linear-gradient on top of each Webnode bg-image section so
+ * the photo blends into white toward its bottom edge. The gradient
+ * is painted by a `::after` pseudo-element absolutely positioned
+ * inside `.s-bg-l` (which Webnode already renders with
+ * `position: absolute`, so it forms a containing block for its
+ * descendants). The top 60% of the section keeps the photo
+ * untouched; the bottom 40% fades into solid white, producing a
+ * soft "image dissolves into white" transition into whatever sits
+ * below.
+ *
+ * Why an overlay and not `mask-image`: a mask makes pixels
+ * transparent, revealing whatever is behind `.s-bg-l` (which on
+ * Webnode pages may not be white — there can be a dark `.s-bg`
+ * wrapper, an `overlay-black` layer, or the section's own bg). An
+ * overlay paints actual white pixels on top, so the visual is
+ * identical regardless of what sits behind.
+ *
+ * Currently scoped via body class `has-hero-fade`, present only on
+ * /sviluppo-software for the test. */
+body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image .s-bg-l::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, #ffffff 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ── 4.5 Auto breadcrumb above H1 ────────────────────────────────
+ * Injected by injectBreadcrumb() in artide-overrides.js, which reads
+ * the current page name and parent category straight from the
+ * Webnode nav (.wnd-active leaf + first .wnd-with-submenu ancestor)
+ * and inserts a `.artide-breadcrumb` element directly before each
+ * page's H1. Always uppercase, always above. Replaces the
+ * inconsistent manual <h3>SERVIZI→...</h3> blocks that some Webnode
+ * pages embed in mixed positions (before or after the H1, with
+ * different markup and inline styles per page). */
+.artide-breadcrumb {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--ac-color, #cc1212);
+  margin: 0 0 0.6em 0;
+  text-transform: uppercase;
 }
 
 /* ── Force unified icon colour across browsers ───────────────────
