@@ -407,11 +407,71 @@
     });
   }
 
+  /* ── Auto breadcrumb above H1 ──────────────────────────────────────
+   * Build a "PARENT → PAGE" breadcrumb above each page's H1 from the
+   * Webnode nav structure: the link with class `wnd-active` is the
+   * current page, its first `wnd-with-submenu` ancestor <li> carries
+   * the parent label. Both names come straight from the menu, so the
+   * breadcrumb stays in sync with whatever the nav shows. Fallback is
+   * the page name alone when no parent submenu is found (homepage,
+   * top-level pages).
+   *
+   * Also wipes any pre-existing manual breadcrumbs in the same
+   * section: those <h3> blocks containing the U+2192 arrow that some
+   * Webnode pages embed before/after the H1 (placement is
+   * inconsistent across pages, that's the whole reason for this
+   * auto-injection). */
+  function injectBreadcrumb() {
+    var nav = document.getElementById('menu');
+    if (!nav) return;
+
+    var activeLi = nav.querySelector('li.wnd-active');
+    if (!activeLi) return;
+
+    var activeText = activeLi.querySelector(':scope > a .menu-item-text');
+    if (!activeText) return;
+    var current = (activeText.textContent || '').trim();
+    if (!current) return;
+
+    var parent = '';
+    var ancestor = activeLi.parentElement;
+    while (ancestor) {
+      if (ancestor.tagName === 'LI' && ancestor.classList.contains('wnd-with-submenu')) {
+        var pText = ancestor.querySelector(':scope > a .menu-item-text');
+        if (pText) {
+          parent = (pText.textContent || '').trim();
+          break;
+        }
+      }
+      ancestor = ancestor.parentElement;
+    }
+
+    var main = document.querySelector('main') || document.body;
+    var h1 = main.querySelector('h1');
+    if (!h1) return;
+
+    var host = h1.parentNode;
+    if (host.querySelector(':scope > .artide-breadcrumb')) return;
+
+    var section = h1.closest('section') || main;
+    Array.prototype.forEach.call(section.querySelectorAll('h3'), function (h3) {
+      if ((h3.textContent || '').indexOf('→') !== -1) h3.remove();
+    });
+
+    var bc = document.createElement('div');
+    bc.className = 'artide-breadcrumb';
+    bc.textContent = parent
+      ? parent.toUpperCase() + ' → ' + current.toUpperCase()
+      : current.toUpperCase();
+    host.insertBefore(bc, h1);
+  }
+
   /* ── Init ──────────────────────────────────────────────────────── */
   function init() {
     try { patchMenu(); } catch (e) { console.warn('[artide] menu patch failed', e); }
     try { setupHomeMenu(); } catch (e) { console.warn('[artide] home menu failed', e); }
     try { mountSlider(); } catch (e) { console.warn('[artide] slider failed', e); }
+    try { injectBreadcrumb(); } catch (e) { console.warn('[artide] breadcrumb failed', e); }
   }
 
   if (document.readyState === 'loading') {

@@ -1048,6 +1048,25 @@ body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image .s-bg-l::af
   z-index: 5;
 }
 
+/* ── 4.5 Auto breadcrumb above H1 ────────────────────────────────
+ * Injected by injectBreadcrumb() in artide-overrides.js, which reads
+ * the current page name and parent category straight from the
+ * Webnode nav (.wnd-active leaf + first .wnd-with-submenu ancestor)
+ * and inserts a `.artide-breadcrumb` element directly before each
+ * page's H1. Always uppercase, always above. Replaces the
+ * inconsistent manual <h3>SERVIZI→...</h3> blocks that some Webnode
+ * pages embed in mixed positions (before or after the H1, with
+ * different markup and inline styles per page). */
+.artide-breadcrumb {
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--ac-color, #cc1212);
+  margin: 0 0 0.6em 0;
+  text-transform: uppercase;
+}
+
 /* ── Force unified icon colour across browsers ───────────────────
  * Webnode renders the small column icons (numero verde, orologio,
  * documento, badge, scudo, ecc.) via <embed type="image/svg+xml"> +
