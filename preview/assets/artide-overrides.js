@@ -29,7 +29,6 @@
     // hops (SEO audit: "avoid internal redirects").
     var REDIRECT_TARGETS = {
       '/blog-articoli/': '/blog/',
-      '/blog-articoli-in-evidenza/': '/blog/',
       '/azienda/': '/chi-siamo/',
       '/assistenza/': '/contatti/',
       '/supporto/': '/contatti/',
@@ -45,10 +44,6 @@
       'WIKI - TOTEM RICARICA',
       "WIKI - CASA DELL'ACQUA",
       "WIKI - CASA DELL\u2019ACQUA",
-      // ARTICOLI IN EVIDENZA points to /blog/ (same as ARTICOLI DEL
-      // BLOG) \u2014 there is no separate featured-articles page on the
-      // new site, so the duplicate menu item is removed.
-      'ARTICOLI IN EVIDENZA',
     ]);
 
     // 1a. Repoint redirect-targeted links, rename ASSISTENZA, flag items to hide
