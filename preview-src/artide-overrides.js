@@ -45,6 +45,10 @@
       'WIKI - TOTEM RICARICA',
       "WIKI - CASA DELL'ACQUA",
       "WIKI - CASA DELL\u2019ACQUA",
+      // ARTICOLI IN EVIDENZA points to /blog/ (same as ARTICOLI DEL
+      // BLOG) \u2014 there is no separate featured-articles page on the
+      // new site, so the duplicate menu item is removed.
+      'ARTICOLI IN EVIDENZA',
     ]);
 
     // 1a. Repoint redirect-targeted links, rename ASSISTENZA, flag items to hide
@@ -426,22 +430,29 @@
     if (!nav) return;
 
     /* Standard pages have a `<li class="wnd-active">` for the current
-     * page. Detail pages (blog articles, product/listing details) do
-     * NOT — the URL doesn't match any menu item directly. Fall back
-     * to the deepest `<li class="wnd-active-path">`: that's the
-     * submenu leaf that took the user here (e.g. "ARTICOLI DEL BLOG"
-     * for any /l/blog-* article). */
+     * page → use the menu label as `current`. Detail pages (blog
+     * articles, product/listing details) do NOT have wnd-active
+     * because the URL doesn't match any menu item directly → fall
+     * back to the deepest `<li class="wnd-active-path">` to anchor
+     * the parent lookup, and use the page's H1 text as `current`
+     * (the article/detail title is more useful than the submenu
+     * label "ARTICOLI DEL BLOG" repeated on every article). */
+    var main = document.querySelector('main') || document.body;
+    var h1 = main.querySelector('h1');
+    if (!h1) return;
+
+    var current = '';
     var activeLi = nav.querySelector('li.wnd-active');
-    if (!activeLi) {
+    if (activeLi) {
+      var activeText = activeLi.querySelector(':scope > a .menu-item-text');
+      if (!activeText) return;
+      current = (activeText.textContent || '').trim();
+    } else {
       var pathLeafs = nav.querySelectorAll('li.wnd-active-path');
       if (pathLeafs.length > 0) activeLi = pathLeafs[pathLeafs.length - 1];
+      current = (h1.textContent || '').trim();
     }
-    if (!activeLi) return;
-
-    var activeText = activeLi.querySelector(':scope > a .menu-item-text');
-    if (!activeText) return;
-    var current = (activeText.textContent || '').trim();
-    if (!current) return;
+    if (!activeLi || !current) return;
 
     var parent = '';
     var ancestor = activeLi.parentElement;
@@ -455,10 +466,6 @@
       }
       ancestor = ancestor.parentElement;
     }
-
-    var main = document.querySelector('main') || document.body;
-    var h1 = main.querySelector('h1');
-    if (!h1) return;
 
     var host = h1.parentNode;
     if (host.querySelector(':scope > .artide-breadcrumb')) return;
