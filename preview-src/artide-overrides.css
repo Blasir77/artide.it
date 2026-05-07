@@ -1317,195 +1317,229 @@ a { transition: color 0.15s ease, opacity 0.15s ease; }
 button { font-family: inherit; }
 
 
-/* ── 7. Bento grid (categoria prodotti) ──────────────────────────
- * Replaces the flat 4-col Webnode tile grid on /prodotti/ with a
- * bento-style asymmetric layout + cinematic hover effects:
- *   - Image cover, scales 1.08 on hover (slow ease-out)
- *   - Linear-gradient overlay that lightens on hover
- *   - Title slides up, subtitle reveals from 0 height,
- *     red CTA "Scopri →" fades in with arrow nudge
+/* ── 7. Tab + mega-card (categoria prodotti) ─────────────────────
+ * Stripe/Notion-style category navigator on /prodotti/. Uses pure
+ * CSS (radio inputs + labels + sibling combinator) — no JS. Click
+ * a tab → its panel becomes visible with a subtle fade-in. The
+ * radio inputs are visually hidden but kept in the DOM as the
+ * state holder for `:checked ~`.
  *
- * Layout (12-col grid, desktop):
- *   row 1: Casa dell'Acqua (span-7) + Erogatore d'Acqua (span-5)
- *   row 2: Totem + Tessere + Pur.Acqua + Pur.Aria  (4× span-3)
- *   row 3: Compattatori (span-6) + Trituratori (span-6)
+ * Layout per panel (desktop): big image left + text content right
+ *   - h2 title
+ *   - lead paragraph (1 line, value proposition)
+ *   - bullet list of 4 features
+ *   - red CTA button
  *
- * Mobile (≤920px): collapses to 2-col grid; the row-1 hero cards
- * each take the full width (span 2). */
-.artide-bento-wrap {
+ * Mobile (≤920px): tab row scrolls horizontally; panel stacks
+ * (image on top, text below). */
+.artide-tabs-wrap {
   margin: 0 auto;
-  padding: 0;
 }
-.artide-bento {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1.25rem;
-  margin: 0 auto;
+.artide-tabs {
+  position: relative;
   max-width: 1280px;
+  margin: 0 auto;
   padding: 0 1.5rem;
 }
-.artide-bento-card {
+.artide-tabs > input[type="radio"] {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* Tab navigation row */
+.artide-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 2.5rem;
   position: relative;
-  display: block;
-  overflow: hidden;
-  border-radius: 14px;
-  text-decoration: none !important;
-  background: #1a1a1a;
-  isolation: isolate;
+}
+.artide-tabs-nav label {
+  padding: 0.95rem 1.4rem;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-              box-shadow 0.4s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #555;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
 }
-.artide-bento-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
-}
-.artide-bento-card.span-7 { grid-column: span 7; aspect-ratio: 16 / 9; }
-.artide-bento-card.span-5 { grid-column: span 5; aspect-ratio: 16 / 9; }
-.artide-bento-card.span-3 { grid-column: span 3; aspect-ratio: 1 / 1; }
-.artide-bento-card.span-6 { grid-column: span 6; aspect-ratio: 21 / 9; }
-
-@media (max-width: 920px) {
-  .artide-bento {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.85rem;
-    padding: 0 1rem;
-  }
-  .artide-bento-card.span-7,
-  .artide-bento-card.span-6 {
-    grid-column: span 2;
-    aspect-ratio: 16 / 10;
-  }
-  .artide-bento-card.span-5 {
-    grid-column: span 2;
-    aspect-ratio: 16 / 10;
-  }
-  .artide-bento-card.span-3 {
-    grid-column: span 1;
-    aspect-ratio: 1 / 1;
-  }
+.artide-tabs-nav label:hover {
+  color: var(--ac-color, #cc1212);
 }
 
-.artide-bento-card picture,
-.artide-bento-card img {
+/* Active state — eight rules, one per tab */
+#tab-casa:checked      ~ .artide-tabs-nav label[for="tab-casa"],
+#tab-erogatore:checked ~ .artide-tabs-nav label[for="tab-erogatore"],
+#tab-totem:checked     ~ .artide-tabs-nav label[for="tab-totem"],
+#tab-tessere:checked   ~ .artide-tabs-nav label[for="tab-tessere"],
+#tab-puracq:checked    ~ .artide-tabs-nav label[for="tab-puracq"],
+#tab-puraria:checked   ~ .artide-tabs-nav label[for="tab-puraria"],
+#tab-compatt:checked   ~ .artide-tabs-nav label[for="tab-compatt"],
+#tab-tritur:checked    ~ .artide-tabs-nav label[for="tab-tritur"] {
+  color: var(--ac-color, #cc1212);
+  border-bottom-color: var(--ac-color, #cc1212);
+}
+
+/* Panels: hidden by default, shown when their radio is checked */
+.artide-tab-panel {
+  display: none;
+}
+#tab-casa:checked      ~ .artide-tabs-panels [data-for="tab-casa"],
+#tab-erogatore:checked ~ .artide-tabs-panels [data-for="tab-erogatore"],
+#tab-totem:checked     ~ .artide-tabs-panels [data-for="tab-totem"],
+#tab-tessere:checked   ~ .artide-tabs-panels [data-for="tab-tessere"],
+#tab-puracq:checked    ~ .artide-tabs-panels [data-for="tab-puracq"],
+#tab-puraria:checked   ~ .artide-tabs-panels [data-for="tab-puraria"],
+#tab-compatt:checked   ~ .artide-tabs-panels [data-for="tab-compatt"],
+#tab-tritur:checked    ~ .artide-tabs-panels [data-for="tab-tritur"] {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  animation: artide-tab-fade 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes artide-tab-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.artide-tab-image {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #1a1a1a;
+}
+.artide-tab-image picture,
+.artide-tab-image img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   z-index: 0;
 }
-.artide-bento-card img {
+.artide-tab-image img {
   object-fit: cover;
   object-position: center;
-  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.artide-bento-card:hover img {
-  transform: scale(1.08);
 }
 
-.artide-bento-grad {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.40) 45%,
-    rgba(0, 0, 0, 0.05) 100%);
-  transition: background 0.4s ease;
-  pointer-events: none;
-}
-.artide-bento-card:hover .artide-bento-grad {
-  background: linear-gradient(to top,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(0, 0, 0, 0.20) 60%,
-    rgba(0, 0, 0, 0.00) 100%);
-}
-
-.artide-bento-content {
-  position: absolute;
-  left: 1.5rem;
-  right: 1.5rem;
-  bottom: 1.25rem;
-  z-index: 2;
-  color: #fff;
-  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.artide-bento-card:hover .artide-bento-content {
-  transform: translateY(-0.4rem);
-}
-.artide-bento-card.span-3 .artide-bento-content {
-  left: 1rem;
-  right: 1rem;
-  bottom: 0.85rem;
-}
-
-.artide-bento-title {
-  font-size: 1.55rem;
+.artide-tab-text h2 {
+  font-size: 2.4rem;
   font-weight: 700;
-  margin: 0;
-  line-height: 1.15;
-  letter-spacing: 0.005em;
-  color: #fff !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  line-height: 1.1;
+  margin: 0 0 0.85rem;
+  color: #1a1a1a;
 }
-.artide-bento-card.span-7 .artide-bento-title,
-.artide-bento-card.span-5 .artide-bento-title,
-.artide-bento-card.span-6 .artide-bento-title {
-  font-size: 1.95rem;
+.artide-tab-lead {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: #555;
+  margin: 0 0 1.75rem;
+  font-weight: 400;
 }
-.artide-bento-card.span-3 .artide-bento-title {
-  font-size: 1.1rem;
-  line-height: 1.2;
+.artide-tab-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
 }
-
-.artide-bento-subtitle {
-  margin: 0;
-  font-size: 0.9rem;
+.artide-tab-features li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.85rem;
+  font-size: 0.97rem;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 0.88);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.4s ease, max-height 0.4s ease, margin-top 0.4s ease;
+  color: #2a2a2a;
+  border-bottom: 1px solid #f0f0f0;
 }
-.artide-bento-card.span-3 .artide-bento-subtitle {
-  font-size: 0.78rem;
+.artide-tab-features li:last-child {
+  border-bottom: none;
 }
-.artide-bento-card:hover .artide-bento-subtitle {
-  opacity: 1;
-  max-height: 6rem;
-  margin-top: 0.4rem;
-}
-
-.artide-bento-cta {
+.artide-tab-features li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: var(--ac-color, #cc1212);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ac-color, #cc1212);
-  margin-top: 0;
-  opacity: 0;
-  transform: translateY(0.4rem);
-  transition: opacity 0.4s ease 0.05s,
-              transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.05s,
-              margin-top 0.4s ease;
+  justify-content: center;
+  line-height: 1;
 }
-.artide-bento-card:hover .artide-bento-cta {
-  opacity: 1;
-  transform: translateY(0);
-  margin-top: 0.55rem;
+.artide-tab-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: var(--ac-color, #cc1212);
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.2s ease;
 }
-.artide-bento-cta::after {
+.artide-tab-cta::after {
   content: "\2192";
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.15em;
   line-height: 1;
-  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.artide-bento-card:hover .artide-bento-cta::after {
+.artide-tab-cta:hover {
+  background: #a30e0e;
+  box-shadow: 0 8px 22px rgba(204, 18, 18, 0.28);
+}
+.artide-tab-cta:hover::after {
   transform: translateX(0.35rem);
+}
+
+/* Mobile: stack vertically, tab row scrolls horizontally */
+@media (max-width: 920px) {
+  .artide-tabs {
+    padding: 0 1rem;
+  }
+  .artide-tabs-nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    margin-bottom: 1.75rem;
+  }
+  .artide-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+  .artide-tabs-nav label {
+    flex-shrink: 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  #tab-casa:checked      ~ .artide-tabs-panels [data-for="tab-casa"],
+  #tab-erogatore:checked ~ .artide-tabs-panels [data-for="tab-erogatore"],
+  #tab-totem:checked     ~ .artide-tabs-panels [data-for="tab-totem"],
+  #tab-tessere:checked   ~ .artide-tabs-panels [data-for="tab-tessere"],
+  #tab-puracq:checked    ~ .artide-tabs-panels [data-for="tab-puracq"],
+  #tab-puraria:checked   ~ .artide-tabs-panels [data-for="tab-puraria"],
+  #tab-compatt:checked   ~ .artide-tabs-panels [data-for="tab-compatt"],
+  #tab-tritur:checked    ~ .artide-tabs-panels [data-for="tab-tritur"] {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+  .artide-tab-text h2 {
+    font-size: 1.85rem;
+  }
+  .artide-tab-lead {
+    font-size: 1.05rem;
+  }
 }
