@@ -1229,6 +1229,23 @@ footer.l-f .s-c {
   padding-bottom: 3rem !important;
 }
 
+/* 4. Diffuse-bg pages (sviluppo-software, telecontrollo, automazione,
+ *    progettazione, corsi) carry multiple wnd-background-image
+ *    sections that paint dark imagery edge-to-edge through the page.
+ *    On these pages the 7rem gap above the dark footer band would
+ *    expose the white default body bg → a jarring white "interference"
+ *    strip between the dark page content and the dark footer.
+ *
+ *    Detect these pages via :has() (any body whose <main> contains
+ *    two or more sibling wnd-background-image sections) and tint
+ *    the body bg to the footer dark colour. On white-bg pages
+ *    (single or zero wnd-background-image sections) the rule
+ *    doesn't match, so the gap above the footer stays white as
+ *    intended for visual separation. */
+body:has(main > .sw > .sw-c > section.wnd-background-image ~ section.wnd-background-image) {
+  background-color: var(--footer-bg-color, #0e0e10);
+}
+
 /* 3. Copyright strip below the columns: same dark fill so the
  *    whole footer area reads as one continuous block. */
 footer.l-f {
