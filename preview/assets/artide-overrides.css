@@ -1236,6 +1236,18 @@ main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-c {
   padding-top: 3rem !important;
   padding-bottom: 1.5rem !important;
 }
+/* Remove the default <a> underline from the column-header links
+ * (Artide srl / Servizi / Prodotti / Site Link / Ultime News)
+ * inside the footer-columns section. They're identifiable by the
+ * bold styling: either inline `style="font-weight: bold;"` (Servizi
+ * + Prodotti) or wrapping inside `<strong>` (Artide srl, Site Link,
+ * Ultime News). The regular sub-links keep their default underline. */
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide a[style*="font-weight: bold"],
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide strong > a,
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide a > strong,
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide a:has(strong) {
+  text-decoration: none !important;
+}
 footer.l-f .s-w,
 footer.l-f .s-o {
   padding-top: 0 !important;

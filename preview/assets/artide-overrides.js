@@ -302,12 +302,28 @@
     return el;
   }
 
+  /* Fisher-Yates in-place shuffle. Used to randomise both the SLIDES
+   * order (so the user sees a different sequence each visit) and the
+   * TRANSITIONS order (so the animation chosen for each slide change
+   * isn't predictable). */
+  function shuffle(arr) {
+    for (var k = arr.length - 1; k > 0; k--) {
+      var j = Math.floor(Math.random() * (k + 1));
+      var tmp = arr[k]; arr[k] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
+
   function mountSlider() {
     if (!document.body.classList.contains('is-home')) return;
     var main = document.querySelector('main');
     if (!main) return;
     var wrap = document.createElement('section');
     wrap.id = 'artide-slider';
+
+    /* Randomise slide order on every page load so the home banner
+     * doesn't always start with the same hero image. */
+    shuffle(SLIDES);
 
     var base = getBase();
     var slideEls = SLIDES.map(function (s) { return buildSlide(s, base); });
@@ -356,16 +372,27 @@
     window.addEventListener('load', fitSlider);
 
     /* ── Transition rotation ─────────────────────────────────── */
-    /* Five distinct effects rotate so consecutive slide changes
-     * feel different. Order shuffled so the first transition is
-     * the showy "liquid wave". */
+    /* 11 distinct effects (mix 2D + 3D). On each slide change a
+     * RANDOM transition is picked so consecutive changes don't
+     * follow a predictable pattern. The previous transition is
+     * tracked and excluded from the next pick to avoid the same
+     * effect playing twice in a row. */
     var TRANSITIONS = [
       // 2D effects
       'liquid', 'iris', 'drift', 'glitch', 'zoom',
       // 3D effects
       'flip-card', 'cube', 'fold', 'dive', 'tilt', 'spiral',
     ];
-    var transitionIdx = 0;
+    var lastTransition = null;
+    function pickTransition() {
+      var pool = TRANSITIONS;
+      if (lastTransition && TRANSITIONS.length > 1) {
+        pool = TRANSITIONS.filter(function (t) { return t !== lastTransition; });
+      }
+      var pick = pool[Math.floor(Math.random() * pool.length)];
+      lastTransition = pick;
+      return pick;
+    }
     var TRANS_DURATION = 1750; // ms — must be >= longest CSS animation (spiral 1.7s)
 
     var index = 0;
@@ -376,7 +403,7 @@
       var target = ((i % n) + n) % n;
       if (target === index && !userTriggered) return;
 
-      var transName = TRANSITIONS[transitionIdx++ % TRANSITIONS.length];
+      var transName = pickTransition();
 
       slideEls.forEach(function (el, j) {
         // Clear every transition class, every state class
