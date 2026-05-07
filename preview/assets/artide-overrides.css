@@ -1259,19 +1259,6 @@ body:has(main > .sw > .sw-c > section.wnd-background-image ~ section.wnd-backgro
   background-image: none !important;
 }
 
-/* On diffuse-bg pages the body tint above also "fills" the 7rem
- * margin-top we set on the footer columns section — making the
- * dark band appear visually taller than on white-bg pages and
- * pushing the columns off-centre relative to the rest of the
- * footer area. Drop the margin on these pages so the dark band
- * begins right at the bottom of the last content section, keeping
- * the same compact size the band has on white-bg pages where the
- * 7rem still serves as a white visual separator. */
-body:has(main > .sw > .sw-c > section.wnd-background-image ~ section.wnd-background-image)
-  main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide {
-  margin-top: 0 !important;
-}
-
 /* 3. Copyright strip below the columns: same dark fill so the
  *    whole footer area reads as one continuous block. */
 footer.l-f {
