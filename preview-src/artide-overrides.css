@@ -1145,6 +1145,62 @@ main > .sw > .sw-c > section.s-basic:nth-last-of-type(-n+2):not(:first-of-type) 
 footer.l-f .s-f-cr { display: none !important; }
 
 
+/* ── 5.x Traditional dark footer (replaces water-image hero) ──────
+ * Per client decision: drop the water/wave image hero above the
+ * footer columns — too complex to maintain consistently across
+ * pages with diffuse-bg backgrounds (sviluppo-software,
+ * telecontrollo, automazione, progettazione, corsi). Replace with
+ * a flat dark background that spans the footer columns section
+ * AND the <footer class="l-f"> copyright strip below.
+ *
+ * Customisation hooks (CSS variables on :root): override globally
+ * to change the whole site's footer at once.
+ *   --footer-bg-color  default #0e0e10 (near-black)
+ *   --footer-bg-image  default `none`. Set to e.g.
+ *                      `url('/artide.it/assets/img/footer-bg.jpg')`
+ *                      to use a background image instead of the
+ *                      solid colour. The image will be sized
+ *                      `cover`, positioned centre.
+ */
+:root {
+  --footer-bg-color: #0e0e10;
+  --footer-bg-image: none;
+}
+
+/* 1. Hide the legacy water-hero section (purely decorative — no
+ *    text content on any page). It's the second-to-last <section>
+ *    in main when present (only on pages that had a water image). */
+main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) {
+  display: none !important;
+}
+
+/* 2. Footer columns section (address + Servizi + Prodotti +
+ *    Site Link + Ultime News): drop the legacy negative pull-up,
+ *    apply the new dark fill + optional image. */
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide {
+  margin-top: 0 !important;
+  background-color: var(--footer-bg-color) !important;
+  background-image: var(--footer-bg-image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-bg,
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-bg-l {
+  background: transparent !important;
+}
+
+/* 3. Copyright strip below the columns: same dark fill so the
+ *    whole footer area reads as one continuous block. */
+footer.l-f {
+  background-color: var(--footer-bg-color) !important;
+  background-image: var(--footer-bg-image) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+
 /* ── 6. Polish ───────────────────────────────────────────────────── */
 a { transition: color 0.15s ease, opacity 0.15s ease; }
 button { font-family: inherit; }
