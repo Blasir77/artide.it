@@ -1268,6 +1268,19 @@ body:has(main > .sw > .sw-c > section.wnd-background-image ~ section.wnd-backgro
   background-image: none !important;
 }
 
+/* Belt-and-braces override: even if the :has() rule above doesn't
+ * match for any reason (older/odd DOM, JS wrapping, etc.), the
+ * body classes themselves are deterministic — has-hero-bg and
+ * has-hero-fixed are still present on the deployed gh-pages HTML
+ * for the diffuse-bg pages. Override their bg directly so the body
+ * is reliably white on every page that carries either class. */
+body.has-hero-bg,
+body.has-hero-fixed,
+body.has-hero-fade {
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
 /* 3. Copyright strip below the columns: same dark fill so the
  *    whole footer area reads as one continuous block. */
 footer.l-f {
