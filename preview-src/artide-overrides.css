@@ -783,8 +783,8 @@ main > .sw > .sw-c > section.s-hc-claim:has(.artide-seo-outro-block) .ez-c > .b-
  *   2. trailing .b-sp Webnode spacer block(s) inside .ez-c
  *   3. trailing .b-hr-line horizontal rule blocks
  */
-main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) > .s-w > .s-c,
-main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image) .s-c.s-fs {
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image):not(.sc-acd):not(.s-hc-claim) > .s-w > .s-c,
+main > .sw > .sw-c > section.s-basic:has(+ section.wnd-background-image):not(.sc-acd):not(.s-hc-claim) .s-c.s-fs {
   padding-bottom: 0 !important;
 }
 /* Kill every trailing decorative block at the end of that section's
