@@ -90,12 +90,16 @@
 
 /* Main nav — default: red with white text.
  * This is the "visible" state used on non-home pages and on home
- * once the user starts scrolling. */
+ * once the user starts scrolling.
+ *
+ * Menu-specific red is #ee1515 (a brighter red than the brand
+ * --artide-red #cc1212), per client request. The brand red stays
+ * unchanged for banners, CTAs, accent links elsewhere. */
 .l-h .s-hn,
 .l-h .s-hn .s-bg,
 .l-h .s-hn .s-bg-l {
-  background: var(--artide-red) !important;
-  background-color: var(--artide-red) !important;
+  background: #ee1515 !important;
+  background-color: #ee1515 !important;
   transition: background 0.35s ease, opacity 0.35s ease;
 }
 .l-h .s-hn a,
@@ -103,6 +107,7 @@
 .l-h .s-hn li,
 .l-h .s-hn .s-c {
   color: #ffffff !important;
+  font-weight: 700 !important;
   text-shadow: none !important;
 }
 /* Subtle shadow on nav when visible */
