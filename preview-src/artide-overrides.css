@@ -1176,9 +1176,11 @@ main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) {
 
 /* 2. Footer columns section (address + Servizi + Prodotti +
  *    Site Link + Ultime News): drop the legacy negative pull-up,
- *    apply the new dark fill + optional image. */
+ *    apply the new dark fill + optional image. Leave a small gap
+ *    above (margin-top) so the dark band visibly separates from
+ *    the page body content above. */
 main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide {
-  margin-top: 0 !important;
+  margin-top: 2.25rem !important;  /* ~36px gap above the dark band */
   background-color: var(--footer-bg-color) !important;
   background-image: var(--footer-bg-image) !important;
   background-size: cover !important;
@@ -1188,6 +1190,22 @@ main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide {
 main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-bg,
 main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-bg-l {
   background: transparent !important;
+}
+/* Zero out outer-wrapper padding/margin so the only vertical
+ * spacing inside the footer band comes from the explicit padding
+ * rule on .s-c — same trick used for the red claim banner. Without
+ * this, Webnode's wnd-s-normal default sneaks asymmetric padding
+ * onto .s-w / .s-o and the columns sit visibly off-centre. */
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide > .s-w,
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-o {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-c {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 /* 3. Copyright strip below the columns: same dark fill so the
