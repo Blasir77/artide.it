@@ -1281,6 +1281,26 @@ body.has-hero-fade {
   background-image: none !important;
 }
 
+/* On diffuse-bg pages, the client wants the 7rem gap above the
+ * dark footer band to show the SAME background imagery as the
+ * section above it (with the section's blur + overlay filters)
+ * rather than a flat white strip. Move the 7rem of vertical space
+ * INTO the section right above the (hidden) water-hero by giving
+ * its .s-c an extra padding-bottom; the section's bg image (already
+ * filtered by the existing wnd-background-image rules) fills that
+ * area naturally. Then drop the margin-top above the dark footer
+ * band on these pages so we don't double-up the gap. */
+body.has-hero-bg main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(3) .s-c,
+body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(3) .s-c,
+body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(3) .s-c {
+  padding-bottom: 7rem !important;
+}
+body.has-hero-bg main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide,
+body.has-hero-fixed main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide,
+body.has-hero-fade main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide {
+  margin-top: 0 !important;
+}
+
 /* 3. Copyright strip below the columns: same dark fill so the
  *    whole footer area reads as one continuous block. */
 footer.l-f {
