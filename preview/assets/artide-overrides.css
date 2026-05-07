@@ -1176,11 +1176,11 @@ main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(2) {
 
 /* 2. Footer columns section (address + Servizi + Prodotti +
  *    Site Link + Ultime News): drop the legacy negative pull-up,
- *    apply the new dark fill + optional image. Leave a small gap
- *    above (margin-top) so the dark band visibly separates from
- *    the page body content above. */
+ *    apply the new dark fill + optional image. Leave a generous
+ *    gap above (margin-top) so the dark band visibly separates
+ *    from the page body content above. */
 main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide {
-  margin-top: 2.25rem !important;  /* ~36px gap above the dark band */
+  margin-top: 7rem !important;  /* ~112px gap above the dark band */
   background-color: var(--footer-bg-color) !important;
   background-image: var(--footer-bg-image) !important;
   background-size: cover !important;
@@ -1203,8 +1203,29 @@ main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-o {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+/* The dark band reads visually as a single block but is actually
+ * two stacked sections: the columns section (this one) + the
+ * <footer class="l-f"> copyright strip. To make the visible
+ * top/bottom padding symmetric (i.e. distance from dark-top edge
+ * to "Artide srl" == distance from "Privacy Policy" to dark-bottom
+ * edge), give each section the OUTER padding only on its outer
+ * edge: columns gets padding-top, copyright strip gets padding-
+ * bottom. Inner edges meet with a smaller, equal padding so the
+ * mid-band separation between columns content and copyright text
+ * stays comfortable but doesn't dominate. */
 main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide .s-c {
   padding-top: 3rem !important;
+  padding-bottom: 1.5rem !important;
+}
+footer.l-f .s-w,
+footer.l-f .s-o {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+footer.l-f .s-c {
+  padding-top: 1.5rem !important;
   padding-bottom: 3rem !important;
 }
 
