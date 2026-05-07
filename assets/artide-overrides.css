@@ -1241,9 +1241,22 @@ footer.l-f .s-c {
  *    the body bg to the footer dark colour. On white-bg pages
  *    (single or zero wnd-background-image sections) the rule
  *    doesn't match, so the gap above the footer stays white as
- *    intended for visual separation. */
+ *    intended for visual separation.
+ *
+ *    Also reset background-image to none. These pages still carry
+ *    the legacy `has-hero-bg` body class + an inline <style> in
+ *    the <head> that sets a body background-image (the old "diffuse
+ *    hero" effect: a 60% black overlay layered above the section's
+ *    photo, painted on body and shown through gaps). With the new
+ *    flat dark footer that effect was unwanted: the body image was
+ *    visible in the 7rem gap above the footer WITHOUT the section's
+ *    blur/overlay filter, producing a visible "raw image" artefact
+ *    next to the same image rendered with filters in the section
+ *    above. Resetting background-image to none keeps only the flat
+ *    dark colour. */
 body:has(main > .sw > .sw-c > section.wnd-background-image ~ section.wnd-background-image) {
-  background-color: var(--footer-bg-color, #0e0e10);
+  background-color: var(--footer-bg-color, #0e0e10) !important;
+  background-image: none !important;
 }
 
 /* 3. Copyright strip below the columns: same dark fill so the
