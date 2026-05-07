@@ -1293,7 +1293,7 @@ body.has-hero-fade {
 body.has-hero-bg main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(3) .s-c,
 body.has-hero-fixed main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(3) .s-c,
 body.has-hero-fade main > .sw > .sw-c > section.wnd-background-image:nth-last-of-type(3) .s-c {
-  padding-bottom: 21rem !important;
+  padding-bottom: 7rem !important;
 }
 body.has-hero-bg main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide,
 body.has-hero-fixed main > .sw > .sw-c > section.s-basic.sc-cd.sc-a.wnd-w-wide,
