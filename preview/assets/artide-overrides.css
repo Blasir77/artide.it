@@ -1255,16 +1255,16 @@ footer.l-f .s-c {
  *    above. Resetting background-image to none keeps only the flat
  *    dark colour. */
 body:has(main > .sw > .sw-c > section.wnd-background-image ~ section.wnd-background-image) {
-  /* Only reset bg-image — leave bg-color at the default white. The
-   * legacy `has-hero-bg` artefact was the body bg IMAGE rendering
-   * unfiltered (raw photo with only a 60% black overlay) where the
-   * sections show the same photo with blur + overlay-* filters.
-   * Killing the image removes the artefact. We initially also
-   * tinted bg-color dark to "blend" the 7rem gap above the footer
-   * with the dark band, but the client confirmed they actually want
-   * the 7rem gap to be VISIBLE as a clean separator (same as on
-   * white-bg pages) — so the bg-color override is removed and the
-   * gap renders white on these pages too. */
+  /* Override BOTH bg-image AND bg-color from the legacy
+   * `body.has-hero-bg` rule (still set on these pages). Without
+   * the explicit bg-color reset, body.has-hero-bg's
+   * `background-color: #0d0d10` was winning and the body stayed
+   * dark — which made the 7rem gap above the dark footer band
+   * blend with the band, producing the "no visible gap" result
+   * the client reported. Force white so the gap renders as a
+   * clean separator on diffuse-bg pages too, matching white-bg
+   * pages. */
+  background-color: #ffffff !important;
   background-image: none !important;
 }
 
