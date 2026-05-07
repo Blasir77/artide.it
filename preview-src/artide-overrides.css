@@ -107,8 +107,22 @@
 .l-h .s-hn li,
 .l-h .s-hn .s-c {
   color: #ffffff !important;
-  font-weight: 700 !important;
   text-shadow: none !important;
+}
+/* Bold ONLY on top-level menu items (PRODOTTI / SERVIZI / AZIENDA
+ * / BLOG / CONTATTI). Submenu (level-2 + level-3) keeps regular
+ * weight for readability. */
+.l-h .s-hn .level-1 > li > .menu-item a,
+.l-h .s-hn .level-1 > li > .menu-item span,
+.l-h .s-hn .level-1 > li > a,
+.l-h .s-hn .level-1 > li > a span {
+  font-weight: 700 !important;
+}
+.l-h .s-hn .level-2 a,
+.l-h .s-hn .level-2 span,
+.l-h .s-hn .level-3 a,
+.l-h .s-hn .level-3 span {
+  font-weight: 400 !important;
 }
 /* Subtle shadow on nav when visible */
 .l-h .s-hn { box-shadow: 0 4px 18px rgba(0,0,0,0.12); }
@@ -1363,10 +1377,15 @@ button { font-family: inherit; }
   text-decoration: none !important;
   background: #1a1a1a;
   isolation: isolate;
-  cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
               box-shadow 0.4s ease;
 }
+/* Cursor: native pointer for <a> cards (Casa dell'Acqua only),
+ * default for <div class="artide-bento-card is-static"> cards
+ * (the other 7 categories — clickable detail pages will be added
+ * later when their dedicated schede are produced). */
+a.artide-bento-card { cursor: pointer; }
+.artide-bento-card.is-static { cursor: default; }
 .artide-bento-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
