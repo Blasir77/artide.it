@@ -9,7 +9,7 @@
 	<title>Artide</title>
 	<link>https://37.156.244.26/~artide1</link>
 	<description>Import file with pages and primary menu</description>
-	<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+	<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 	<language>it-IT</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>https://37.156.244.26/~artide1</wp:base_site_url>
@@ -32,17 +32,17 @@
 	<item>
 		<title>Home</title>
 		<link>https://37.156.244.26/~artide1/home/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=10</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>10</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[home]]></wp:post_name>
@@ -56,17 +56,47 @@
 	<item>
 		<title>Chi Siamo</title>
 		<link>https://37.156.244.26/~artide1/chi-siamo/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=11</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Chi siamo: produttore italiano di case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Il Tuo Migliore Partner</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artide srl è un produttore italiano di case dell'acqua ed erogatori con sede a Sala Baganza (Parma). Dal 2003 progettiamo e manuteniamo case dell'acqua per Comuni, gestori del servizio idrico integrato e grandi realtà industriali. Come produttore case dell'acqua controlliamo internamente la depurazione acqua, l'osmosi inversa, il telecontrollo case dell'acqua e la riqualificazione case dell'acqua esistenti, garantendo i nostri prodotti a vita.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</a></strong> <strong></strong>è un marchio creato e gestito dalla famiglia <strong><a href="/chi-siamo/">Arquati</a></a></strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La famiglia <strong>Arquati</a></strong> è rinomata per la lunga esperienza imprenditoriale che in oltre 40 anni di attività li ha portati a diventare leader europeo nel settore delle tende e delle cornici.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Conclusa questa esperienza la famiglia Arquati ha fondato nel 2003 il marchio <strong>Artide</strong></a>, specializzandosi oggi principalmente nel settore professionale de trattamento e della purificazione dell'acqua.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/team/">Artide ci mette la faccia</a></strong>, perché da oltre 20 anni lavoriamo garantendo sempre il miglior servizio al clienti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Essere un produttore case dell'acqua italiano significa essere unico responsabile di progettazione, produzione e manutenzione. Per scoprire le persone dietro al marchio Artide visita la pagina <a href="/team/">team Artide</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>11</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[chi-siamo]]></wp:post_name>
@@ -80,17 +110,63 @@
 	<item>
 		<title>Contatti</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=12</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Contatti Artide: case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>Indirizzo</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>Telefono</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>Email</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>Seguici</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/">Artide s.r.l.</a></strong>| P.IVA e C.F. 02268330343 | Reg. Imprese: 02268330343 | REA: CCIAA Parma 224129 | C.SOC. € 110.000,00 I.V.<br/><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Via Aldo Moro 19/6, 43038 Sala Baganza <a href="https://maps.app.goo.gl/L3tp5MPxGNTLRYmP7" rel="nofollow noopener" target="_blank"><strong>Parma</strong></a><strong></strong>, ITALIA</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="https://maps.app.goo.gl/L3tp5MPxGNTLRYmP7" rel="nofollow noopener" target="_blank">QUI</a></strong> su GoogleMaps</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tel. +39 <strong><a href="/">0521 833702</a></strong><br/>Fax. +39 0521 548542<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>info@pec.artide.info<br/></strong></a><em>abilitato solo per la ricezione di PEC, per informazioni e/o contatti utilizzare il modulo di supporto <strong><a href="/contatti/">QUI</a></strong></em><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="https://www.facebook.com/artideparma" rel="nofollow noopener" target="_blank">Facebook</a><br/><a href="https://www.instagram.com/artideparma" rel="nofollow noopener" target="_blank">Instagram</a><br/><a href="https://www.twitter.com/artideparma" rel="nofollow noopener" target="_blank">Twitter</a><br/><a href="https://www.youtube.com/@Artidesrl" rel="nofollow noopener" target="_blank">Youtube</a><br/><a href="https://www.linkedin.com/company/77855658" rel="nofollow noopener" target="_blank">Linkedin</a><br/><a href="https://www.pinterest.it/artidesrl/" rel="nofollow noopener" target="_blank">Pinterest</a><br/><a href="https://www.tiktok.com/@artideparma" rel="nofollow noopener" target="_blank">TikTok</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Per contattarci su Info Prodotti o Assistenza puoi utilizzare la normale mail <em>(</em><em>che vedi indicata in alto in ogni pagina)</em>; tuttavia Ti consigliamo di impiegare il modulo di contatto visibile dalla pagina di <a href="/contatti/"><strong>supporto</strong></a>, in quanto in tal modo è possibile tenere traccia di tutte le Tue segnalazioni ed avere un riscontro più tempestivo senza incorrere nel rischio che la Tua mail venga filtrata del server SPAM.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>12</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[contatti]]></wp:post_name>
@@ -104,17 +180,17 @@
 	<item>
 		<title>Blog</title>
 		<link>https://37.156.244.26/~artide1/blog/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=13</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>13</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[blog]]></wp:post_name>
@@ -128,17 +204,43 @@
 	<item>
 		<title>Certificazioni</title>
 		<link>https://37.156.244.26/~artide1/certificazioni/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=14</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Certificazioni Artide per case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>LE CERTIFICAZIONI DI QUALITÀ</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Alcuni dei riconoscimenti e delle Certificazioni che <strong>Artide</strong></a> <strong></strong>ha raggiunto<br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artide è un produttore italiano di case dell'acqua certificato secondo i principali standard di qualità, ambiente e sicurezza alimentare. Le nostre case dell'acqua e i nostri erogatori sono conformi a ISO 9001, ISO 14001, ISO 22000, marcatura CE, regolamento MOCA, direttiva RoHS, iscritti all'Albo Gestori Ambientali e al registro OSA. La conformità è ribadita in ogni capitolato di gara e accompagnata da documentazione tecnica completa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Le <a href="https://www.iso.org/home.html" rel="nofollow noopener" target="_blank"><strong>norme ISO</strong></a> <strong></strong>rappresentano gli standard per la certificazione di qualità e l'<strong>Organizzazione Internazionale per la Normazione</strong>, <em>(detta comunumente ISO)</em>, è la più nota organizzazione internazionale per la definizione di normative relative alla gestione e la certificazione di qualità; partecipano all'ISO, gli enti di 162 Stati e l'Italia ne è membro attraverso la rappresentanza dell'UNI <em>(Ente Nazionale Italiano di Unificazione)</em>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>La migliore garanzia è quindi quella di offrire a tutti i nostri clienti un alto livello di attenzione nelle scelte progettuali, dei materiali, nell'efficienza produttiva rispettosa dell'ambiente e nella sicurezza sul luogo di lavoro, per noi e per i nostri collaboratori</strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ogni componente viene accuratamente selezionato attraverso rigide procedure oggettive di qualificazione dei fornitori, favorendo realizzazioni Made in Italy, certificate dai più alti standard ed in ottemperanza alle normative vigenti. Da sempre la nostra tecnologia ed il nostro impegno sono al servizio del cliente e dell'ambiente perché crediamo che sia possibile crescere ed allo stesso tempo favorire uno sviluppo eco-sostenibile, con particolare cura di quanto ci circonda.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>14</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[certificazioni]]></wp:post_name>
@@ -152,17 +254,59 @@
 	<item>
 		<title>AIAQ</title>
 		<link>https://37.156.244.26/~artide1/aiaq/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=15</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Artide membro AIAQ: Associazione Acque di Qualità</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artide è iscritta all'AIAQ — Associazione Italiana Acque di Qualità — che riunisce i principali operatori italiani del trattamento acqua potabile, della depurazione acqua e degli impianti di potabilizzazione delle acque. L'adesione AIAQ è una garanzia di aggiornamento normativo continuo e di rispetto degli standard tecnici condivisi dal settore della casa dell'acqua.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</strong></a> è un menbro dell'<strong>A</a></strong> <strong></strong>ssociazione <strong>I</strong></a> <strong></strong>taliana <strong>A</strong> <strong></strong></a><strong></strong>cqua di <strong>Q</strong></a> ualità.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fin dalla sua costituzione, AIAQ ha dimostrato il proprio impegno su più fronti, mantenendo sempre tra gli obiettivi primari la crescita tecnica e culturale del mondo del trattamento dell'acqua. Punto di forza è il modus operandi, sempre pronto a favorire i contatti fra persone, enti e associazioni.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nello specifico, lo scopo principale risulta essere la diffusione della cultura del trattamento delle acque nel settore agroalimentare, rappresentando gli interessi dette aziende operanti nel settore.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A oggi AIAQè presente in 12 regioni del territorio nazionale, in rappresentanza di 34 importanti aziende che operano nel settore della progettazione, costruzione e installazione di impianti per il trattamento dell'acqua potabile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>EVENTI AIAQ promuove differenti attività culturali, quali convegni, conferenze, dibattiti e seminari, ma anche attività di formazione interna <em>(corsi di aggiornamento teorico/pratici per soci)</em> ed esterna <em>(lezioni, corsi di formazione)</em>. Tra glì eventi e le iniziative recentemente svolte da AIAQ ricordiamo:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Oltre agli eventi, AIAQ promuove numerose attività editoriali (atti di convegni, seminari, nonché studi e ricerche specifiche).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Per maggiori informazioni <a href="https://www.acquadiqualita.it/" rel="nofollow noopener" target="_blank">www. <strong>acquadiqualita</strong>.it</a><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>AIAQ promuove la condivisione di buone pratiche fra produttori case dell'acqua e operatori della potabilizzazione acqua. Tutte le altre certificazioni Artide sono raccolte nella pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Partecipazione alla stesura delle<strong>"Linee guida per l'informazione sulle apparecchiature per il trattamento dell'acqua destinata al consumo umano</strong>", a cura di Rossella Colagrossi (Ministero della Salute) e Luca Lucentini (Istituto Superiore di Sanità) - Edizione 2015</li><li>Convegno nazionale: "<strong>Il trattamento dell'acqua potabile nei pubblici esercizi</strong>" rivolto ai gestori di pubblici esercizi, costruttori/installatori e manutentori di impianti di trattamento dell'acqua e agli organi di controllo ufficiali; con la partecipazione dell'Istituto Superiore di Sanità e il Ministero della Salute a Roma nel marzo 2017</li><li>Corso di formazione: "<strong>Acqua tra trattamenti, nutrizione e fake news</strong>", con la partecipazione dell'Istituto Superiore di Sanità e l'Università Cattolica Sacro Cuore a Roma nel settembre 2018</li></ul>
+<!-- /wp:list -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>15</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[aiaq]]></wp:post_name>
@@ -176,17 +320,59 @@
 	<item>
 		<title>CE</title>
 		<link>https://37.156.244.26/~artide1/ce/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=16</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Marcatura CE sulle case dell'acqua Artide</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>A cosa serve la marcatura CE</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Vantaggi per i consumatori</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tutte le case dell'acqua, gli erogatori e i totem prodotti da Artide sono conformi alla marcatura CE e alle direttive europee applicabili: macchine, bassa tensione, compatibilità elettromagnetica, MOCA. La marcatura CE è apposta su ogni casa dell'acqua dopo i test di conformità ed è documentata da dichiarazione di conformità UE.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La marcatura CEè un importante strumento di tutela della sicurezza dei consumatori e della libera circolazione dei prodotti nell'Unione Europea; I prodotti certificati CE offrono una serie di vantaggi sia per i produttori che per i consumatori. La marcatura CEè quindi un requisito fondamentale per la libera circolazione dei prodotti nell'Unione Europea e <a href="/"><strong>anche se sembra scontato a tutt'oggi vi sono molti prodotti senza marchio CE</strong></a> che non possono essere circolare ed essere venduti nel mercato europeo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>Artide è un produttore</strong></a>, e non un semplice commerciante, tutti i nostri prodotti conformi alle normative Europee e sono quindi Certificati CE.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Per i consumatori i prodotti certificati CE offrono una serie di vantaggi, tra cui:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Commissione Europea: <a href="http://www.commission.europa.eu" rel="nofollow noopener" target="_blank">www.commission.europa.eu</a><br/>Ministero delle Imprese: <a href="https://atc.mise.gov.it/index.php/tecnologie-delle-comunicazioni/servizi/marcatura-ce" rel="nofollow noopener" target="_blank">www.atc.mise.gov.it</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La marcatura CE è obbligatoria per qualsiasi casa dell'acqua installata in Italia. Per le altre certificazioni del produttore case dell'acqua Artide visita la pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong>Apparecchi elettrici ed elettronici</strong></li><li><strong>Macchine</strong></li><li><strong>Giocattoli</strong></li><li><strong>Dispositivi medici</strong></li><li><strong>Prodotti da costruzione</strong></li><li><strong>Materiali da costruzione</strong></li><li><strong>Attrezzature a pressione</strong></li><li><strong>Apparecchiature a gas</strong></li><li><strong>Prodotti di protezione individuale</strong></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li>Ri <a href="/">Sicurezza</a><br/>I prodotti certificati CE sono stati testati e approvati da un organismo indipendente, il che garantisce che siano conformi ai requisiti di sicurezza dell'Unione Europea.<br/><br/></li><li><strong><a href="/">Qualità</a></strong><br/>I prodotti certificati CE sono spesso di qualità superiore ai prodotti non certificati, in quanto devono soddisfare requisiti più rigorosi.<br/><br/></li><li><a href="/"><strong>Garanzia</strong></a><br/>I prodotti certificati CE sono spesso coperti da una garanzia, che offre al consumatore una maggiore tutela in caso di problemi.<br/><br/></li></ul>
+<!-- /wp:list -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>16</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[ce]]></wp:post_name>
@@ -200,17 +386,71 @@
 	<item>
 		<title>DM174, DM25, MOCA</title>
 		<link>https://37.156.244.26/~artide1/moca/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=17</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Conformità MOCA per case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>DM174, DM25 e MOCA</strong><br/></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><ul><li><div><strong>Decreto Legislativo n.31 del 2/02/2001</strong>[ <a href="https://www.gazzettaufficiale.it/eli/id/2001/03/03/001G0074/sg" rel="nofollow noopener" target="_blank">link normativa</a> ]</div><div>Pubblicato sulla GU Serie Generale n.52 del 03-03-2001 - Suppl. Ordinario n. 41[ <a href="/eli/gu/2001/03/03/52/so/41/sg/20010303_052_SO_041.pdf" target="_blank">link download</a> ]</div><div>La "qualità dell'acqua destinata al consumo umano" è disciplinata dal presente decreto, il quale recepisce la direttiva 98/83/CE e si applica a tutte le acque destinate all'uso potabile, per la preparazione di cibi e bevande, sia in ambito domestico che nelle imprese alimentari, a prescindere dalla loro origine e tipo di fornitura.<br/></div><div><br/></div><div>I parametri e i valori massimi consentiti, di cui all'allegato I, sono in genere fontati sugli orientamenti stabiliti dall'Organizzazione Mondiale della Sanità e sul parere del comitato scientifico della Commissione Europea, mentre, valori più restrittivi e parametri supplementari, ad es. "clorito" e "vanadio", sono determinati dall'Istituto Superiore di Sanità.</div><div><br/></div></li><li><div><strong>Decreto Ministeriale 174 del 6 aprile 2004</strong>[ <a href="https://www.gazzettaufficiale.it/eli/id/2004/07/17/004G0204/sg" rel="nofollow noopener" target="_blank">link normativa</a> ]</div><div>Pubblicato sulla GU n.166 del 17-07-2004[ <a href="/eli/gu/2004/07/17/166/sg/20040717_166.pdf" target="_blank">link download</a> ]</div><div>Il Decreto è la norma relativa ai materiali che possono essere utilizzati negli impianti di distribuzione dell'acqua e, da ultimo, il regolamento che disciplina le apparecchiature destinate alle modifiche delle caratteristiche organolettiche dell'acqua potabile.</div><div><br/></div></li><li><div><strong>Decreto Ministeriale 25 del 7 febbraio 2012</strong>[ <a href="https://www.gazzettaufficiale.it/eli/id/2012/03/22/012G0044/sg" rel="nofollow noopener" target="_blank">link normativa</a> ]</div><div>Pubblicato sulla GU n.69 del 22-03-2012[ <a href="/eli/gu/2012/03/22/69/sg/20120322_069.pdf" target="_blank">link download</a> ]</div><p>Inquadrandosi nel moderno contesto normativo in materia di qualità delle acque destinate al consumo umano (D. Lgs. 31/01), igiene dei prodotti alimentari, Codice del Consumo (D.Lgs 206/2005) e libera circolazione delle merci, il presente decreto ha l'obiettivo di garantire che:</p><ul><li>i trattamenti non pregiudichino la qualità delle acque, già idonee sotto il profilo sanitario</li><li>le apparecchiature di trattamento garantiscano gli effetti dichiarati nel tempo stabilito</li><li>l'informazione completa sugli effetti dei trattamenti sia adeguatamente fornita al consumatore</li></ul><p></p><div>A differenza del precedente decreto n. 443/90, il D.M. 25/2012 si applica sia all'ambito domestico che alle attività di ristorazione pubblica e collettiva (ristoranti, bar, comunità, mense, hotel, strutture turistico-ricettive ecc.). e all'industria alimentare ed esclude esplicitamente dal campo di applicazione i trattamenti dell'acqua esclusivamente ad uso di impianti tecnologici e/o elettrodomestici che pertanto devono essere installati in reti separate da quelle destinate al trasporto di acqua destinata al consumo umano.</div><p></p><br/></li><li><div><strong>MOCA</strong><br/><p><a href="https://www.salute.gov.it/portale/temi/p2_6.jsp?area=sicurezzaAlimentare&amp;id=1173&amp;menu=chim" rel="nofollow noopener" target="_blank">MOCA</a> è l'acronimo di "Materiali e Oggetti a Contatto con gli Alimenti", sotto cui è raggruppato tutto ciò che viene a contatto con i prodotti alimentari, lungo tutta la filiera industriale; Dalla fase di produzione, alla fase di somministrazione e consumo finale.</p><p>Ad esempio, fanno parte dei MOCA i seguenti oggetti:</p><ul><li>macchinari per la trasformazione degli alimenti</li><li>macchinari da imballaggio</li><li>imballaggi primari</li><li>contenitori per il trasporto dei prodotti alimentari</li><li>recipienti, utensili da cucina, posate e stoviglie.</li></ul><p>Questi materiali possono diventare una fonte di contaminazione per l'alimento.</p><p>Ad esempio, i microrganismi o le sostanze indesiderate presenti sugli oggetti possono essere cedute all'alimento tramite il contatto, modificandone la composizione chimica. In questi casi si parla di "cross contamination", invece, quando sono delle sostanze chimiche ad essere trasferite dal materiale all'alimento, sia in maniera diretta che indiretta, si parla di"migrazione".</p><p><strong>La norme di riferimento per i MOCA sono</strong>:<br/>Regolamento (CE) n. 1935/2004 che ne definisce i principi generali[ <a href="/legal-content/IT/TXT/PDF/CELEX%253A32004R1935%253AIT%253ATXT.pdf" target="_blank">link download</a> ]<br/>Regolamento (CE) n. 2023/2006 che ne definisce le buone pratiche di fabbicazione[ <a href="/legal-content/IT/TXT/PDF/CELEX%253A32006R2023%253AIT%253ATXT.pdf" target="_blank">link download</a> ]<br/>Regolamento (UE) n. 10/2011 norme per verificare la composizione dei materaili plastici[ <a href="/LexUriServ/CELEX%253A32011R0010%253AIT%253ATXT.pdf" target="_blank">link download</a> ]<br/></p></div></li></ul></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Le case dell'acqua Artide sono conformi al regolamento MOCA (Materiali e Oggetti a Contatto con Alimenti): tubi, raccordi, guarnizioni e membrane del depuratore acqua a osmosi inversa rispondono ai requisiti DM 174/2004 e CE 1935/2004. La conformità MOCA è garantita anche dopo ogni intervento di manutenzione case dell'acqua e di sanificazione serbatoio acqua potabile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il settore del trattamento acqua in italia è particolarmente complesso ed articolato, per questo molte aziende non entrano nel merito del dettaglio; tuttavia a scopo informativo è bene citare la terna delle norme base a cui devono avere rispondenza i sistemi di distribuzione e/o trattamento per acqua potabile:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Inquadrandosi nel moderno contesto normativo in materia di qualità delle acque destinate al consumo umano (D. Lgs. 31/01), igiene dei prodotti alimentari, Codice del Consumo (D.Lgs 206/2005) e libera circolazione delle merci, il presente decreto ha l'obiettivo di garantire che:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="https://www.salute.gov.it/portale/temi/p2_6.jsp?area=sicurezzaAlimentare&amp;id=1173&amp;menu=chim" rel="nofollow noopener" target="_blank">MOCA</a> è l'acronimo di "Materiali e Oggetti a Contatto con gli Alimenti", sotto cui è raggruppato tutto ciò che viene a contatto con i prodotti alimentari, lungo tutta la filiera industriale; Dalla fase di produzione, alla fase di somministrazione e consumo finale.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ad esempio, fanno parte dei MOCA i seguenti oggetti:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questi materiali possono diventare una fonte di contaminazione per l'alimento.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ad esempio, i microrganismi o le sostanze indesiderate presenti sugli oggetti possono essere cedute all'alimento tramite il contatto, modificandone la composizione chimica. In questi casi si parla di "cross contamination", invece, quando sono delle sostanze chimiche ad essere trasferite dal materiale all'alimento, sia in maniera diretta che indiretta, si parla di"migrazione".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>La norme di riferimento per i MOCA sono</strong>:<br/>Regolamento (CE) n. 1935/2004 che ne definisce i principi generali[ <a href="/legal-content/IT/TXT/PDF/CELEX%253A32004R1935%253AIT%253ATXT.pdf" target="_blank">link download</a> ]<br/>Regolamento (CE) n. 2023/2006 che ne definisce le buone pratiche di fabbicazione[ <a href="/legal-content/IT/TXT/PDF/CELEX%253A32006R2023%253AIT%253ATXT.pdf" target="_blank">link download</a> ]<br/>Regolamento (UE) n. 10/2011 norme per verificare la composizione dei materaili plastici[ <a href="/LexUriServ/CELEX%253A32011R0010%253AIT%253ATXT.pdf" target="_blank">link download</a> ]<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>MOCA è un requisito imprescindibile per qualsiasi casa dell'acqua che eroga acqua destinata al consumo umano. Tutte le certificazioni Artide sono raccolte nella pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><div><strong>Decreto Legislativo n.31 del 2/02/2001</strong>[ <a href="https://www.gazzettaufficiale.it/eli/id/2001/03/03/001G0074/sg" rel="nofollow noopener" target="_blank">link normativa</a> ]</div><div>Pubblicato sulla GU Serie Generale n.52 del 03-03-2001 - Suppl. Ordinario n. 41[ <a href="/eli/gu/2001/03/03/52/so/41/sg/20010303_052_SO_041.pdf" target="_blank">link download</a> ]</div><div>La "qualità dell'acqua destinata al consumo umano" è disciplinata dal presente decreto, il quale recepisce la direttiva 98/83/CE e si applica a tutte le acque destinate all'uso potabile, per la preparazione di cibi e bevande, sia in ambito domestico che nelle imprese alimentari, a prescindere dalla loro origine e tipo di fornitura.<br/></div><div><br/></div><div>I parametri e i valori massimi consentiti, di cui all'allegato I, sono in genere fontati sugli orientamenti stabiliti dall'Organizzazione Mondiale della Sanità e sul parere del comitato scientifico della Commissione Europea, mentre, valori più restrittivi e parametri supplementari, ad es. "clorito" e "vanadio", sono determinati dall'Istituto Superiore di Sanità.</div><div><br/></div></li><li><div><strong>Decreto Ministeriale 174 del 6 aprile 2004</strong>[ <a href="https://www.gazzettaufficiale.it/eli/id/2004/07/17/004G0204/sg" rel="nofollow noopener" target="_blank">link normativa</a> ]</div><div>Pubblicato sulla GU n.166 del 17-07-2004[ <a href="/eli/gu/2004/07/17/166/sg/20040717_166.pdf" target="_blank">link download</a> ]</div><div>Il Decreto è la norma relativa ai materiali che possono essere utilizzati negli impianti di distribuzione dell'acqua e, da ultimo, il regolamento che disciplina le apparecchiature destinate alle modifiche delle caratteristiche organolettiche dell'acqua potabile.</div><div><br/></div></li><li><div><strong>Decreto Ministeriale 25 del 7 febbraio 2012</strong>[ <a href="https://www.gazzettaufficiale.it/eli/id/2012/03/22/012G0044/sg" rel="nofollow noopener" target="_blank">link normativa</a> ]</div><div>Pubblicato sulla GU n.69 del 22-03-2012[ <a href="/eli/gu/2012/03/22/69/sg/20120322_069.pdf" target="_blank">link download</a> ]</div><p>Inquadrandosi nel moderno contesto normativo in materia di qualità delle acque destinate al consumo umano (D. Lgs. 31/01), igiene dei prodotti alimentari, Codice del Consumo (D.Lgs 206/2005) e libera circolazione delle merci, il presente decreto ha l'obiettivo di garantire che:</p><ul><li>i trattamenti non pregiudichino la qualità delle acque, già idonee sotto il profilo sanitario</li><li>le apparecchiature di trattamento garantiscano gli effetti dichiarati nel tempo stabilito</li><li>l'informazione completa sugli effetti dei trattamenti sia adeguatamente fornita al consumatore</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li>macchinari per la trasformazione degli alimenti</li><li>macchinari da imballaggio</li><li>imballaggi primari</li><li>contenitori per il trasporto dei prodotti alimentari</li><li>recipienti, utensili da cucina, posate e stoviglie.</li></ul>
+<!-- /wp:list -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>17</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[moca]]></wp:post_name>
@@ -224,17 +464,43 @@
 	<item>
 		<title>Gestore Ambientale</title>
 		<link>https://37.156.244.26/~artide1/gestore-ambientale/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=18</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Artide iscritta all'Albo Gestori Ambientali</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>GESTORI AMBIENTALI</strong><br/></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artide è iscritta all'Albo Nazionale Gestori Ambientali per il trasporto e la gestione dei rifiuti derivanti dalla manutenzione case dell'acqua: filtri esausti del depuratore acqua a osmosi inversa, oli, carcasse elettroniche del telecontrollo case dell'acqua. L'iscrizione tutela il committente da responsabilità indirette nella gestione del fine-vita dell'impianto.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide trattando sistemi di filtrazione per acqua è regolarmente iscritta all'Albo</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tecnicamente è un'obbligo di gestione che garantisce al cliente ed alla pubblica utenza che il trattamento dei "consumabili"<em>(identificabili pincipalmente con i filtri a sedimenti e/o carboni attivi e/o le lampade UVC)</em> prodotti durante il processo di manutenzione periodica che viene operata sugli impianti <em>(Erogatori Domestici, Erogatori da Ufficio, Erogatori Condominiali, Case dell'Acqua)</em> sia effettivamente conforme ed a norma; <strong>ovvero che questi componenti vengano effettivamente sostituiti e smaltiti in modo conforme</a></strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il volume di filtri che annualmente viene movimentato certificato dalle bolle di smaltimento diventa quindi un documento ufficiale <em>(divulgabile a richiesta agli enti pubblici Partner)</em> a garanzia della serietà del processo di manutenzione e gestione che l'azienda opera.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Affidare la manutenzione case dell'acqua a un gestore ambientale iscritto significa chiudere il cerchio della conformità normativa. Tutte le certificazioni Artide sono raccolte nella pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>18</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[gestore-ambientale]]></wp:post_name>
@@ -248,17 +514,47 @@
 	<item>
 		<title>ISO 9001</title>
 		<link>https://37.156.244.26/~artide1/iso-9001/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=19</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">ISO 9001: qualità certificata nelle case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artide è certificata ISO 9001 come produttore case dell'acqua: ogni fase — progettazione, produzione, depuratore acqua, manutenzione case dell'acqua e telecontrollo case dell'acqua — è documentata, verificata e tracciabile. La certificazione ISO 9001 è rilasciata da ente accreditato e rinnovata annualmente con audit di sorveglianza.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Si tratta di una scelta strategica per l'azienda in quanto permette di:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Difatto il cliente e la sua soddisfazione sono al centro della <a href="https://www.iso.org/iso-9001-quality-management.html" rel="nofollow noopener" target="_blank"><strong>ISO 9001</strong></a>; ogni attività, applicazione e monitoraggio delle attività/processi è infatti volta a determinare il massimo soddisfacimento del cliente e, se applicabile, dell'utilizzatore finale.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Le fasi di applicazione della norma partono dalla definizione delle procedure e registrazioni per ogni singolo processo o macro processo identificato all'interno dell'organizzazione aziendale, in armonia <strong><a href="/export/e6hpso97lrhpva19l3uocm525o/hkl0c58vkdjh3kirh9l6us4mo8/1776615600000/100966961328230047731/Artides.r.l.-PoliticaAmbientalePUBBLICATO.pdf" target="_blank">secondo la nostra politica ambientale consultable dal QUI</a></strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide è Certificata allo Standard ISO 9001 dal 2014 ed oggi è certificata da Istituto Accreditato da Ente Terzo Riconosciuto dal Ministero dello Sviluppo Economico</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ISO 9001 garantisce al committente che il produttore case dell'acqua applica gli stessi standard di qualità a tutta la filiera. Tutte le certificazioni Artide sono raccolte nella sezione <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><a href="#"><strong>Incrementare la propria produzione</strong></a></li><li><a href="#"><strong>Abbattere i costi</strong></a></li><li><a href="#"><strong>Diventare più aggressiva sul mercato</strong></a></li><li><strong>Aumentare la fidelizzazione della clientela</strong></a></li></ul>
+<!-- /wp:list -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>19</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[iso-9001]]></wp:post_name>
@@ -272,17 +568,51 @@
 	<item>
 		<title>ISO 14001</title>
 		<link>https://37.156.244.26/~artide1/iso-14001/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=20</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">ISO 14001: gestione ambientale Artide</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Ma in termini pratici in cosa si concretizza questo impegno ?<br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>La certificazione ISO 14001, conseguita ad aprile 2024, attesta che Artide produce e manutiene case dell'acqua riducendo l'impatto ambientale lungo l'intero ciclo di vita: scelta dei materiali, produzione, logistica, manutenzione case dell'acqua e dismissione. ISO 14001 si integra con la nostra iscrizione all'Albo Gestori Ambientali e con il sistema di telecontrollo case dell'acqua per ridurre gli sprechi idrici.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La UNI EN <strong><a href="https://www.iso.org/standard/60857.html" rel="nofollow noopener" target="_blank">ISO 14001</a></strong> <strong></strong>è lo standard riconosciuto a livello internazionale per i Sistemi di Gestione Ambientale (SGA); ovvero fornisce un "modus operandi" che consente alle organizzazioni di progettare e implementare un SGA e di migliorare continuamente le proprie prestazioni ambientali.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Grazie a questo standard, dimostriamo concretamente il nostro impegno per un futuro più sostenibile <strong><a href="/export/e6hpso97lrhpva19l3uocm525o/hkl0c58vkdjh3kirh9l6us4mo8/1776615600000/100966961328230047731/Artides.r.l.-PoliticaAmbientalePUBBLICATO.pdf" target="_blank">secondo la nostra politica ambientale consultable dal QUI</a></strong>, ottimizzando l'uso delle risorse e riducendo i costi operativi e la nostra impronta produttiva sull'ambiente.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questo non solo beneficia l'ambiente, ma arricchisce anche il valore che offriamo ai nostri stakeholder.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Oltre che nella gestione del processo produttivo aziendale, come la gestione della raccolta differenziata, la scelta di approvvisionamento da sole energie rinnovabili e l'impiego di materiali a basso impatto sull'impronta di Carbonio, si riflette anche sul prodotto, come per la Casa dell'Acqua che viene oggi progettata con elementi totalmente reciclabili nel tradizionale percorso di recupero, ovvero senza la necessità di interventi di aziende specializzate, ad esempio le pannellature in Vetroresina Navale <em>(elemento tecnicamente eterno ma non "Amico dell'Ambiente")</em> sono state sostituite in pannellatture in Alluminio rinforzate da un'intelaiatura a nido d'ape che a parità di prestazioni in termini di resistenza e coibentazione risulta totalmente eco-compatibile e integrabili nei <a href="http://gpp.mase.gov.it/CAM-vigenti" rel="nofollow noopener" target="_blank">CAM</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide è Certificata allo Standard ISO 14001 dal 2024</strong></a><strong>.</strong><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ISO 14001 è un requisito sempre più frequente nei capitolati comunali. Per la versione integrale del certificato, e di tutte le altre certificazioni Artide, visita la pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>20</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[iso-14001]]></wp:post_name>
@@ -296,17 +626,47 @@
 	<item>
 		<title>ISO 22000</title>
 		<link>https://37.156.244.26/~artide1/iso-22000/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=21</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">ISO 22000: sicurezza alimentare delle case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ISO 22000 certifica che la casa dell'acqua Artide rispetta i requisiti di sicurezza alimentare lungo tutta la filiera: depuratore acqua a osmosi inversa, materiali a contatto con alimenti (MOCA), sanificazione serbatoio acqua potabile, tracciabilità dei lotti e procedure HACCP. ISO 22000 si applica anche al servizio di manutenzione case dell'acqua e alla sanificazione periodica.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La UNI EN <strong><a href="https://www.iso.org/iso-22000-food-safety-management.html" rel="nofollow noopener" target="_blank">ISO 22000</a></strong> <strong></strong><strong></strong><em>(Sistemi di gestione per la sicurezza alimentare - Requisiti per qualsiasi organizzazione nella filiera alimentare)</em> è una norma volontaria che si propone di armonizzare su un livello globale le esigenze di un'organizzazione aziendale finalizzata alla <strong>sicurezza alimentare</strong></a><strong></strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La norma <strong><a href="https://www.iso.org/iso-22000-food-safety-management.html" rel="nofollow noopener" target="_blank">ISO 22000</a></strong> ha il grande merito di integrare e armonizzare a livello internazionale l'approccio di gestione della sicurezza lungo l'intera catena alimentare.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La certificazione viene integrata nel contesto aziendale in modo armonizzato <strong><a href="/export/e6hpso97lrhpva19l3uocm525o/hkl0c58vkdjh3kirh9l6us4mo8/1776615600000/100966961328230047731/Artides.r.l.-PoliticaAmbientalePUBBLICATO.pdf" target="_blank">secondo la nostra politica ambientale consultable dal QUI</a>.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide è Certificata allo Standard ISO 22000 dal 2012 ed oggi è certificata da Istituto Accreditato da Ente Terzo Riconosciuto dal Ministero dello Sviluppo Economico</strong></a><strong>.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Approfondisci questo argomento leggendo la pagina dedicata pubblicata sul blog ufficiale aziendale <a href="/l/blog-sicurezza-alimentare-casa-dell-acqua-erogatori/"><strong>QUI</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Per Comuni e gestori del servizio idrico, ISO 22000 è la garanzia che l'acqua erogata dalla casa dell'acqua è sicura per il consumo. Tutte le certificazioni Artide sono consultabili nella sezione <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>21</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[iso-22000]]></wp:post_name>
@@ -320,17 +680,39 @@
 	<item>
 		<title>OSA</title>
 		<link>https://37.156.244.26/~artide1/osa/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=22</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Artide è un OSA: Operatore del Settore Alimentare</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>OPERATORE SETTORE ALIMENTARE</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Artide è iscritta come OSA (Operatore del Settore Alimentare) presso l'ASL di competenza: ciò significa che il produttore case dell'acqua è soggetto a vigilanza sanitaria e ai controlli previsti dal regolamento europeo 178/2002. La qualifica OSA si applica sia alla produzione case dell'acqua sia alla manutenzione case dell'acqua e alla sanificazione.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'<strong>O</strong> peratore del <strong>S</strong> ettore <strong>A</strong> limentare è un punto cardine della nuova legislazione alimentare, che rovescia rispetto all'assetto precedente l'onere primario di garanzia della sicurezza alimentare. Infatti la definizione stessa data nel Regolamento (CE) n. 178/2002 riporta:<br/><br/>"operatore del settore alimentare è la persona fisica o giuridica responsabile di garantire il rispetto delle disposizioni della legislazione alimentare nell'impresa alimentare posta sotto il suo controllo."<br/><br/>Lo stesso regolamento prevede all'articolo 17 che "Spetti agli operatori del settore alimentare e dei mangimi garantire che nelle imprese da essi controllate, gli alimenti o i mangimi soddisfino le disposizioni della legislazione alimentare, inerenti alle loro attività in tutte le fasi della produzione, della trasformazione e della distribuzione e verificare che tali disposizioni siano soddisfatte".<br/><br/>Le motivazioni di questo approccio si possono leggere nel Considerando 30 del medesimo: "Gli operatori del settore alimentare sono in grado, meglio di chiunque altro, di elaborare sistemi sicuri per l'approvvigionamento alimentare e per garantire la sicurezza dei prodotti forniti; essi dovrebbero pertanto essere legalmente responsabili, in via principale, della sicurezza degli alimenti<br/><br/>Analogamente, nel Regolamento (CE) n. 852/2004 si ribadisce che "<strong>gli operatori del settore alimentare garantiscono che tutte le fasi della produzione, della trasformazione e della distribuzione degli alimenti sottoposte al loro controllo soddisfino i pertinenti requisiti di igiene fissati nel presente regolamento</strong>". Il Regolamento stabilisce che tutto ciò sia attuato, applicando nell'azienda alimentare l'autocontrollo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>*Fonte <a href="https://www.salute.gov.it/portale/temi/p2_6.jsp?lingua=italiano&amp;id=1137&amp;area=sicurezzaAlimentare&amp;menu=sicurezza" rel="nofollow noopener" target="_blank">Ministero della Salute</a></em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La qualifica OSA è una garanzia ulteriore richiesta nei capitolati di Comuni e municipalizzate. Tutte le certificazioni e le autorizzazioni del produttore case dell'acqua Artide sono consultabili nella pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>22</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[osa]]></wp:post_name>
@@ -344,17 +726,39 @@
 	<item>
 		<title>RoHS</title>
 		<link>https://37.156.244.26/~artide1/rohs/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=23</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Conformità RoHS delle case dell'acqua Artide</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Le case dell'acqua e gli erogatori Artide sono conformi alla direttiva RoHS (Restriction of Hazardous Substances): nessuna casa dell'acqua contiene piombo, mercurio, cadmio o altre sostanze vietate nelle apparecchiature elettriche ed elettroniche. La conformità RoHS si applica sia alle parti elettroniche del telecontrollo case dell'acqua sia ai componenti del depuratore acqua a osmosi inversa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>È collegata strettamente con la direttiva sulla rottamazione di apparecchiature elettriche ed elettroniche <em>(o RAEE o WEEE, dall'inglese "Waste of electric and electronic equipment")</em> 2002/96/CE che regola l'accumulazione, il riciclaggio e il recupero per le apparecchiature elettriche e fa parte di un'iniziativa di legge per risolvere il problema dell'enorme quantitativo di rifiuti generati dalle apparecchiature elettroniche obsolete. RAEE in italiano sta per "rifiuti di apparecchiature elettriche ed elettroniche" o anche diffusa con il nome inglese. Su molte apparecchiature infatti si possono trovare i marchi RAEE o WEEE che indicano però la stessa normativa.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La RoHS si applica ai prodotti costruiti o importati nell'Unione europea. Ogni stato membro della Comunità europea deve "recepire" la direttiva, cio è adottare proprie politiche di applicazione, usando la direttiva come guida. Di conseguenza, ci potrebbero essere versioni differenti della legge quanti sono gli stati della CE.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide è registrata al consorzio nazionale per la gestione e lo smaltimento dei RAEE dal 2008</strong></a>.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>RoHS protegge gli utenti finali e il personale di manutenzione case dell'acqua dall'esposizione a sostanze pericolose. Le altre certificazioni del produttore case dell'acqua Artide sono consultabili nella pagina <a href="/certificazioni/">certificazioni</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>23</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[rohs]]></wp:post_name>
@@ -368,17 +772,43 @@
 	<item>
 		<title>Info &amp; Copyright</title>
 		<link>https://37.156.244.26/~artide1/info-copyright/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=24</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Informativa Copyright</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>INFORMAZIONI sul COPYRIGHT</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>INFORMATIVA SUL COPYRIGHT</strong><br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tutti i contenuti di <a href="/" target="_blank">www.artide.it</a>/<a href="/" target="_blank">www.artide.info</a> e nelle mail dai rispettivi siti inviate, sono proprietà letteraria riservata e protetti dal diritto di autore. I testi pubblicati nel sito, possono essere liberamente distribuiti alle seguenti condizioni:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>A</strong>. i testi e i file allegati devono rimanere nel loro formato originale<br/><strong>B</strong>. la distribuzione non deve essere finalizzata al lucro<br/><strong>C</strong>. deve essere citata la fonte e l'autore e l'indirizzo web da cui sono stati tratti</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Per l'inserimento dei testi in CD-ROM, chiavette USB, collezioni di software, ecc. è necessario richiedere l'autorizzazione scritta di Artide S.r.L.; chi intende utilizzare i nostri contenuti, può farne richiesta per scritto all'indirizzo mail <a href="mailto:info@artide.info" target="_blank">info@artide.info</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il materiale e i contenuti presentati nel sito sono stati attentamente vagliati e analizzati, e sono stati elaborati con la massima cura. In ogni caso errori, inesattezze e omissioni sono possibili. Artide S.r.L. declina qualsiasi responsabilità per errori ed omissioni eventualmente presenti nel sito. Artide S.r.L. declina ogni responsabilità per qualunque tipo di utilizzo fatto da terzi del presente lavoro. L'elaborazione del testo non comporta responsabilità per specifici errori e/o inesattezze. Nonè consentito scaricare contenuti che sono proprietà intellettuale del Team per creare un clone di fonteartide.com o di parti di esso. Ogni abuso in questo senso sarà segnalato alle Autorità competenti e perseguito nel rispetto delle leggi vigenti.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>24</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[info-copyright]]></wp:post_name>
@@ -392,17 +822,127 @@
 	<item>
 		<title>Informativa Privacy</title>
 		<link>https://37.156.244.26/~artide1/informativa-privacy/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=25</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Informativa sulla Privacy</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[A]. IL SITO</strong><br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[B]. I DATI TRATTATI</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[C]. FINALITÀ E BASE GIURIDICA DEL TRATTAMENTO</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[D]. NATURA DEL CONFERIMENTO DEI DATI E CONSEGUENZE DI UN EVENTUALE RIFIUTO</strong><br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[E]. DESTINATARI DEI DATI</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[F]. DATI DI MINORI</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[G]. TRASFERIMENTO ALL'ESTERO</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[H]. CONSERVAZIONE DEI DATI</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[I].SICUREZZA DEI DATI</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>[M]. COMUNICAZIONI VIA E-MAIL</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Il Titolare del trattamento dei dati personali è <strong><a href="/">Artide s.r.l.</a></strong> con sede in <strong>Via Aldo Moro 19/6, 43038 Sala Baganza (PR) ITALIA</a></strong> <em>(di seguito, "<strong>Società</strong>", "<strong>noi</strong>" e "<strong>nostro</strong>")</em>.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In conformità al Codice della Privacy <em>(D.Lgs. n. 196/2003 e s.m. e i.)</em> la presente informativa descrive come vengono raccolti e utilizzati i dati personali degli utenti; la presente privacy policy <em>("<strong>Privacy Policy</strong>")</em> si applica unicamente ai siti di ns. propietà tra cui il presente <a href="/" target="_blank">www.artide.it</a> e/o <a href="/" target="_blank">www.artide.info</a> <em>(nel seguito, complessivamente, il "<strong>Sito</strong>")</em> ed alle respettive email indirizzate a tali siti e/o prevenienti da tali siti.<br/><br/>Si prega di leggere con attenzione la Privacy Policy prima di utilizzare il Sito:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Dati Forniti Volontariamente dall'Utente</strong>:<br/>La Società può raccogliere i seguenti dati personali forniti volontariamente dall'utente:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Dati di navigazione</strong>:<br/>I dati di navigazione comprendono tutti dati raccolti automaticamente tramite il Sito e riguardano, ad esempio, le tipologie di azioni effettuate sul Sito dall'utente e come l'utente sta utilizzando il Sito. Inoltre, possiamo automaticamente registrare l'indirizzo IP <em>(vale a dire l'indirizzo univoco che identifica il dispositivo dell'utente su internet)</em>, che viene automaticamente riconosciuto dal nostro server. I dati di navigazione sono utilizzati al solo fine di ottenere informazioni statistiche anonime sull'utilizzo del Sito e per controllarne il regolare funzionamento e sono cancellati immediatamente dopo il loro trattamento. Tali dati potrebbero essere inoltre utilizzati al fine di accertare responsabilità in caso di eventuali reati informatici ai danni del Sito o per tutelare i nostri diritti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Conferire i dati per le finalità di cui al punto C.1, C.4 è necessario e un rifiuto da parte dell'utente comporta l'impossibilità per la Società di eseguire i propri obblighi contrattuali e fornire all'utente le funzionalità, i servizi e le informazioni richieste come sopra specificato. Il conferimento dei dati per le finalità di cui al punto C.3 è automatico e implicito nei protocolli di trasmissione di Internet.<br/>Conferire i dati per le finalità di cui al punto C.2 e C.3 è facoltativo e un eventuale rifiuto da parte dell'utente non avrà nessuna conseguenza sulla prestazione all'utente dei servizi, funzionalità e informazioni richiesti tramite il Sito.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Società affiliate, controllate</strong>:<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La comunicazione di dati personali di utenti può avvenire a fronte di eventi quali ad esempio fusioni, cessioni di azienda (o di suo ramo) o altre operazioni straordinarie nell'ambito delle quali la Società potrebbe dover condividere informazioni con potenziali acquirenti o controparti e i relativi consulenti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Con il consenso dell'utente, possiamo comunicare i dati personali di utenti a nostri partner commerciali per perseguire la finalità di cui al punto C.3.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Gli utenti minori di 18 anni sono pregati di non registrarsi sul Sito e di non fornire dati personali.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La Società può avere necessità di trasferire i dati personali degli utenti all'estero per fornire servizi all'utente e per perseguire le altre finalità indicate nella presente Privacy Policy. Prima di procedere al trasferimento di dati al di fuori dall'Unione Europea, adotterà idonee precauzioni, anche contrattuali, previste dalla normativa privacy applicabile, al fine di garantire la protezione, la sicurezza e la riservatezza dei dati personali oggetto di trasferimento (ad esempio, adotterà le Clausole Contrattuali Standard previste dalla Commissione Europea) o verificherà che il destinatario, se stabilito negli Stati Uniti, sia regolarmente iscritto al programma "<em>Privacy Shield</em>".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Conserviamo i dati personali degli utenti solo per il tempo strettamente necessario al fine di fornire servizi o per il raggiungimento delle finalità per le quali i dati sono stati raccolti, oppure ancora in ottemperanza a obblighi di legge. Ad esempio, conserviamo i dati personali necessari all'esercizio del nostro diritto di difesa in caso di controversie legali, quali i dati personali relativi a un contratto o alla prestazione di un servizio, fino a un massimo 10 anni decorrenti dalla conclusione della prestazione del servizio e/o fornitura del prodotto, sulla base del termine di prescrizione ordinario previsto dal Codice Civile.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nel caso in cui avessimo raccolto dati personali basandoci sul consenso dell'utente e non avessimo più altra valida base giuridica per proseguire con il loro trattamento, se l'utente nega successivamente il proprio consenso provvederemo a cancellare i dati personali interessati da tale revoca. Fermo restando quanto precede, conserviamo i dati personali degli utenti raccolti in conformità alla presente Privacy Policy per le finalità di marketing di cui al punto C.2 per un periodo comunque non eccedente 2 anni dalla loro raccolta e per finalità di profilazione di cui al punto C.3 per un periodo comunque non eccedente 12 mesi dalla loro raccolta.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La Società si impegna a proteggere la sicurezza dei dati personali dell'utente e rispetta le disposizioni in materia di sicurezza previste dalla normativa applicabile al fine di evitare perdite di dati, usi illegittimi o illeciti dei dati e accessi non autorizzati agli stessi. Inoltre, i sistemi informativi e i programmi informatici sono configurati in modo da ridurre al minimo l'uso di dati personali e identificativi, che sono usati solo quando necessari al perseguimento delle specifiche finalità di volta in volta perseguite come indicato nella presente informativa. La Società utilizza molteplici tecnologie avanzate di sicurezza e procedure atte a favorire la protezione dei dati personali degli utenti; ad esempio, i dati personali sono conservati su server sicuri ubicati in luoghi ad accesso controllato. L'utente può aiutare la Società ad aggiornare e mantenere corretti i propri dati personali comunicandoci qualsiasi modifica relativa, ad esempio, al proprio indirizzo e-mail.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>[L]. DIRITTI PRIVACY</strong><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'utente ha infine il diritto di proporre un reclamo ad una competente Autorità di Controllo. L'esercizio dei diritti di cui sopra non ha costi ma nel caso in cui ritenessimo l'esercizio di diritti privacy da parte dell'utente manifestamente infondato o eccessivo, possiamo riservarci di addebitare all'utente richiedente un ragionevole contributo spese per l'evasione della richiesta. Per l'esercizio dei suoi diritti privacy, nonché per richiedere qualunque informazione o chiarimento in merito alla presente Privacy Policy, l'utente può rivolgersi alla Società tramite il seguente indirizzo: <strong>info@artide.info</strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il contenuto delle e-mail inviate dagli indirizzi dei ns. siti/domini come sopra specificati, e gli eventuali allegati sono confidenziali e riservati solo ai destinatari nominati, e contenenti nozioni e/o informazioni protette da copyright dei rispettivi detentori</a>. Se hai ricevuto una e-mail per errore, Ti preghiamo di informare immediatamente il mittente e distruggere la mail stessa e di non divulgare il contenuto a nessuno o farne copie. Eventuale uso fraudolento del contenuto delle comunicazione verrà perseguito in sede legale.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Nome e cognome</li><li>Indirizzi e-mail</li><li>Numeri di contatto telefonico</li><li>Indirizzo di residenza e di fatturazione</li><li>Tutto quanto contenuto nelle mail di comunicazione inviateci</li></ul>
+<!-- /wp:list -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>25</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[informativa-privacy]]></wp:post_name>
@@ -416,17 +956,31 @@
 	<item>
 		<title>Citazioni Bibliografiche</title>
 		<link>https://37.156.244.26/~artide1/citazioni-bibliografiche/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=26</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Citazioni bibliografiche sulle case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Nell'era dell'informazione digitale, la trasparenza e l'affidabilità delle fonti sono diventate imprescindibili per garantire contenuti di qualità e promuovere una cultura basata sul vero; di fronte a questa esigenza, emerge l'importanza di creare una pagina dedicata esclusivamente alle "Citazioni", che raccolga meticolosamente tutte le referenze a fonti esterne utilizzate all'interno del presente sito web.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questa pagina non solo serve a riconoscere il merito agli autori originali, preservando l'integrità intellettuale del lavoro altrui, ma funge anche da strumento prezioso per gli utenti, offrendo loro la possibilità di approfondire gli argomenti trattati attraverso fonti dirette e affidabili.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La creazione di una sezione "Citazioni" facilita la navigazione e l'approfondimento tematico per chi desidera esplorare oltre il contenuto presentato, incentivando un approccio critico e consapevole all'informazione seria e responsabile, che valorizza la conoscenza e promuove l'educazione continua.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>26</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[citazioni-bibliografiche]]></wp:post_name>
@@ -440,17 +994,107 @@
 	<item>
 		<title>Il Team</title>
 		<link>https://37.156.244.26/~artide1/team/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=27</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Il team Artide: professionisti delle case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>ANDREA Arcari</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>ETTORE Arquati</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>DANIELE Arquati</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>SABRINA Arquati</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>GESSICA Barbierato</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>CHIARA Bonarosa</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>SALVATORE Bonarosa</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>DANIELE Del Chiaro</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>MASCIA Delsante</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>GABRIELE Gallani</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>CLAUDIU Marian Manea</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>PIERANGELO Moscatelli</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>ANDREA Savardi</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>DENNYS Scalzotto<br/></strong><strong>in Artide dal 2020</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>ALEXANDRU Tcacenco</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>ANGELA Tinelli</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Il team Artide è composto da ingegneri idraulici, sviluppatori software, tecnici di manutenzione case dell'acqua e consulenti amministrativi specializzati nella gestione contratti con la pubblica amministrazione. Come produttore case dell'acqua copriamo internamente progettazione, depuratore acqua, telecontrollo case dell'acqua e riqualificazione case dell'acqua, senza esternalizzare le competenze chiave.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il segreto dell'<a href="/" target="_blank"><strong>Artide</strong></a> sono le persone che la compongono e che amando il proprio lavoro Vi regalano il migliore prodotto e servizio che possa mai essere creato.<br/><br/>Amare il proprio lavoro significa vivere in sintonia con l'Azienda e voler dare sempre il meglio di se..... è la nostra filosofia e la migliore ricetta per garantire buoni prodotti, a prezzi competitivi ed ad un'ottima qualità abbinata ad un Servizio Unico.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I dettagli di ogni <strong>Casa dell'Acqua</strong></a> o <strong>Erogatore</a></strong> o <strong>Purificatore</a></strong> che vengono prodotti sono curati e verificati trasformandoli in un'opera unica creata non in una linea produttiva ma in un'officina tecnica con un'attenzione artigianale.<br/><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tecnico Manutentore<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tecnico Manutentore<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Board of Directors<br/><em><em>Founder Partner</em></em><br/></p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>27</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[team]]></wp:post_name>
@@ -464,17 +1108,67 @@
 	<item>
 		<title>Prodotti</title>
 		<link>https://37.156.244.26/~artide1/prodotti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=28</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Prodotti Artide: case dell'acqua, erogatori e totem</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Casa dell'Acqua</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Erogatore d'Acqua</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Totem di Pagamento</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Tessere e Badge</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Purificatore d'Acqua</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Purificatore d'Aria</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Compattatori</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Trituratori di Vetro</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Non trovi quello che cerchi ?</strong> Contattaci ...<br/><br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scopri tutti i prodotti che <strong><a href="/">Artide</a></strong> in oltre 20 anni di attività può offrirti e nel caso non trovi il servizio di Tuo interesse non esistare a contattarci direttamente,</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/">Artide</a></strong> è un'azienda dinamica ed in costante crescita su vari fronti e vari settori, può quindi produrre miniserie dedicati a specifici progetti richiesti dai clienti.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/">Artide</a></strong> è un'azienda dinamica e sempre alla ricerca di nuovi scenari in cui applicare la propria esperienza e molti dei nostri prodotti sono nati proprio da una semplice richiesta dei nostri clienti.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>28</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[prodotti]]></wp:post_name>
@@ -488,17 +1182,39 @@
 	<item>
 		<title>Casa dell&#x27;Acqua</title>
 		<link>https://37.156.244.26/~artide1/casa-dell-acqua/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=29</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Casa dell'Acqua: erogatori pubblici con osmosi inversa</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>la CASA dell'ACQUA</strong><br/></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sono la versione moderna di ciò che un tempo erano le fontane pubbliche. Le ragioni della diffusione ormai a livello nazionale delle <em>case dell'acqua</em> (oltre 2000 censite nell'anno 2017) sono principalmente: l'utilità sociale, la riduzione della plastica <em>usa e getta</em> che crea un carico di raccolta e smaltimento dei rifiuti, e la mitigazione dei danni ambientali di tutta la catena dell'acqua in bottiglia.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</a></strong> da 20 anni produce e manutenziona è una collezione di Case dell'Acqua appositamente studiate per essere delle opere pubbliche di riferimento.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Non Case dell'Acqua in semplici strutture anonime non caratteristiche e già obsolete all'installazione, <strong>ma vere sculture tecnologiche</a></strong> con uno stile sempre fresco e nuovo che non invecchia nel tempo ed in grado di integrarsi con armonia in ogni situazione urbana.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Cosi vestita la Casa dell'Acqua ritorna a splendere in un nuovo contesto funzionale, diventando un nuovo punto di riferimento, di ritrovo, di vita pubblica per la comunità, <strong>giustificando ancor di più la spesa che gli enti devono sostenere per il posizionamento ed il mantenimento nel tempo</a></strong>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>29</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[casa-dell-acqua]]></wp:post_name>
@@ -512,17 +1228,35 @@
 	<item>
 		<title>Collezione</title>
 		<link>https://37.156.244.26/~artide1/casa-dell-acqua-collezione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=30</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Collezione Case dell'Acqua Artide: oltre 13 modelli</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Non trovi quello che cerchi ?</strong> Contattaci ...<br/><br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scopri come ogni <strong><a href="/">Casa dell'Acqua</a></strong> prodotta da Artide può trasformare ed innovare il Tuo modo di lavorare.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Esplora la nostra selezione delle nostre <strong><a href="/">Case dell'Acqua</a></strong> attraverso una galleria di immagini esemplificative di installazioni effettuate e tuttora attive.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ogni modello è progettato per integrarsi perfettamente in diversi contesti urbani e naturali, riflette il nostro impegno per la sostenibilità e l'innovazione.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>30</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[casa-dell-acqua-collezione]]></wp:post_name>
@@ -536,17 +1270,315 @@
 	<item>
 		<title>FAQ Casa dell&#x27;Acqua</title>
 		<link>https://37.156.244.26/~artide1/faq-casa-dell-acqua/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=31</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">FAQ Casa dell'Acqua: domande e risposte</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>001 | Cos'è una Casa dell'Acqua?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>002 | Come funziona una Casa dell'Acqua ?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>003 |<em></em>Perché utilizzare le Case dell'Acqua ?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">004 | Quali vantaggi ho a bere dalla Casa dell'Acqua rispetto all'acqua di casa ?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">005 | Se l'acqua di approvvigionamento è potabile, perché filtrarla e sterilizzata ?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">006 | Quali sono i Benefici Ambientali delle Case dell'Acqua?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>007 | È necessario portare il proprio contenitore ?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">008 | Bottiglia in VETRO o PLASTICA ?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>009 | Quanto costa riempire una bottiglia da una Casa dell'Acqua ?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>010 | L'acqua delle Case dell'Acqua è sicura ?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><p>011 | Entro quanto può essere consumata l'acqua prelevata dalla Casa dell'Acqua ?</p></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">012 | Quanto si risparmia acquistando l'acqua alla Casa dell'Acqua ?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Non trovi la risposta a ciò che cercavi ?<br/><br/></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>La Casa dell'Acqua è un prodotto innovativo che offre un accesso facile e conveniente ad acqua di alta qualità; tuttavia, come per qualsiasi nuovo prodotto o servizio, possono sorgere dubbi e domande, e per questo motivo, è stata creare questa pagina di FAQ <em>(Frequently Asked Questions)</em> dedicata alle Case dell'Acqua.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questa pagina di FAQ nasce per Fornisce informazioni immediate e Migliorare la trasparenza del servizio e del prodotto offerto.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>001 | Cos'è una Casa dell'Acqua?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Una Casa dell'Acqua è un punto di distribuzione pubblico dove le persone possono rifornirsi di acqua potabile MICROFILTRATA, sia Naturale che Frizzante, a un costo NOTEVOLMENTE inferiore rispetto all'acqua in bottiglia venduta nei negozi, garantendo tuttavia un'ottima qualità del prodotto.<br/><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questi impianti sono progettati per:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><br/>Installate in spazi pubblici come piazze, parchi o vicino a edifici pubblici, le Case dell'Acqua sono dotate di una tecnologia avanzata per filtrare e refrigerare l'acqua, assicurando che il prodotto sia <strong>sempre sicuro e piacevole al gusto</strong>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Queste strutture rappresentano un'alternativa ecologica all'acquisto di acqua in bottiglia, ed ai purificatori domestici, <a href="/">contribuendo significativamente alla riduzione dei rifiuti plastici</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>002 | Come funziona una Casa dell'Acqua ?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Una Casa dell'Acqua sfrutta l'acqua proveniente dalla rete idrica fornita dall'acquedotto comunale.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questa acqua è già potabile, ma la Casa dell'Acqua la sottopone a ulteriori trattamenti per migliorarne la qualità ed il gusto.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il format filtrante varia da struttura a struttura secondo le personalizzazioni richieste dalla committenza, tuttavia di Standard Artide produce le proprie Case dell'Acqua secondo questo format grossolanamente riepilogato <em>(in quanto sarebbe molto più complesso)</em>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/">PRE-Filtrazione Sedimenti</a><br/></strong>La pre-filtrazione a sedimenti con maglia da 5 micron rappresenta un metodo efficace per eliminare particelle e sedimenti fini dall'acqua prima che attraversi ulteriori stadi di trattamento.<br/>Questo processo non solo migliora significativamente la qualità dell'acqua rendendola più chiara, ma protegge anche gli impianti di trattamento successivi da potenziali danneggiamenti e ostruzioni facilitando la rimozione di contaminanti più grandi prima che raggiungano filtri più fini, la pre-filtrazione estende la durata degli impianti di trattamento, riducendo i costi di manutenzione e garantendo un'efficienza operativa costante.<br/>È una soluzione preventiva che ottimizza l'intero sistema di trattamento dell'acqua.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>Filtrazione attraverso carboni attivi</strong></a><br/>La filtrazione dell'acqua con carboni attivi da 0,5 micronè estremamente efficace nell'eliminare contaminanti chimici, come cloro, pesticidi e composti organici volatili, migliorando significativamente sapore e odore.<br/>Questa tecnica consente anche di catturare particelle estremamente piccole, garantendo un'acqua più pura e sicura per il consumo, Questo metodo di filtrazione migliora la qualità dell'acqua senza l'uso di sostanze chimiche, offrendo un approccio naturale ed ecologico al trattamento dell'acqua.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>Sterilizzazione con Raggi UVC</strong></a><br/>La sterilizzazione UV distrugge batteri, virus e microorganismi patogeni senza l'uso di sostanze chimiche, evitando la formazione di sottoprodotti nocivi. Questa sinergia assicura un'acqua estremamente pura e sicura per il consumo, mantenendo le proprietà naturali dell'acqua e proteggendo la salute degli utenti.<br/>È una soluzione ecologica che garantisce alta efficienza nella purificazione dell'acqua.<br/><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>Aggiunta di Anidride Carbonica<br/></strong></a>Questo processo arricchisce l'acqua con bollicine che ne migliorano la frizzantezza e il sapore, rendendola più gradevole al palato.<br/>L'acqua gasata può essere una valida alternativa alle bevande zuccherate e gassate, offrendo una scelta più sana senza rinunciare al piacere di una bevanda frizzante<br/><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/">la Refrigerazione</a></strong><br/>Bere acqua fresca, specialmente in climi caldi o dopo l'attività fisica, può essere più rinfrescante e stimolare l'assunzione di liquidi, aiutando a mantenere una buona idratazione.<br/>L'acqua fredda accelera il processo di raffreddamento del corpo, fornendo sollievo immediato dal calore. Inoltre, mantenere l'acqua a temperature più basse può limitare la crescita di batteri, garantendo una qualità dell'acqua migliore e più sicura per il consumo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Gli utenti accedono all'acqua tramite distributori automatici, portando con sé contenitori riutilizzabili. L'accesso all'erogazione può essere:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questo sistema non solo offre acqua di alta qualità a un prezzo ridotto ma promuove anche un modello di consumo responsabile e sostenibile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>003 |<em></em>Perché utilizzare le Case dell'Acqua ?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Utilizare la Casa dell'Acqua offre principalmente i seguenti vantaggi:<br/><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Bere acqua dalla Casa dell'Acqua anziché direttamente da quella di casa può offrire vantaggi in termini di qualità dell'acqua.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Difatti il gestore del servizio idrico integrato è responsabile della qualità dell'acqua fino al punto di consegna <em>(ovvero</em> dove viene installato il contatore), successivamente è a discapito dell'utenza privata il buon mantenimento della condotta idraulica, pratica che difficilmente viene operata in modo coerente e costante nel tempo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/">Premesso che l'acqua in italia distribuita dagli acquedotti è di alta qualità</a> <em>(in quanto proveniente per la maggior parte da fonti in profondità)</em>, questa nel percorso della rete distribuzione <em>(dall'acquedotto a casa)</em> può avere una lieve mutazione in termini di gusto in particolar modo durante il trasporto nelle tubazioni [ <a href="/citazioni-bibliografiche/">4</a> ].<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>All'interno della Casa dell'Acqua dopo il punto di consegna dell'acqua di acquedotto, viene installato <em>(chiaramente in modo ridotto)</em> l'impianto di trattamento che generalmente viene fatto alla base dell'acquedotto, quindi le filtrazioni e le sterilizzazioni intallate, migliorano il gusto assicurando un'acqua di qualità costantemente elevata, indipendentemente dalle variazioni di qualità che possono verificarsi nell'approvvigionamento a valle.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Anche se l'acqua di approvvigionamento è potabile, l'acqua in erogazione deve tecnicamente essere perfetta.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Premesso che l'acqua in italia distribuita dagli acquedotti è di alta qualità <em>(in quanto proveniente per la maggior parte da fonti in profondità)</em>, questa nel percorso della rete distribuzione <em>(dall'acquedotto a casa)</em> può avere una lieve mutazione in termini di gusto in particolar modo durante il trasporto nelle tubazioni [ <a href="/citazioni-bibliografiche/">4</a> ].</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Difatti il gestore del servizio idrico integrato è responsabile della qualità dell'acqua fino al punto di consegna <em>(ovvero</em> dove viene installato il contatore), successivamente è a discapito dell'utenza privata il buon mantenimento della condotta idraulica, pratica che difficilmente viene operata in modo coerente e costante nel tempo.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Nella Casa dell'Acqua dopo il punto di consegna dell'acqua di acquedotto, viene installato <em>(chiaramente in modo ridotto)</em> l'impianto di trattamento che generalmente viene fatto alla base dell'acquedotto, quindi le filtrazioni e le sterilizzazioni intallate, migliorano il gusto assicurando un'acqua di qualità costantemente elevata, indipendentemente dalle variazioni di qualità che possono verificarsi nell'approvvigionamento a valle.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Le Case dell'Acqua offrono significativi benefici ambientali, ed in particolare:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Utilizzando contenitori riutilizzabili, le persone possono diminuire considerevolmente la quantità di plastica monouso generata, contribuendo alla lotta contro l'inquinamento plastico.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Inoltre, poiché l'acqua distribuita proviene da fonti locali, le Case dell'Acqua riducono la necessità di trasportare acqua su lunghe distanze, abbassando ulteriormente l'impronta carbonica del consumo idrico.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/">Questi impianti rappresentano quindi un passo importante verso modelli di consumo più sostenibili e responsabili</a>.</strong><br/><br/>Una Casa dell'Acqua mediamente all'anno eroga <strong><a href="/">150.000 litri d'acqua</a></strong>, questo genera [ <a href="/citazioni-bibliografiche/">5</a> ]:<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>007 | È necessario portare il proprio contenitore ?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Le Case dell'Acqua sono un servizio pubblico che permette ai cittadini di accedere ad acqua potabile fresca e di alta qualità, e per utilizzare questo servizio, è necessario utilizzare un proprio contenitore per i seguenti principali motivi:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Consigli:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Invitiamo tutti i cittadini a utilizzare questo servizio e a contribuire alla tutela dell'ambiente.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Optare per bottiglie in vetro anziché in plastica per l'approvvigionamento dell'acqua da un'erogatore rappresenta una scelta consapevole verso la sostenibilità e il benessere.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/">Il vetro, materiale inerte e privo di sostanze chimiche nocive come il BPA, assicura che l'acqua mantenga la sua purezza, senza alterazioni nel gusto o nell'odore</a>. A differenza della plastica, che può finire in discarica o negli oceani aggravando l'inquinamento, il vetro è completamente riciclabile e riutilizzabile all'infinito, riducendo l'impronta ecologica e promuovendo un consumo responsabile.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Dal punto di vista economico, sebbene le bottiglie di vetro presentino un costo iniziale superiore, la loro durabilità e riutilizzabilità le rendono vantaggiose a lungo termine, contrastando il ciclo di consumo e rifiuto tipico delle bottiglie di plastica.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>L'adozione di bottiglie in vetro non solo favorisce uno stile di vita più autentico e naturale, ma anche un approccio più consapevole e rispettoso verso l'ambiente</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>009 | Quanto costa riempire una bottiglia da una Casa dell'Acqua ?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il costo dell'acqua presso una Casa dell'Acqua può variare a seconda dell'ente gestore e delle politiche locali, tuttavia, in media, si aggira intorno ai <a href="/"><strong>5 centesimi al litro</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questo prezzo irrisorio è spesso finalizzato al solo scopo di scoraggiare lo spreco e a rientrare in parte nei costi di gestione del servizio da parte dell'ente comunale.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'acqua delle Case dell'Acqua è un'alternativa più economica e sostenibile rispetto all'acqua in bottiglia monouso, Inoltre, contribuisce a ridurre l'impatto ambientale legato alla plastica.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>010 | L'acqua delle Case dell'Acqua è sicura ?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'acqua fornita dalle Case dell'Acqua è soggetta a rigorosi controlli di qualità che assicurano la sua potabilità e sicurezza.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Questi controlli NON solo vengono operati dal gestore ma anche da enti regolatori locali <em>(come ATS e ASL)</em> per garantire che il prodotto distribuito al pubblico soddisfi e superi gli standard di qualità.<br/><br/><a href="/">Inoltre Artide srl ha certificazione ISO 22.000</a>, requisito essenziale per garantire la sicurezza e qualità dell'acqua erogata, stabilendo standard elevati per la gestione della sicurezza alimentare. Questo standard internazionale assicura che l'acqua sia pura e sicura per il consumo, attraverso la gestione delle risorse, il controllo delle contaminazioni e la valutazione rigorosa dei rischi, offrendo ai consumatori fiducia e tranquillità. Questa scelta sottolinea l'impegno verso la salute, garantendo acqua di qualità secondo criteri riconosciuti globalmente.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La trasparenza e il monitoraggio costante sono fondamentali per mantenere la fiducia del pubblico nella sicurezza dell'acqua erogata.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>011 | Entro quanto può essere consumata l'acqua prelevata dalla Casa dell'Acqua ?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'acqua prelevata dalla Casa dell'Acqua è di alta qualità e sicura da bere, <a href="/"><strong>ma è consigliabile consumarla entro 24 ore</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Difatti le bottiglie utilizzate per prelevare l'acqua <strong>non sono sterili</strong>, ed anche se pulite e igienizzate, possono contenere batteri o altri microrganismi che, con il tempo, possono proliferare e alterare la qualità dell'acqua.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Consigli per mantenere al meglio l'acqua prelevata:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il vero e giusto conteggio è un dato che solo la singola famiglia può rilevare, tuttavia secondo un rapporto <a href="/l/blog-costo-acqua-bottiglia-2023/">Assoutenti</a> del 22 marzo 2023 rivela che il crescente scetticismo sulla sicurezza dell'acqua potabile in Italia ha portato a un aumento del 9% nel consumo di acqua in bottiglia nel 2022, raggiungendo 14,9 miliardi di litri. Questo incremento è accompagnato da un rialzo dei prezzi del 15%, evidenziando notevoli disparità regionali nei costi.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><a href="/l/blog-costo-acqua-bottiglia-2023/">Premesso quanto sopra, se si bevesse 2lt al giorno d'acqua dalla Casa dell'Acqua una famiglia di 3 persone risparmierebbe in media € 438,00/anno.</a></strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Non c'è problema, mandaci un messaggio, il ns. servizio clienti è a Tua disposizione e sarà contento di dari le informazioni di cui hai necessità.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong><a href="/">Ridurre l'uso di plastica monouso</a></strong></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li><strong><a href="/">Promuovere l'accesso all'acqua potabile di alta qualità</a></strong></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li><strong><a href="/">Incoraggiare pratiche di consumo sostenibili.</a></strong></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li><strong><a href="/">100.000</a></strong> bottiglie da 1,5 lit non immesse nel mercato</li><li><a href="/"><strong>€ 67.500,00</strong></a> di risparmio economico per le famiglie che ne hanno usufruito</li><li><a href="/"><strong>900.000 lt</strong></a> di acqua risparmiata</li><li><a href="/"><strong>24.300 Kg</strong></a> di greggio risparmiato</li><li><a href="/"><strong>14.527 Kg</strong></a> di CO2 risparmiato</li><li><a href="/"><strong>€ 12.000,00</strong></a> risparmiami per lo smaltimento</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li>E' consigliabile utilizzare un contenitore in materiale resistente, come il vetro o l'acciaio inossidabile. La plastica NONè riutilizzabile in quanto l'uso prolungato può intaccare il prodotto internamente e qunidi rilasciare incquinanti tossici nell'acqua stivata al proprio interno. [ <a href="/citazioni-bibliografiche/">6</a> ]</li><li>E' importante lavare il contenitore regolarmente con acqua calda, sapone ed amichina.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li><a href="/"><strong>Solo VETRO<br/></strong></a>Utilizzare solo bottiglie in vetro, le bottiglie in plastica riutilizzabili sono più soggette a contaminazione rispetto alle bottiglie in vetro o alle borracce in acciaio inossidabile.<br/><br/></li><li><a href="/"><strong>LAVARLE</strong></a><br/>Utilizzare bottiglie pulite e igienizzate è il modo migliore per esaltare la bontà dell'acqua prelevata oltre al miglior modo per garantirne la sicurezza.<br/><br/></li><li><a href="/"><strong>CONSERVARE AL FRESCO<br/></strong></a>Conservare l'acqua in un luogo fresco e buio aiuta a rallentare la crescita dei batteri.<br/><br/></li><li><strong><a href="/">LONTANO DALLA LUCE</a><br/></strong>La luce solare può favorire la crescita di alghe e altri microrganismi.</li></ul>
+<!-- /wp:list -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>31</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[faq-casa-dell-acqua]]></wp:post_name>
@@ -560,17 +1592,79 @@
 	<item>
 		<title>Servizi</title>
 		<link>https://37.156.244.26/~artide1/servizi/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=32</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Servizi Artide per case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Automazione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Corsi di Formazione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Manutenzione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Incasso</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Potabilizzazione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Progettazione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Riqualificazione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Sanificazione</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Sviluppo Software</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Telecontrollo</strong></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><strong>Non trovi quello che cerchi ?</strong> Contattaci ...</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>I servizi Artide coprono l'intero ciclo di vita di una casa dell'acqua e di un erogatore: dalla progettazione su capitolato comunale alla manutenzione case dell'acqua attiva 24 ore su 24, dal telecontrollo in tempo reale alla sanificazione periodica dell'impianto idrico. Operiamo su oltre 500 installazioni in Italia, con tecnici specializzati nella depurazione acqua, nella potabilizzazione e nella riqualificazione case dell'acqua di altri produttori, garantendo continuità operativa e conformità ISO 22000.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scopri tutti i servizi che Artide può offrirti e nel caso non trovi il servizio di Tuo interesse non esistare a contattarci direttamente, Artide è un'azienda dinamica ed in costante crescita su vari fronti e vari settori.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="/"><strong>Artide</strong></a> è un'azienda dinamica e sempre alla ricerca di nuovi scenari in cui applicare la propria esperienza.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Scegliendo Artide come unico interlocutore, il committente affida la manutenzione case dell'acqua, la sanificazione serbatoio acqua potabile e il telecontrollo a un produttore italiano con vent'anni di esperienza. Per un preventivo su misura visita la pagina <a href="/contatti/">contatti</a>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>32</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[servizi]]></wp:post_name>
@@ -584,17 +1678,35 @@
 	<item>
 		<title>Automazione</title>
 		<link>https://37.156.244.26/~artide1/automazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=33</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Automazione industriale per case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>AUTOMAZIONE INDUSTRIALE</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Queste attività possono includere il funzionamento di macchinari, l'assemblaggio di prodotti o il monitoraggio e il controllo dei processi di produzione.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'obiettivo dell'automazione industriale è aumentare l'efficienza, ridurre i costi e migliorare la qualità dei prodotti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>L'automazione industriale può essere applicata a un'ampia gamma di settori, tra cui produzione, petrolio e gas, estrazione mineraria e trasporti.<br/></p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>33</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[automazione]]></wp:post_name>
@@ -608,17 +1720,39 @@
 	<item>
 		<title>Corsi di Formazione</title>
 		<link>https://37.156.244.26/~artide1/corsi/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=34</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Corsi di formazione per case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>CORSI di FORMAZIONE</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Le Case dell'Acqua in particolare sono ambienti che toccano una branca normativa particolarmente ampia che interessa in particolare l'aspetto idraulico, quello alimentare e quello elettrico come ambiente tecnico, frequentare un corso è quinidi importante per comprendere il corretto rischio operativo che un'errata procedura può comportare alla pubblica utenza.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Un corso di formazione è un programma progettato per aiutare le persone ad acquisire nuove competenze o migliorare quelle esistenti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I corsi di formazione possono essere offerti in una varietà di formati, tra cui lezioni di persona, corsi online e programmi di autoapprendimento.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Possono essere incentrati su una vasta gamma di argomenti, come lo sviluppo professionale, le competenze tecniche o l'arricchimento personale. I corsi di formazione possono essere offerti da istituzioni educative, organizzazioni professionali o singoli formatori e possono essere rivolti a persone di tutti i livelli di esperienza e competenza.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>34</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[corsi]]></wp:post_name>
@@ -632,17 +1766,75 @@
 	<item>
 		<title>Manutenzione</title>
 		<link>https://37.156.244.26/~artide1/manutenzione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=35</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Manutenzione case dell'acqua: contratti e garanzia a vita</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":2} -->
+<h2 class="wp-block-heading"><strong>MANUTENZIONE</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>La manutenzione case dell'acqua è il servizio più richiesto da Comuni e gestori del servizio idrico integrato. Artide fornisce contratti full service di manutenzione case dell'acqua con interventi entro 24 ore, ricambi originali, sanificazione serbatoio acqua potabile programmata e monitoraggio remoto via telecontrollo. La manutenzione case dell'acqua Artide include anche depurazione acqua, sostituzione filtri a osmosi inversa e taratura impianti, nel rispetto delle normative ISO 22000 e MOCA.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Difatti grazie all'esperienza diretta nel settore, siamo in grado di garantire il funzionamento anche degli impianti concorrenti potendo estendere direttamente la garanzia offerta dal produttore che in tal caso riusulta presa in carico da noi.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Lavoriamo direttamente su tutto il territorio Italiano</strong> potendoti Garantire un servizio da primato che si contraddistingue principarlmente per i seguenti punti:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><br/>Un Numero Verde</a> Applicato Sulle Strutture Raggiungibile H24 anche dai cellulari<br/></strong><em>(siamo forse gli unici in italia a fornire questo servizio)</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><br/>La Risoluzione Guasti generalmente Entro H24</a> dalla Segnalazione<br/></strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><br/>Una Reportistica Digitale Visibile in Tempo Reale e Dotata di Foto</strong><br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><br/>Un Unico Referente con cui Interfacciarti, che ha memoria storica del Tuo prodotto e delle sue caratteristiche</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><br/>Una Carta dei servizi sottoscritta</strong>, non obbligatoria essendo Artide un'azienda privata, tuttavia necessaria per dimostrarTi la nostra serietà nel servizio offerto</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong><br/>Uno Screening di Analisi presso laboratori Registrati alla Regione e Accreditati da Enti Terzi Riconosciuti dal Ministero dell'Interno.</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Ma nonè tutto, Artide è forse oggi l'unica azienda nel settore che è in grado di offrirti una Garanzia a Vita del prodotto in manutenzione</a></strong>; sottoscrivi con noi un contratto di manutenzione ALL-IN* con il quale viene eccezionalmente estesa la garanzia commerciale e gli extra per tutta la durata del servizio, ed al resto ci pensiamo noi !</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>un fulmine colpisce la Casetta e si brucia la parte elettronica dell'impianto ?</strong><br/><em>nessun problema ci pensa <strong>Artide</strong>! ed a Te non Ti costa nulla in più a quanto pattuito nel contratto.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>un vandalo Ti crea € 1.500,00 di danni rompendoti la porta d'accesso per rubarti un'incasso di circa € 50,00 ?</strong><br/><em>nessun problema ci pensa <strong>Artide</strong></em><em>! ed a Te non Ti costa nulla in più a quanto pattuito nel contratto.<br/></em><br/><strong>il tubo dell'acqua si rompe e ti allaga l'impianto elettrico della casetta ?</strong><br/><em>nessun problema ci pensa <strong>Artide</strong></em><em>! ed a Te non Ti costa nulla in più a quanto pattuito nel contratto.<br/></em><br/><strong>il gruppo frigo non di ns. produzione va in avaria edè necessario cambiarlo ?</strong><br/><em>nessun problema ci pensa <strong>Artide</strong></em><em>! ed a Te non Ti costa nulla in più a quanto pattuito nel contratto.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><em>*per maggiori informazioni contattaci e fai riferimento alle specifiche riportate nel contratto di manutenzione sottoscritto.</em><br/></p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>35</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[manutenzione]]></wp:post_name>
@@ -656,17 +1848,31 @@
 	<item>
 		<title>Incasso</title>
 		<link>https://37.156.244.26/~artide1/incasso/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=36</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Incasso contante per case dell'acqua</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Il servizio di incasso contante Artide gestisce lo svuotamento periodico delle casse di ogni casa dell'acqua, il conteggio dei contanti, il versamento bancario e la rendicontazione al Comune. Il servizio è conforme alla normativa antiriciclaggio e si integra con il telecontrollo case dell'acqua per riconciliare incassi e litri erogati. La gestione incasso è inclusa nei contratti full service di manutenzione case dell'acqua.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</a></strong> riesce a seguirti anche in questo aspetto, impegnandosi ed esponendosi in prima persona non solo nella gestione dell'incasso ma se richiesto anche nella dichiarazione dello stesso presso l'Agenzia Delle Entrate.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</a></strong> riesce ad offrirTi un servizio Chiavi in Mano che Ti assicura la massima tranquillita anche in caso di atti vandalici, difatti <strong><a href="/">l'incasso anche non deposistato in banca che viene inivato alla Agenzia delle Entrate viene da noi garantito</a></strong>.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>36</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[incasso]]></wp:post_name>
@@ -680,17 +1886,35 @@
 	<item>
 		<title>Potabilizzazione</title>
 		<link>https://37.156.244.26/~artide1/potabilizzazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=37</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Potabilizzazione acqua con osmosi inversa</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Gli impianti di potabilizzazione acqua Artide trasformano acque non conformi in acqua potabile certificata. Il trattamento acqua potabile si basa su filtrazione meccanica, osmosi inversa, microfiltrazione a 0,5 µm e disinfezione UV. La potabilizzazione acqua è applicata sia nelle case dell'acqua sia in impianti di potabilizzazione delle acque per condomini, scuole e mense aziendali. Tutti i materiali sono conformi MOCA e ISO 22000.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Offriamo una vasta gamma di servizi per <strong>trasformare qualsiasi tipologia d'acqua non potabile in acqua pura e sicura da bere</strong></a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Utilizziamo tecnologie all'avanguardia e metodi di trattamento dell'acqua testati per rimuovere impurità come batteri, virus, metalli pesanti, alsenico, ammoniaca ed altre sostanze chimiche indesiderate.<br/></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>La tecnologia di filtrazione impiegata è just in time, ed il processo di trattamento in ogni sui punto critico viene monitorato in tempo reale; siamo quindi in grado di potabilizzare ed erogare acqua pura e sicura nello stesso sito produttivo.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>37</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[potabilizzazione]]></wp:post_name>
@@ -704,17 +1928,23 @@
 	<item>
 		<title>Progettazione</title>
 		<link>https://37.156.244.26/~artide1/progettazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=38</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Progettazione case dell'acqua su capitolato comunale</h1>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading"><ol><li><strong>Progettazione</strong></li><li><strong>Prototipazione</strong></li><li><strong>Vestizione Grafica</strong></li><li><strong>Produzione</strong></li><li><strong>Installazione</strong></li><li><strong>Messa in Funzione</strong></li><li><strong>Manutenzione</strong></li></ol></h3>
+<!-- /wp:heading -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>38</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[progettazione]]></wp:post_name>
@@ -728,17 +1958,31 @@
 	<item>
 		<title>Riqualificazione</title>
 		<link>https://37.156.244.26/~artide1/trasformazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=39</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Riqualificazione case dell'acqua esistenti</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>La riqualificazione case dell'acqua è il servizio Artide che permette ai Comuni di rinnovare impianti esistenti senza demolirli. La riqualificazione case dell'acqua sostituisce il depuratore acqua a osmosi inversa, l'unità di telecontrollo, i totem di pagamento e la carrozzeria, riportando in garanzia anche case dell'acqua di altri produttori. Operiamo riqualificazione di case dell'acqua urbane, compatte e a incasso, salvando i componenti hardware ancora validi.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Dopo svariati anni di utilizzo e l'avvendo di nuove tecnologie sempre più integrate nei processi quotidiani di controllo e gestione rendono necessaria la valutazione di installare un nuovo impianto e rottamare il vecchio.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide riesce a proporti il Riqualificazione</a></strong>, ovvero il completo ammodernamento dell'impiantistica, Idraulica, Elettrica ed Estetica della Casa dell'Acqua, riuscendo a conservare tutti quei prodotti <em>(come ad esempio il gruppo frigo o il carbonatore)</em> che risultano ancora correttamente funzionanti e che quindi possono contribuire a non essere un costo per un'eventuale nuovo acquisto.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>39</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[trasformazione]]></wp:post_name>
@@ -752,17 +1996,27 @@
 	<item>
 		<title>Sanificazione</title>
 		<link>https://37.156.244.26/~artide1/sanificazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=40</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Sanificazione case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>La sanificazione case dell'acqua e dei serbatoi di accumulo è una componente obbligatoria della manutenzione case dell'acqua. Artide esegue la sanificazione serbatoio acqua potabile con protocolli HACCP, trattamento acqua potabile a base di ozono e raggi UV, controlli microbiologici e tracciabilità documentale. La sanificazione delle cisterne acqua e dei circuiti idrici è certificata ISO 22000 e compatibile con il regolamento MOCA per i materiali a contatto con alimenti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Ma non solo, negli ambienti ospedalieri siamo in grado di installare impianti di Sanificazione a Raggi UVC e/o nebulizzatori a nebbia fredda non bagnante composta da goccioline micrometriche caricate elettricamente, che si possono attivare in modo automatico durante il non utilizzo del locale da parte del personale tecnico garantendo sempre il più alto standard di qualità nell'ambiente.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>40</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[sanificazione]]></wp:post_name>
@@ -776,17 +2030,31 @@
 	<item>
 		<title>Sviluppo Software</title>
 		<link>https://37.156.244.26/~artide1/sviluppo-software/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=41</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Sviluppo software per case dell'acqua ed erogatori</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</a></strong> è in grado di sviluppare software personalizzato per rispondere alle esigenze specifiche dei nostri clienti. Utilizziamo le più moderne tecnologie e metodologie di sviluppo per garantire soluzioni software affidabili, efficienti ed intuitive.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il nostro team di sviluppatori esperti lavora a stretto contatto con i nostri clienti per comprendere le loro necessità e sviluppare soluzioni software che soddisfino le loro aspettative. Offriamo una vasta gamma di servizi di sviluppo software, dalla progettazione alla realizzazione, fino alla manutenzione e al supporto.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Siamo orgogliosi di offrire un servizio di alta qualità ai nostri clienti, che ci ha permesso di guadagnare una solida reputazione nel settore. Se sei interessato a sviluppare una soluzione software per la tua azienda, non esitare a contattarci. Saremo lieti di discutere le tue esigenze e di offrirti una soluzione su misura.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>41</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[sviluppo-software]]></wp:post_name>
@@ -800,17 +2068,35 @@
 	<item>
 		<title>Telecontrollo</title>
 		<link>https://37.156.244.26/~artide1/telecontrollo/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?page_id=42</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Telecontrollo case dell'acqua: gestione remota in tempo reale</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Artide</strong></a> è in grado di offrire servizi di telecontrollo per aiutare le imprese a monitorare e gestire i loro impianti da remoto. Utilizziamo tecnologie all'avanguardia come sensori e sistemi di controllo remoto per garantire una gestione efficace e sicura dei nostri clienti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il telecontrollo permette alle aziende di monitorare in tempo reale il funzionamento dei loro impianti e di intervenire rapidamente in caso di anomalie o problemi. In questo modo, è possibile ridurre i tempi di fermo e aumentare l'efficienza dei processi.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il telecontrollo è una soluzione ideale per le aziende che hanno impianti distribuiti in diverse sedi o che necessitano di una gestione a distanza dei loro sistemi. Offriamo servizi di telecontrollo su misura per soddisfare le esigenze specifiche dei nostri clienti.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Il nostro team di esperti è a disposizione per fornire supporto e consulenza durante tutte le fasi del progetto di telecontrollo. Se sei interessato a scoprire come il telecontrollo può aiutare la tua azienda.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>42</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[telecontrollo]]></wp:post_name>
@@ -824,17 +2110,17 @@
 	<item>
 		<title>BLOG</title>
 		<link>https://37.156.244.26/~artide1/blog/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=100</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>100</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[100]]></wp:post_name>
@@ -881,17 +2167,17 @@
 	<item>
 		<title>Articoli del Blog</title>
 		<link>https://37.156.244.26/~artide1/blog/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=101</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>101</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[101]]></wp:post_name>
@@ -938,17 +2224,17 @@
 	<item>
 		<title>Articoli in Evidenza</title>
 		<link>https://37.156.244.26/~artide1/blog/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=102</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>102</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[102]]></wp:post_name>
@@ -995,17 +2281,17 @@
 	<item>
 		<title>AZIENDA</title>
 		<link>https://37.156.244.26/~artide1/chi-siamo/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=110</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>110</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[110]]></wp:post_name>
@@ -1052,17 +2338,17 @@
 	<item>
 		<title>Contatti</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=111</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>111</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[111]]></wp:post_name>
@@ -1109,17 +2395,17 @@
 	<item>
 		<title>Chi Siamo</title>
 		<link>https://37.156.244.26/~artide1/chi-siamo/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=112</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>112</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[112]]></wp:post_name>
@@ -1166,17 +2452,17 @@
 	<item>
 		<title>Certificazioni</title>
 		<link>https://37.156.244.26/~artide1/certificazioni/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=113</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>113</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[113]]></wp:post_name>
@@ -1223,17 +2509,17 @@
 	<item>
 		<title>AIAQ</title>
 		<link>https://37.156.244.26/~artide1/aiaq/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=114</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>114</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[114]]></wp:post_name>
@@ -1280,17 +2566,17 @@
 	<item>
 		<title>CE</title>
 		<link>https://37.156.244.26/~artide1/ce/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=115</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>115</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[115]]></wp:post_name>
@@ -1337,17 +2623,17 @@
 	<item>
 		<title>DM174, DM25, MOCA</title>
 		<link>https://37.156.244.26/~artide1/moca/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=116</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>116</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[116]]></wp:post_name>
@@ -1394,17 +2680,17 @@
 	<item>
 		<title>Gestore Ambientale</title>
 		<link>https://37.156.244.26/~artide1/gestore-ambientale/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=117</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>117</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[117]]></wp:post_name>
@@ -1451,17 +2737,17 @@
 	<item>
 		<title>ISO 9001</title>
 		<link>https://37.156.244.26/~artide1/iso-9001/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=118</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>118</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[118]]></wp:post_name>
@@ -1508,17 +2794,17 @@
 	<item>
 		<title>ISO 14001</title>
 		<link>https://37.156.244.26/~artide1/iso-14001/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=119</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>119</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[119]]></wp:post_name>
@@ -1565,17 +2851,17 @@
 	<item>
 		<title>ISO 22000</title>
 		<link>https://37.156.244.26/~artide1/iso-22000/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=120</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>120</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[120]]></wp:post_name>
@@ -1622,17 +2908,17 @@
 	<item>
 		<title>OSA</title>
 		<link>https://37.156.244.26/~artide1/osa/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=121</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>121</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[121]]></wp:post_name>
@@ -1679,17 +2965,17 @@
 	<item>
 		<title>RoHS</title>
 		<link>https://37.156.244.26/~artide1/rohs/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=122</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>122</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[122]]></wp:post_name>
@@ -1736,17 +3022,17 @@
 	<item>
 		<title>Info &amp; Copyright</title>
 		<link>https://37.156.244.26/~artide1/info-copyright/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=123</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>123</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[123]]></wp:post_name>
@@ -1793,17 +3079,17 @@
 	<item>
 		<title>Informativa Privacy</title>
 		<link>https://37.156.244.26/~artide1/informativa-privacy/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=124</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>124</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[124]]></wp:post_name>
@@ -1850,17 +3136,17 @@
 	<item>
 		<title>Citazioni Bibliografiche</title>
 		<link>https://37.156.244.26/~artide1/citazioni-bibliografiche/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=125</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>125</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[125]]></wp:post_name>
@@ -1907,17 +3193,17 @@
 	<item>
 		<title>Il Team</title>
 		<link>https://37.156.244.26/~artide1/team/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=126</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>126</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[126]]></wp:post_name>
@@ -1964,17 +3250,17 @@
 	<item>
 		<title>PRODOTTI</title>
 		<link>https://37.156.244.26/~artide1/prodotti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=130</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>130</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[130]]></wp:post_name>
@@ -2021,17 +3307,17 @@
 	<item>
 		<title>Casa dell&#x27;Acqua</title>
 		<link>https://37.156.244.26/~artide1/casa-dell-acqua/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=131</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>131</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[131]]></wp:post_name>
@@ -2078,17 +3364,17 @@
 	<item>
 		<title>Collezione</title>
 		<link>https://37.156.244.26/~artide1/casa-dell-acqua-collezione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=132</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>132</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[132]]></wp:post_name>
@@ -2135,17 +3421,17 @@
 	<item>
 		<title>FAQ</title>
 		<link>https://37.156.244.26/~artide1/faq-casa-dell-acqua/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=133</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>133</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[133]]></wp:post_name>
@@ -2192,17 +3478,17 @@
 	<item>
 		<title>SERVIZI</title>
 		<link>https://37.156.244.26/~artide1/servizi/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=140</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>140</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[140]]></wp:post_name>
@@ -2249,17 +3535,17 @@
 	<item>
 		<title>Automazione</title>
 		<link>https://37.156.244.26/~artide1/automazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=141</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>141</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[141]]></wp:post_name>
@@ -2306,17 +3592,17 @@
 	<item>
 		<title>Corsi di Formazione</title>
 		<link>https://37.156.244.26/~artide1/corsi/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=142</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>142</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[142]]></wp:post_name>
@@ -2363,17 +3649,17 @@
 	<item>
 		<title>Manutenzione</title>
 		<link>https://37.156.244.26/~artide1/manutenzione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=143</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>143</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[143]]></wp:post_name>
@@ -2420,17 +3706,17 @@
 	<item>
 		<title>Incasso</title>
 		<link>https://37.156.244.26/~artide1/incasso/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=144</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>144</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[144]]></wp:post_name>
@@ -2477,17 +3763,17 @@
 	<item>
 		<title>Potabilizzazione</title>
 		<link>https://37.156.244.26/~artide1/potabilizzazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=145</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>145</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[145]]></wp:post_name>
@@ -2534,17 +3820,17 @@
 	<item>
 		<title>Progettazione</title>
 		<link>https://37.156.244.26/~artide1/progettazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=146</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>146</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[146]]></wp:post_name>
@@ -2591,17 +3877,17 @@
 	<item>
 		<title>Riqualificazione</title>
 		<link>https://37.156.244.26/~artide1/trasformazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=147</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>147</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[147]]></wp:post_name>
@@ -2648,17 +3934,17 @@
 	<item>
 		<title>Sanificazione</title>
 		<link>https://37.156.244.26/~artide1/sanificazione/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=148</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>148</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[148]]></wp:post_name>
@@ -2705,17 +3991,17 @@
 	<item>
 		<title>Sviluppo Software</title>
 		<link>https://37.156.244.26/~artide1/sviluppo-software/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=149</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>149</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[149]]></wp:post_name>
@@ -2762,17 +4048,17 @@
 	<item>
 		<title>Telecontrollo</title>
 		<link>https://37.156.244.26/~artide1/telecontrollo/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=150</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>150</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[150]]></wp:post_name>
@@ -2819,17 +4105,17 @@
 	<item>
 		<title>CONTATTI</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=160</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>160</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[160]]></wp:post_name>
@@ -2876,17 +4162,17 @@
 	<item>
 		<title>Supporto</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=161</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>161</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[161]]></wp:post_name>
@@ -2933,17 +4219,17 @@
 	<item>
 		<title>Wiki</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=162</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>162</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[162]]></wp:post_name>
@@ -2990,17 +4276,17 @@
 	<item>
 		<title>Wiki - Totem Ricarica</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=163</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>163</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[163]]></wp:post_name>
@@ -3047,17 +4333,17 @@
 	<item>
 		<title>Wiki - Casa dell&#x27;Acqua</title>
 		<link>https://37.156.244.26/~artide1/contatti/</link>
-		<pubDate>Fri, 08 May 2026 20:40:07 +0000</pubDate>
+		<pubDate>Fri, 08 May 2026 20:44:31 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://37.156.244.26/~artide1/?p=164</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>164</wp:post_id>
-		<wp:post_date><![CDATA[2026-05-08 20:40:07]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2026-05-08 20:40:07]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2026-05-08 20:40:07]]></wp:post_modified_gmt>
+		<wp:post_date><![CDATA[2026-05-08 20:44:31]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_date_gmt>
+		<wp:post_modified><![CDATA[2026-05-08 20:44:31]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2026-05-08 20:44:31]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[164]]></wp:post_name>

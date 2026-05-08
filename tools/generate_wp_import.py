@@ -5,8 +5,103 @@ and the Primary Menu structure already wired up."""
 from __future__ import annotations
 
 import html
+import re
 from datetime import datetime, timezone
 from pathlib import Path
+
+PREVIEW_DIR = Path(__file__).resolve().parent.parent / "preview"
+
+
+def _clean_inline(s: str) -> str:
+    """Strip Webnode-specific wrappers, keep semantic tags."""
+    # Drop <font>, <span> wrappers but keep their content
+    s = re.sub(r"</?(?:font|span)\b[^>]*>", "", s)
+    # Drop inline style and class attributes
+    s = re.sub(r'\s+(?:style|class|data-[\w-]+)="[^"]*"', "", s)
+    # Drop empty <a> with no href
+    s = re.sub(r"<a\s*>", "", s)
+    # Rewrite preview-relative links to root-relative WordPress URLs
+    s = s.replace("/artide.it/", "/")
+    # Collapse whitespace
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def _strip_tags(s: str) -> str:
+    return re.sub(r"<[^>]+>", "", s).strip()
+
+
+def extract_page_content(slug: str) -> str:
+    """Return Gutenberg-block-formatted content for a preview page slug.
+
+    Returns empty string if the page has no extractable content (home, blog,
+    landing pages) so they can be filled by hand or by Strategy A overrides.
+    """
+    src = PREVIEW_DIR / slug / "index.html"
+    if not src.exists():
+        return ""
+    raw = src.read_text(encoding="utf-8")
+
+    # Pick the first s-basic section that contains an h1 — that's the content.
+    sections = re.findall(
+        r'<section[^>]*class="s s-basic[^"]*"[^>]*>(.*?)</section>', raw, re.S
+    )
+    body = ""
+    for sec in sections:
+        if re.search(r"<h1\b", sec):
+            body = sec
+            break
+    if not body:
+        return ""
+
+    blocks: list[str] = []
+
+    # H1 → Gutenberg heading level 1
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
+    if h1:
+        text = _clean_inline(h1.group(1))
+        text_only = _strip_tags(text)
+        if text_only:
+            blocks.append(
+                f'<!-- wp:heading {{"level":1}} -->\n<h1 class="wp-block-heading">{text}</h1>\n<!-- /wp:heading -->'
+            )
+
+    # H2 / H3 (skip breadcrumb h3 which has the "AZIENDA →" pattern)
+    for tag, level in (("h2", 2), ("h3", 3)):
+        for m in re.finditer(rf"<{tag}[^>]*>(.*?)</{tag}>", body, re.S):
+            text = _clean_inline(m.group(1))
+            plain = _strip_tags(text)
+            if not plain or "→" in plain:
+                continue
+            blocks.append(
+                f'<!-- wp:heading {{"level":{level}}} -->\n<h{level} class="wp-block-heading">{text}</h{level}>\n<!-- /wp:heading -->'
+            )
+
+    # Paragraphs — skip those containing media elements
+    for p in re.findall(r"<p[^>]*>(.*?)</p>", body, re.S):
+        if re.search(r"<(?:source|picture|img)\b", p):
+            continue
+        text = _clean_inline(p)
+        plain = _strip_tags(text).strip()
+        if len(plain) < 4:
+            continue
+        blocks.append(
+            f"<!-- wp:paragraph -->\n<p>{text}</p>\n<!-- /wp:paragraph -->"
+        )
+
+    # Lists
+    for ul in re.findall(r"<ul[^>]*>(.*?)</ul>", body, re.S):
+        items = re.findall(r"<li[^>]*>(.*?)</li>", ul, re.S)
+        cleaned = [_clean_inline(li) for li in items]
+        cleaned = [li for li in cleaned if _strip_tags(li).strip()]
+        if not cleaned:
+            continue
+        list_html = "".join(f"<li>{li}</li>" for li in cleaned)
+        blocks.append(
+            f"<!-- wp:list -->\n<ul>{list_html}</ul>\n<!-- /wp:list -->"
+        )
+
+    return "\n\n".join(blocks)
 
 SITE_TITLE = "Artide"
 SITE_URL = "https://37.156.244.26/~artide1"
@@ -112,6 +207,9 @@ def cdata(text: str) -> str:
 
 def page_xml(pid: int, slug: str, title: str, parent: int) -> str:
     link = f"{SITE_URL}/{slug}/"
+    # Skip content extraction for landing/hub pages handled separately
+    skip_content = {"home", "blog"}
+    content = "" if slug in skip_content else extract_page_content(slug)
     return f"""\t<item>
 \t\t<title>{html.escape(title)}</title>
 \t\t<link>{link}</link>
@@ -119,7 +217,7 @@ def page_xml(pid: int, slug: str, title: str, parent: int) -> str:
 \t\t<dc:creator>{cdata(AUTHOR_LOGIN)}</dc:creator>
 \t\t<guid isPermaLink="false">{SITE_URL}/?page_id={pid}</guid>
 \t\t<description></description>
-\t\t<content:encoded>{cdata("")}</content:encoded>
+\t\t<content:encoded>{cdata(content)}</content:encoded>
 \t\t<excerpt:encoded>{cdata("")}</excerpt:encoded>
 \t\t<wp:post_id>{pid}</wp:post_id>
 \t\t<wp:post_date>{cdata(NOW_SQL)}</wp:post_date>
