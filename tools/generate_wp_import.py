@@ -150,13 +150,28 @@ PAGES: list[tuple[int, str, str, int]] = [
 ]
 
 # Menu items: (id, label, parent_menu_item_id, page_slug_or_url, order)
-# For "custom link" items, page_slug_or_url starts with "url:"
+# Order and content match the preview's RENDERED state, after the JS in
+# preview-src/artide-overrides.js has run (top-level reorder, removal of
+# SUPPORTO/WIKI/WIKI-* placeholders, ASSISTENZA → CONTATTI rename).
 MENU_ITEMS: list[tuple[int, str, int, str, int]] = [
-    (100, "BLOG", 0, "blog", 1),
-    (101, "Articoli del Blog", 100, "blog", 1),
-    (102, "Articoli in Evidenza", 100, "blog", 2),
+    (130, "PRODOTTI", 0, "prodotti", 1),
+    (131, "Casa dell'Acqua", 130, "casa-dell-acqua", 1),
+    (132, "Collezione", 131, "casa-dell-acqua-collezione", 1),
+    (133, "FAQ", 131, "faq-casa-dell-acqua", 2),
 
-    (110, "AZIENDA", 0, "chi-siamo", 2),
+    (140, "SERVIZI", 0, "servizi", 2),
+    (141, "Automazione", 140, "automazione", 1),
+    (142, "Corsi di Formazione", 140, "corsi", 2),
+    (143, "Manutenzione", 140, "manutenzione", 3),
+    (144, "Incasso", 140, "incasso", 4),
+    (145, "Potabilizzazione", 140, "potabilizzazione", 5),
+    (146, "Progettazione", 140, "progettazione", 6),
+    (147, "Riqualificazione", 140, "trasformazione", 7),
+    (148, "Sanificazione", 140, "sanificazione", 8),
+    (149, "Sviluppo Software", 140, "sviluppo-software", 9),
+    (150, "Telecontrollo", 140, "telecontrollo", 10),
+
+    (110, "AZIENDA", 0, "chi-siamo", 3),
     (111, "Contatti", 110, "contatti", 1),
     (112, "Chi Siamo", 110, "chi-siamo", 2),
     (113, "Certificazioni", 110, "certificazioni", 3),
@@ -174,28 +189,11 @@ MENU_ITEMS: list[tuple[int, str, int, str, int]] = [
     (125, "Citazioni Bibliografiche", 110, "citazioni-bibliografiche", 6),
     (126, "Il Team", 110, "team", 7),
 
-    (130, "PRODOTTI", 0, "prodotti", 3),
-    (131, "Casa dell'Acqua", 130, "casa-dell-acqua", 1),
-    (132, "Collezione", 131, "casa-dell-acqua-collezione", 1),
-    (133, "FAQ", 131, "faq-casa-dell-acqua", 2),
-
-    (140, "SERVIZI", 0, "servizi", 4),
-    (141, "Automazione", 140, "automazione", 1),
-    (142, "Corsi di Formazione", 140, "corsi", 2),
-    (143, "Manutenzione", 140, "manutenzione", 3),
-    (144, "Incasso", 140, "incasso", 4),
-    (145, "Potabilizzazione", 140, "potabilizzazione", 5),
-    (146, "Progettazione", 140, "progettazione", 6),
-    (147, "Riqualificazione", 140, "trasformazione", 7),
-    (148, "Sanificazione", 140, "sanificazione", 8),
-    (149, "Sviluppo Software", 140, "sviluppo-software", 9),
-    (150, "Telecontrollo", 140, "telecontrollo", 10),
+    (100, "BLOG", 0, "blog", 4),
+    (101, "Articoli del Blog", 100, "blog", 1),
+    (102, "Articoli in Evidenza", 100, "blog", 2),
 
     (160, "CONTATTI", 0, "contatti", 5),
-    (161, "Supporto", 160, "contatti", 1),
-    (162, "Wiki", 160, "contatti", 2),
-    (163, "Wiki - Totem Ricarica", 162, "contatti", 1),
-    (164, "Wiki - Casa dell'Acqua", 162, "contatti", 2),
 ]
 
 PAGE_BY_SLUG = {slug: pid for pid, slug, _, _ in PAGES}
