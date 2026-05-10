@@ -1,35 +1,31 @@
 <!-- ============================================================
-     ARTIDE — PAGINA AUTOMAZIONE (versione fedele al preview)
+     ARTIDE — PAGINA AUTOMAZIONE (senza bg, solo contenuto)
 
-     IMPORTANTE: Per ottenere il look del preview Webnode è
-     necessario DISABILITARE il "Kadence Page Title" su questa
-     pagina (Impostazioni Pagina → Disabilita Titolo Pagina).
-     L'hero con H1 grande è dentro al markup qui sotto.
+     Lo sfondo va impostato da WordPress (Featured Image della
+     pagina + snippet PHP che la propaga sul body). Qui dentro
+     ci sono SOLO testi, immagini contenuto e la banda rossa.
+
+     Sezioni trasparenti = vedono lo sfondo della pagina.
      ============================================================ -->
 
 
 <!-- ====================================================================
-     SEZIONE 1 — HERO PARALLAX (dark overlay, white text)
-     Contiene: BREADCRUMB rosso → H1 bianco → intro SEO bianco
-                → H2 bianco → 2-colonne (img + 4 paragrafi)
+     1) HERO / INTRO — testo bianco su sfondo trasparente
      ==================================================================== -->
-<!-- wp:cover {"url":"https://raw.githubusercontent.com/Blasir77/artide.it/claude/fix-wordpress-api-error-LtmqA/preview/assets/img/200000177-9bb359bb38.webp","hasParallax":true,"dimRatio":65,"overlayColor":"black","minHeight":100,"minHeightUnit":"vh","contentPosition":"center center","isDark":true,"align":"full","style":{"spacing":{"padding":{"top":"120px","bottom":"100px","left":"24px","right":"24px"}}}} -->
-<div class="wp-block-cover alignfull is-dark has-parallax" style="padding-top:120px;padding-right:24px;padding-bottom:100px;padding-left:24px;min-height:100vh"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span><div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(https://raw.githubusercontent.com/Blasir77/artide.it/claude/fix-wordpress-api-error-LtmqA/preview/assets/img/200000177-9bb359bb38.webp);filter:grayscale(0.4) brightness(0.7)"></div><div class="wp-block-cover__inner-container">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"60px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"1140px"}} -->
+<div class="wp-block-group alignfull" style="padding-top:80px;padding-right:24px;padding-bottom:60px;padding-left:24px">
 
-<!-- wp:group {"layout":{"type":"constrained","contentSize":"1140px"}} -->
-<div class="wp-block-group">
-
-<!-- ───── BREADCRUMB rosso (sostituisce H3 SERVIZI→AUTOMAZIONE del preview) ───── -->
+<!-- Eyebrow rosso "SERVIZI → AUTOMAZIONE INDUSTRIALE" -->
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#ee1515"},"typography":{"fontSize":"15px","textTransform":"uppercase","letterSpacing":"3px","fontWeight":"700"},"spacing":{"margin":{"top":"0","bottom":"24px"}}}} -->
 <p class="has-text-align-center" style="color:#ee1515;margin-top:0;margin-bottom:24px;font-size:15px;font-weight:700;letter-spacing:3px;text-transform:uppercase">SERVIZI &nbsp;→&nbsp; AUTOMAZIONE INDUSTRIALE</p>
 <!-- /wp:paragraph -->
 
-<!-- ───── H1 grande bianco centrato ───── -->
-<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"clamp(32px, 5vw, 56px)","fontWeight":"800","lineHeight":"1.15"},"spacing":{"margin":{"top":"0","bottom":"40px"}}}} -->
-<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;margin-top:0;margin-bottom:40px;font-size:clamp(32px, 5vw, 56px);font-weight:800;line-height:1.15">Automazione industriale per case dell'acqua</h1>
+<!-- H1 grande bianco -->
+<!-- wp:heading {"textAlign":"center","level":1,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"clamp(32px, 5vw, 56px)","fontWeight":"800","lineHeight":"1.15"},"spacing":{"margin":{"top":"0","bottom":"48px"}}}} -->
+<h1 class="wp-block-heading has-text-align-center" style="color:#ffffff;margin-top:0;margin-bottom:48px;font-size:clamp(32px, 5vw, 56px);font-weight:800;line-height:1.15">Automazione industriale per case dell'acqua</h1>
 <!-- /wp:heading -->
 
-<!-- ───── SEO INTRO paragrafo bianco giustificato (narrow) ───── -->
+<!-- SEO Intro giustificato bianco narrow -->
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"},"style":{"spacing":{"margin":{"top":"0","bottom":"56px"}}}} -->
 <div class="wp-block-group" style="margin-top:0;margin-bottom:56px">
 <!-- wp:paragraph {"align":"justify","style":{"color":{"text":"#f0f0f0"},"typography":{"fontSize":"17px","lineHeight":"1.75"}}} -->
@@ -38,16 +34,16 @@
 </div>
 <!-- /wp:group -->
 
-<!-- ───── H2 sezione "AUTOMAZIONE INDUSTRIALE" bianco ───── -->
+<!-- H2 "AUTOMAZIONE INDUSTRIALE" bianco -->
 <!-- wp:heading {"textAlign":"center","level":2,"style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"36px","fontWeight":"800","letterSpacing":"1px"},"spacing":{"margin":{"top":"0","bottom":"48px"}}}} -->
 <h2 class="wp-block-heading has-text-align-center" style="color:#ffffff;margin-top:0;margin-bottom:48px;font-size:36px;font-weight:800;letter-spacing:1px"><strong>AUTOMAZIONE INDUSTRIALE</strong></h2>
 <!-- /wp:heading -->
 
-<!-- ───── 2 COLONNE: Immagine sx (~49%) + Testo dx (~51%) ───── -->
+<!-- 2 COLONNE: Immagine sx + Testo dx -->
 <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"40px","left":"40px"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center">
 
-<!-- COLONNA SX: Immagine braccio robotico -->
+<!-- COL SX: Braccio robotico -->
 <!-- wp:column {"verticalAlignment":"center","width":"49%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:49%">
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"6px"}}} -->
@@ -56,7 +52,7 @@
 </div>
 <!-- /wp:column -->
 
-<!-- COLONNA DX: 4 paragrafi giustificati -->
+<!-- COL DX: 4 paragrafi giustificati bianchi -->
 <!-- wp:column {"verticalAlignment":"center","width":"51%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:51%">
 
@@ -85,13 +81,10 @@
 </div>
 <!-- /wp:group -->
 
-</div></div>
-<!-- /wp:cover -->
-
 
 <!-- ====================================================================
-     SEZIONE 2 — BANDA ROSSA "L'UNICO NOSTRO LIMITE" + SEO OUTRO
-     Sfondo rosso brand #ee1515, testo bianco centrato
+     2) BANDA ROSSA — "L'UNICO NOSTRO LIMITE" claim + outro SEO
+     Unica sezione con sfondo (rosso brand), il resto è trasparente
      ==================================================================== -->
 <!-- wp:group {"align":"full","style":{"color":{"background":"#ee1515"},"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
 <div class="wp-block-group alignfull has-background" style="background-color:#ee1515;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px">
@@ -109,21 +102,18 @@
 
 
 <!-- ====================================================================
-     SEZIONE 3 — HERO PARALLAX 2 (dark) "I TUOI SOGNI" + CTA CONTATTACI
-     Stessa immagine parallax della sezione 1, white text
+     3) SEZIONE FINALE — "I TUOI SOGNI" + CTA CONTATTACI
+     Sfondo trasparente, testo bianco
      ==================================================================== -->
-<!-- wp:cover {"url":"https://raw.githubusercontent.com/Blasir77/artide.it/claude/fix-wordpress-api-error-LtmqA/preview/assets/img/200000177-9bb359bb38.webp","hasParallax":true,"dimRatio":70,"overlayColor":"black","minHeight":600,"minHeightUnit":"px","isDark":true,"align":"full","style":{"spacing":{"padding":{"top":"100px","bottom":"100px","left":"24px","right":"24px"}}}} -->
-<div class="wp-block-cover alignfull is-dark has-parallax" style="padding-top:100px;padding-right:24px;padding-bottom:100px;padding-left:24px;min-height:600px"><span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-70 has-background-dim"></span><div role="img" class="wp-block-cover__image-background has-parallax" style="background-position:50% 50%;background-image:url(https://raw.githubusercontent.com/Blasir77/artide.it/claude/fix-wordpress-api-error-LtmqA/preview/assets/img/200000177-9bb359bb38.webp);filter:grayscale(0.4) brightness(0.7)"></div><div class="wp-block-cover__inner-container">
-
-<!-- wp:group {"layout":{"type":"constrained","contentSize":"900px"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","bottom":"80px","left":"24px","right":"24px"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
+<div class="wp-block-group alignfull" style="padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px">
 
 <!-- Paragrafo "20 anni" -->
 <!-- wp:paragraph {"align":"justify","style":{"color":{"text":"#f0f0f0"},"typography":{"fontSize":"17px","lineHeight":"1.8"}}} -->
 <p class="has-text-align-justify" style="color:#f0f0f0;font-size:17px;line-height:1.8">Lavorando da oltre <strong>20 anni</strong> nella distribuzione automatica al pubblico in erogazione h24, di un prodotto alimentare da dosare sfuso, con facile deperibilità ed a pagamento, con applicazioni di oltre 20 controlli di processo sulla filiera di captazione, trattamento e distribuzione <strong>siamo in grado di realizzare tecnicamente ogni possibile richiesta del cliente</strong>.</p>
 <!-- /wp:paragraph -->
 
-<!-- HR bianco -->
+<!-- HR bianco semi-trasparente -->
 <!-- wp:separator {"style":{"spacing":{"margin":{"top":"48px","bottom":"48px"}}},"className":"is-style-default"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-default" style="margin-top:48px;margin-bottom:48px;border-color:rgba(255,255,255,0.3)"/>
 <!-- /wp:separator -->
@@ -133,12 +123,12 @@
 <h3 class="wp-block-heading has-text-align-center" style="color:#ffffff;margin-top:0;margin-bottom:32px;font-size:38px;font-weight:800;line-height:1.25"><strong>i Tuoi Sogni con Artide Diventano una Realtà</strong></h3>
 <!-- /wp:heading -->
 
-<!-- Paragrafo centered grassetto domanda -->
+<!-- Domanda bold centered -->
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#ffffff"},"typography":{"fontSize":"19px","lineHeight":"1.6","fontWeight":"700"},"spacing":{"margin":{"top":"0","bottom":"32px"}}}} -->
 <p class="has-text-align-center" style="color:#ffffff;margin-top:0;margin-bottom:32px;font-size:19px;font-weight:700;line-height:1.6">Hai un'idea che per altri sembra irrealizzabile? O un progetto già sviluppato in modo non soddisfacente?</p>
 <!-- /wp:paragraph -->
 
-<!-- Paragrafo testo giustificato -->
+<!-- Paragrafo argomento 1 -->
 <!-- wp:paragraph {"align":"justify","style":{"color":{"text":"#e5e5e5"},"typography":{"fontSize":"16px","lineHeight":"1.8"},"spacing":{"margin":{"bottom":"20px"}}}} -->
 <p class="has-text-align-justify" style="color:#e5e5e5;margin-bottom:20px;font-size:16px;line-height:1.8">Per noi quella che a te sembra una richiesta assurda è all'ordine del giorno ed è fattibile, non solo in termini operativi ma siamo in grado di concretizzarla creando un sistema standardizzato alle disponibilità offerte del mercato, <strong>questo significa che per l'acquisto dell'hardware impiegato non dovrai necessariamente passare da noi</strong>.</p>
 <!-- /wp:paragraph -->
@@ -148,7 +138,7 @@
 <p class="has-text-align-justify" style="color:#e5e5e5;margin-bottom:56px;font-size:16px;line-height:1.8"><strong style="font-size:1.15em;color:#ffffff">Artide</strong> è forse oggi l'unica azienda in Italia in grado di offrire ai clienti la massima serietà di un bene e/o un servizio che, una volta acquistato, può essere mantenuto anche indipendentemente dal produttore del servizio stesso.</p>
 <!-- /wp:paragraph -->
 
-<!-- CTA Bottone CONTATTACI rosso -->
+<!-- CTA CONTATTACI rosso -->
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"style":{"border":{"radius":"4px"},"typography":{"fontSize":"15px","fontWeight":"700","letterSpacing":"2px","textTransform":"uppercase"},"spacing":{"padding":{"top":"18px","right":"48px","bottom":"18px","left":"48px"}},"color":{"background":"#ee1515","text":"#ffffff"}}} -->
@@ -159,14 +149,3 @@
 
 </div>
 <!-- /wp:group -->
-
-</div></div>
-<!-- /wp:cover -->
-
-
-<!-- ====================================================================
-     SEZIONE 4 — IMMAGINE ACQUA DECORATIVA (subito dopo CTA, full-width)
-     ==================================================================== -->
-<!-- wp:image {"align":"full","sizeSlug":"full","linkDestination":"none","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<figure class="wp-block-image alignfull size-full" style="margin-top:0;margin-bottom:0"><img src="https://raw.githubusercontent.com/Blasir77/artide.it/claude/fix-wordpress-api-error-LtmqA/preview/assets/img/200000084-5fcf05fcf3.webp" alt="" style="width:100%;height:auto;display:block"/></figure>
-<!-- /wp:image -->
